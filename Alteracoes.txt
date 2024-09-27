@@ -1,0 +1,91 @@
+--Adicionar novos campo na DIMPRODUTO
+ALTER TABLE dim_produto
+ADD column cod_grupo VARCHAR(15),
+add column grupo VARCHAR(255),
+add column cod_subgrupo VARCHAR(15),
+add column subgrupo VARCHAR(255),
+add column principio_ativo VARCHAR(255),
+add column cod_cultura VARCHAR(15),
+add column cultura  VARCHAR(255),
+add column cod_variedade VARCHAR(15),
+add column variedade VARCHAR(255);
+--------------------------------------------------------------
+--Retirar restrição NOT NULL da coluna cod_familia na tabela DIMPRODUTO
+ALTER TABLE dim_produto alter COLUMN cod_familia drop not NULL; 
+
+--------------------------------------------------------------
+--Retirar restrição NOT NULL da coluna familia na tabela DIMPRODUTO
+ALTER TABLE dim_produto alter COLUMN familia drop not NULL;
+
+--------------------------------------------------------------
+--Adicionar campos na dim_contrato
+alter table dim_contrato_agricola 
+add column sequencial int,
+nome_contrato varchar (255);
+
+--------------------------------------------------------------
+--NOVA COLUNA 
+-- public.dim_talhao definition
+
+-- Drop table
+
+-- DROP TABLE public.dim_talhao;
+
+CREATE TABLE public.dim_talhao (
+	sk_talhao serial4 NOT NULL,
+	nk_talhao varchar(100) NULL,
+	cod_talhao int4 NULL,
+	descricao varchar(255) NULL,
+	area_talhao int4 NULL,
+	CONSTRAINT dim_talhao_nk_talhao_key UNIQUE (nk_talhao),
+	CONSTRAINT dim_talhao_pkey PRIMARY KEY (sk_talhao)
+);
+
+-----------------------------------------------------------------
+--ADD COLUNA NA DIM_PARCEIRO
+
+alter table public.dim_parceiro 
+add column cod_municipio_ibge varchar (50) null,
+add column pais varchar (50) null,
+add column uf varchar (50) null
+
+----------------------------------------------------------------
+--ALTERAÇÕES STAGE FINANCEIRA
+
+-- public.stg_financeiro definition
+
+-- Drop table
+
+-- DROP TABLE public.stg_financeiro;
+
+CREATE TABLE public.stg_financeiro (
+	nk_empresa varchar(255) NULL,
+	nk_parceiro varchar(255) NULL,
+	nk_portador varchar(255) NULL,
+	nk_carteira_financeira varchar(255) NULL,
+	*numero_nota_fiscal varchar(255) NULL,
+	*numero_titulo varchar(255) NULL,
+	numero_parcela int4 NULL,
+	*tipo_dcto_titulo varchar NULL,
+	tipo_lcto bpchar(1) NULL,
+	via_lcto int4 NULL,
+	ocorrencia int4 NULL,
+	data_mvto date NULL,
+	data_ocorrencia date NULL,
+	data_vencimento date NULL,
+	data_quitacao date NULL,
+	conta_fluxo_caixa varchar(20) NULL,
+	valor_titulo float8 NULL,
+	valor_parcela float8 NULL,
+	valor_variavel float8 NULL,
+	tipo_valor_variavel varchar(255) NULL,
+	valor_ocorrencia float8 NULL,
+	ident_fin007 varchar(10) NULL
+);
+CREATE INDEX stg_financeiro_idx ON public.stg_financeiro USING btree (nk_empresa, nk_parceiro, nk_carteira_financeira);
+CREATE INDEX stg_financeiro_idx1 ON public.stg_financeiro USING btree (data_vencimento, data_quitacao);
+CREATE INDEX stg_financeiro_idx2 ON public.stg_financeiro USING btree (nk_empresa, numero_nota_fiscal, numero_titulo, numero_parcela, nk_carteira_financeira, nk_parceiro, nk_portador, tipo_dcto_titulo, tipo_lcto, via_lcto, ocorrencia, data_mvto, data_ocorrencia, data_vencimento, data_quitacao, ident_fin007, tipo_valor_variavel);
+
+----------------------------------------------------------------------------------------------------------
+--ADD COLUNA DE CICLO NA STG_PEDIDOS
+ALTER TABLE public.stg_pedidos ADD nk_ciclo varchar(255) NULL;

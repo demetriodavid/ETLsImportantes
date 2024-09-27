@@ -1,0 +1,922 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>fatoComissaoPedido</name>
+    <description />
+    <extended_description />
+    <trans_version />
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection>SQL Server</connection>
+        <schema />
+        <table>dimArquivoTransformacao</table>
+        <size_limit_lines />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject />
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection />
+        <schema />
+        <table />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection />
+      <table />
+      <field />
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file />
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2015/09/02 16:35:08.215</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2015/09/02 16:35:08.215</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>Oracle</name>
+    <server>10.0.0.18</server>
+    <type>ORACLE</type>
+    <access>Native</access>
+    <database>ORCL</database>
+    <port>1521</port>
+    <username>DEMOSBI</username>
+    <password>Encrypted 2be98afc86aa7f289aa0aba75cc99aac3</password>
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>1521</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>SQL Server</name>
+    <server>SIAGRIBI.CLOUDAPP.NET</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>DW_DEMOAGB</database>
+    <port>1433</port>
+    <username>itprovider</username>
+    <password>Encrypted 2be98afc86aa78285b80aa764ce8ab6c0</password>
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>1433</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>Get Data</from>
+      <to>Export to DW</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Clear Table from DW</from>
+      <to>Get Data</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>Clear Table from DW</name>
+    <type>ExecSQL</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>SQL Server</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>Y</single_statement>
+    <replace_variables>Y</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>delete from fatoComissaoPedido 
+
+</sql>
+    <set_params>N</set_params>
+    <insert_field />
+    <update_field />
+    <delete_field />
+    <read_field />
+    <arguments>
+    </arguments>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>352</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Export to DW</name>
+    <type>TableOutput</type>
+    <description>Write information to table [TABDESC] on database [SQL Server]</description>
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>SQL Server</connection>
+    <schema />
+    <table>fatoComissaoPedido</table>
+    <commit>500</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field>DUMANUT</partitioning_field>
+    <partitioning_daily>Y</partitioning_daily>
+    <partitioning_monthly>N</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>N</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>EMPRESA</column_name>
+        <stream_name>EMPRESA</stream_name>
+      </field>
+      <field>
+        <column_name>VENDEDOR</column_name>
+        <stream_name>VENDEDOR</stream_name>
+      </field>
+      <field>
+        <column_name>CLIENTE</column_name>
+        <stream_name>CLIENTE</stream_name>
+      </field>
+      <field>
+        <column_name>PRODUTO</column_name>
+        <stream_name>PRODUTO</stream_name>
+      </field>
+      <field>
+        <column_name>EMPRESA_PEDIDO</column_name>
+        <stream_name>EMPRESA_PEDIDO</stream_name>
+      </field>
+      <field>
+        <column_name>NUMERO_PEDIDO</column_name>
+        <stream_name>NUMERO_PEDIDO</stream_name>
+      </field>
+      <field>
+        <column_name>SERIE_PEDIDO</column_name>
+        <stream_name>SERIE_PEDIDO</stream_name>
+      </field>
+      <field>
+        <column_name>DATA_PEDIDO</column_name>
+        <stream_name>DATA_PEDIDO</stream_name>
+      </field>
+      <field>
+        <column_name>EMPRESA_NOTA</column_name>
+        <stream_name>EMPRESA_NOTA</stream_name>
+      </field>
+      <field>
+        <column_name>NUMERO_NOTA</column_name>
+        <stream_name>NUMERO_NOTA</stream_name>
+      </field>
+      <field>
+        <column_name>SERIE_NOTA</column_name>
+        <stream_name>SERIE_NOTA</stream_name>
+      </field>
+      <field>
+        <column_name>DATA_NOTA</column_name>
+        <stream_name>DATA_NOTA</stream_name>
+      </field>
+      <field>
+        <column_name>VALOR_ITEM</column_name>
+        <stream_name>VALOR_ITEM</stream_name>
+      </field>
+      <field>
+        <column_name>DATA_PAGAMENTO_NOTA</column_name>
+        <stream_name>DATA_PAGAMENTO_NOTA</stream_name>
+      </field>
+      <field>
+        <column_name>PAGO_VENCIDO</column_name>
+        <stream_name>PAGO_VENCIDO</stream_name>
+      </field>
+      <field>
+        <column_name>DIAS_VENCIDO</column_name>
+        <stream_name>DIAS_VENCIDO</stream_name>
+      </field>
+      <field>
+        <column_name>CONTROLE</column_name>
+        <stream_name>CONTROLE</stream_name>
+      </field>
+      <field>
+        <column_name>ADIANTAMENTO</column_name>
+        <stream_name>ADIANTAMENTO</stream_name>
+      </field>
+      <field>
+        <column_name>DOCUMENTO_ADIANTAMENTO</column_name>
+        <stream_name>DOCUMENTO_ADIANTAMENTO</stream_name>
+      </field>
+      <field>
+        <column_name>DATA_PAGAMENTO_ADIANTAMENTO</column_name>
+        <stream_name>DATA_PAGAMENTO_ADIANTAMENTO</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>704</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Get Data</name>
+    <type>TableInput</type>
+    <description>Reads information from table [TABDESC] on database [Oracle]</description>
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Oracle</connection>
+    <sql>SELECT DISTINCT N.CODI_EMP EMPRESA
+	,N.COD1_PES VENDEDOR
+	,N.CODI_TRA CLIENTE
+	,I.CODI_PSV PRODUTO
+	,(
+		SELECT EMPR_PED
+		FROM INOTA
+		WHERE NPRE_NOT = N.NPRE_NOT
+			AND ROWNUM = 1
+		) EMPRESA_PEDIDO
+	,(
+		SELECT PEDI_PED
+		FROM INOTA
+		WHERE NPRE_NOT = N.NPRE_NOT
+			AND ROWNUM = 1
+		) NUMERO_PEDIDO
+	,(
+		SELECT SERI_PED
+		FROM INOTA
+		WHERE NPRE_NOT = N.NPRE_NOT
+			AND ROWNUM = 1
+		) SERIE_PEDIDO
+	,(
+		SELECT P.DEMI_PED
+		FROM INOTA I
+		INNER JOIN PEDIDO P ON (
+				I.EMPR_PED = P.CODI_EMP
+				AND I.PEDI_PED = P.PEDI_PED
+				AND I.SERI_PED = P.SERI_PED
+				)
+		WHERE NPRE_NOT = N.NPRE_NOT
+			AND ROWNUM = 1
+		) DATA_PEDIDO
+	,N.CODI_EMP EMPRESA_NOTA
+	,N.NOTA_NOT NUMERO_NOTA
+	,N.SERI_NOT SERIE_NOTA
+	,N.DEMI_NOT DATA_NOTA
+	,
+	--CAST ((I.QTDE_INO*I.VLIQ_INO)AS NUMBER(21,9)) VALOR_ITEM,
+	CASE 
+		WHEN (
+				SELECT COUNT(*)
+				FROM CRCBAIXA
+				WHERE CTRL_REC = R.CTRL_REC
+				) > 1
+			AND (
+				SELECT COUNT(*)
+				FROM CRCBAIPR
+				WHERE SEQU_BAI = CRC.SEQU_BAI
+				) > 1
+			THEN (CAST((
+						SELECT QTDP_BPR * I.VLIQ_INO
+						FROM CRCBAIPR
+						WHERE SEQU_BAI = CRC.SEQU_BAI
+							AND CODI_PSV = I.CODI_PSV
+						) - ABS(coalesce(CRC.VVCA_BAI,0)) AS NUMBER(21, 9)))
+		WHEN (
+				SELECT COUNT(*)
+				FROM CRCBAIXA
+				WHERE CTRL_REC = R.CTRL_REC
+				) > 1
+			AND (
+				SELECT COUNT(*)
+				FROM CRCBAIPR
+				WHERE SEQU_BAI = CRC.SEQU_BAI
+				) &lt;= 1
+			THEN CAST((CRC.VLOR_BAI - CRC.JURO_BAI - CRC.DESC_BAI - ABS(coalesce(CRC.VVCA_BAI,0))) AS NUMBER(21, 9))
+		WHEN (
+				SELECT COUNT(*)
+				FROM CRCBAIXA
+				WHERE CTRL_REC = R.CTRL_REC
+				) = 1
+			AND (N.TOTA_NOT) = (
+				SELECT VLOR_BAI
+				FROM CRCBAIXA
+				WHERE CTRL_REC = CRC.CTRL_rec
+				)
+			THEN (CAST((I.QTDE_INO * I.VLIQ_INO) - ABS(coalesce(CRC.VVCA_BAI,0)) AS NUMBER(21, 9)))
+		WHEN (
+				SELECT COUNT(*)
+				FROM CRCBAIXA
+				WHERE CTRL_REC = R.CTRL_REC
+				) = 1
+			AND (N.TOTA_NOT) &lt;&gt; (
+				SELECT VLOR_BAI
+				FROM CRCBAIXA
+				WHERE CTRL_REC = CRC.CTRL_rec
+				)
+			THEN (CAST((
+						SELECT QTDP_BPR * I.VLIQ_INO
+						FROM CRCBAIPR
+						WHERE SEQU_BAI = CRC.SEQU_BAI
+							AND CODI_PSV = I.CODI_PSV
+						) - ABS(coalesce(CRC.VVCA_BAI,0)) AS NUMBER(21, 9)))
+		ELSE CAST((CRC.VLOR_BAI - CRC.JURO_BAI - CRC.DESC_BAI - ABS(coalesce(CRC.VVCA_BAI,0))) AS NUMBER(21, 9))
+		END VALOR_ITEM
+	,
+	--CAST ((CRC.VLOR_BAI)AS NUMBER(21,9)) VALOR_ITEM,
+	CRC.DPAG_BAI DATA_PAGAMENTO_NOTA
+	,CASE 
+		WHEN CRC.DPAG_BAI > R.VENC_REC
+			THEN 'S'
+		ELSE 'N'
+		END PAGO_VENCIDO
+	,(TO_DATE(CRC.DPAG_BAI) - TO_DATE(R.VENC_REC)) DIAS_VENCIDO
+	,CASE 
+		WHEN (
+				SELECT COUNT(*)
+				FROM CABREC C2
+				WHERE C2.CODI_TDO = 103
+					AND C2.TOTA_CBR = C.TOTA_CBR
+					AND C2.CODI_TRA = C.CODI_TRA
+				) > 0
+			THEN 'S'
+		ELSE 'N'
+		END ADIANTAMENTO
+	,(
+		SELECT C4.NUME_CBR || '-' || C4.SERI_CBR
+		FROM CABREC C4
+		WHERE C4.CODI_TDO = 103
+			AND C4.TOTA_CBR = C.TOTA_CBR
+			AND C4.CODI_TRA = C.CODI_TRA
+			AND C4.SITU_CBR = 'A'
+			AND ROWNUM = 1
+		) DOCUMENTO_ADIANTAMENTO
+	,(
+		SELECT C3.DATA_CBR
+		FROM CABREC C3
+		INNER JOIN RECEBER R2 ON (C3.CTRL_CBR = R2.CTRL_CBR)
+		INNER JOIN CRCBAIXA CRC2 ON (
+				R2.CTRL_REC = CRC2.CTRL_REC
+				AND ROWNUM = 1
+				)
+		WHERE C3.CODI_TDO = 103
+			AND C3.TOTA_CBR = C.TOTA_CBR
+			AND C3.CODI_TRA = C.CODI_TRA
+			AND C3.SITU_CBR = 'A'
+			AND CRC2.SITU_BAI = 'N'
+		) DATA_PAGAMENTO_ADIANTAMENTO
+	,N.NPRE_NOT CONTROLE
+FROM NOTA N
+INNER JOIN INOTA I ON (N.NPRE_NOT = I.NPRE_NOT)
+INNER JOIN NOTACRC NC ON (
+		N.CODI_TRA = NC.CODI_TRA
+		AND N.CODI_EMP = NC.CODI_EMP
+		AND N.NOTA_NOT = NC.NDOC_NOC
+		AND N.SERI_NOT = NC.SDOC_NOC
+		)
+INNER JOIN CABREC C ON (NC.CTRL_CBR = C.CTRL_CBR)
+INNER JOIN RECEBER R ON (C.CTRL_CBR = R.CTRL_CBR)
+INNER JOIN CRCBAIXA CRC ON (R.CTRL_REC = CRC.CTRL_REC)
+WHERE C.SITU_CBR = 'A'
+	AND R.SITU_REC = 'A'
+	AND CRC.SITU_BAI = 'N'
+	AND NOT EXISTS (
+		SELECT *
+		FROM NOTAORIG NO
+		INNER JOIN NOTA N2 ON (
+				NO.NOTD_NFR = N2.NPRE_NOT
+				AND NO.CODI_EMP = N2.CODI_EMP
+				AND NO.TRAD_NFR = N2.CODI_TRA
+				AND N2.CODI_TOP IN (40)
+				)
+		WHERE NO.NOTO_NFR = N.NPRE_NOT
+			AND NO.CODI_EMP = N.CODI_EMP
+			AND NO.TRAO_NFR = N.CODI_TRA
+		)
+	AND N.CODI_TOP NOT IN (40)</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>512</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+</transformation>

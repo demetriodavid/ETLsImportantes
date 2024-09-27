@@ -1,0 +1,1884 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>Trans Carga - Stage - Movimento Estoque</name>
+    <description />
+    <extended_description />
+    <trans_version />
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection />
+        <schema />
+        <table />
+        <size_limit_lines />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject />
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection />
+        <schema />
+        <table />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection />
+      <table />
+      <field />
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file />
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2015/09/11 11:48:51.872</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2015/09/11 11:48:51.872</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+    <notepad>
+      <note>Nessa extração foram implementados os movimentos de estoque, com base nas funções:
+* saldo_inicial_uf -> estoque fisico
+* saldo_inicial_tipoest_uf -> estoque disponivel
+
+Falta implementar os seguintes cursores, que não foram feitos, pois para a Purinutre não havia dados
+ou seja necessidade:
+* CCU
+* CIDDOCA
+* CREQUIS
+* CROMAN
+
+A implementação feita aqui, foi uma análise e adaptação de cada cursor, com base nas restrições
+utilizadas no relatório GES420, que gera o estoque fisico e estoque disponível.</note>
+      <xloc>452</xloc>
+      <yloc>16</yloc>
+      <width>542</width>
+      <heigth>216</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+  </notepads>
+  <connection>
+    <name>[DB] - Oracle - AgriBusiness ERP</name>
+    <server>${ORIGEM_ORACLE_HOST}</server>
+    <type>ORACLE</type>
+    <access>Native</access>
+    <database>${ORIGEM_ORACLE_BANCO}</database>
+    <port>${ORIGEM_ORACLE_PORTA}</port>
+    <username>${ORIGEM_ORACLE_USER_NAME}</username>
+    <password>${ORIGEM_ORACLE_PASSWORD}</password>
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>${ORIGEM_ORACLE_PORTA}</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>[DW] - PostgreSQL - Vistra BI</name>
+    <server>${DESTINO_HOST}</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>${DESTINO_BANCO}</database>
+    <port>${DESTINO_PORTA}</port>
+    <username>${DESTINO_USER_NAME_BD}</username>
+    <password>${DESTINO_PASSWORD_BD}</password>
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>${DESTINO_PORTA}</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>Wait Truncate</from>
+      <to>[DW] - W - Stage Saldo Estoque</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>[DB] - ERP - Estoque - NF Terceiro</from>
+      <to>Wait Truncate</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>[DB] - ERP - Estoque - NF Empresa - Com Pedido</from>
+      <to>Wait Truncate</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>[DB] - ERP - Estoque - NF Empresa - Sem Pedido</from>
+      <to>Wait Truncate</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>[DB] - ERP - Estoque - Pedido de Venda</from>
+      <to>Wait Truncate</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>[DB] - ERP - Estoque - Pedido de Compra</from>
+      <to>Wait Truncate</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>[DB] - ERP - Estoque - Desfazimento - NF de Terceiros</from>
+      <to>Wait Truncate</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>[DB] - ERP - Estoque - Desfazimento - NF Empresa</from>
+      <to>Wait Truncate</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>[DB] - ERP - Estoque - Comprovante de Entrega</from>
+      <to>Wait Truncate</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>[DB] - ERP - Estoque - Solicitacao de Transferencia</from>
+      <to>Wait Truncate</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>[DB] - ERP - Estoque - Ordem de Producao</from>
+      <to>Wait Truncate</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>[DB] - ERP - Estoque - Captação</from>
+      <to>Wait Truncate</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>Wait Truncate</name>
+    <type>BlockUntilStepsFinish</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <steps>
+      <step>
+        <name>[DW] - SQL - Truncate Table</name>
+        <CopyNr>0</CopyNr>
+      </step>
+    </steps>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>557</xloc>
+      <yloc>344</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>[DB] - ERP - Estoque - Captação</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>[DB] - Oracle - AgriBusiness ERP</connection>
+    <sql>WITH
+    TIPO_CTRL AS
+    (
+        SELECT DISTINCT
+            TP.CODI_TOP,
+            DECODE(CS.DESC_CTR, 'ESTOQUE FISICO', 1, 0) AS EF,
+            DECODE(E.FUNC_EST, 'S', -1, 'A', 1, 0) AS FE,
+            DECODE(TP.CAPT_TCT, 'S', -1, 'A', 1, 'N', 0) AS CAPT_TCT
+        FROM
+            TOPCTRL TP
+            LEFT OUTER JOIN CTRLSALDO CS ON CS.CODI_CTR = TP.CODI_CTR
+            LEFT OUTER JOIN ESTOQUE E ON E.CODI_CTR = TP.CODI_CTR
+        WHERE DECODE(TP.CAPT_TCT, 'S', -1, 'A', 1, 'N', 0) &lt;&gt; 0
+    )
+SELECT /* CAPTAÇÃO VINCULADA A PEDIDO */
+    ('CAPTACAO#PEDIDO#') || TO_CHAR(DCP.CTRL_DCP) AS NK_MOVIMENTO_ESTOQUE,
+    TO_CHAR(CCP.CODI_EMP) AS NK_EMPRESA,
+    TO_CHAR(IPE.CODI_PSV) AS NK_PRODUTO,
+    (
+        CASE
+            WHEN PED.PROP_PRO IS NULL THEN MUT.ESTA_MUN
+            ELSE MUP.ESTA_MUN
+        END
+    ) AS ESTA_MUN,
+    CAST(CCP.DATA_CCP AS DATE) AS NK_TEMPO_DIA,
+    (TP.EF * TP.CAPT_TCT) * COALESCE(IDC.QTDE_IDC, 0) AS QTD_EST_FISICO,
+    (TP.CAPT_TCT) * COALESCE(IDC.QTDE_IDC, 0) AS QTD_EST_DISP
+FROM 
+    IDOCSCAPTACAO IDC 
+    INNER JOIN DOCSCAPTACAO DCP ON DCP.CTRL_DCP = IDC.CTRL_DCP 
+    INNER JOIN CABCAPTACAO CCP ON CCP.CODI_CCP = DCP.CODI_CCP 
+    INNER JOIN PEDIDO PED ON DCP.EMPE_DCP = PED.CODI_EMP AND DCP.NDOC_DCP = PED.PEDI_PED AND DCP.SERI_DCP = PED.SERI_PED 
+    INNER JOIN IPEDIDO IPE ON PED.CODI_EMP = IPE.CODI_EMP AND PED.PEDI_PED = IPE.PEDI_PED AND PED.SERI_PED = IPE.SERI_PED AND IPE.CODI_PSV = IDC.CODI_PSV 
+    INNER JOIN TIPO_CTRL TP ON TP.CODI_TOP = PED.CODI_TOP
+    INNER JOIN TRANSAC TRA ON PED.CODI_TRA = TRA.CODI_TRA 
+    LEFT JOIN MUNICIPIO MUT ON TRA.CODI_MUN = MUT.CODI_MUN 
+    LEFT JOIN PROPRIED PRO ON PED.PROP_PRO = PRO.PROP_PRO 
+    LEFT JOIN MUNICIPIO MUP ON PRO.CODI_MUN = MUP.CODI_MUN 
+WHERE 
+    CCP.TDOC_CAP = 'P' AND  
+    ((PED.STAT_PED &lt;&gt; 'C') OR (PED.STAT_PED IS NULL))
+
+UNION ALL
+
+SELECT /*CAPTAÇÃO - VINCULADA A NF*/ 
+    ('CAPTACAO#NF_EMP#') || TO_CHAR(DCP.CTRL_DCP) AS NK_MOVIMENTO_ESTOQUE,
+    TO_CHAR(CCP.CODI_EMP) AS NK_EMPRESA,
+    TO_CHAR(INO.CODI_PSV) AS NK_PRODUTO,
+    (
+        CASE
+            WHEN NTA.PROP_PRO IS NULL THEN MUT.ESTA_MUN
+            ELSE MUP.ESTA_MUN
+        END
+    ) AS ESTA_MUN,
+    CAST(CCP.DATA_CCP AS DATE) AS NK_TEMPO_DIA,
+    (TP.EF * TP.CAPT_TCT) * COALESCE(IDC.QTDE_IDC, 0) AS QTD_EST_FISICO,
+    (TP.CAPT_TCT) * COALESCE(IDC.QTDE_IDC, 0) AS QTD_EST_DISP
+FROM 
+    IDOCSCAPTACAO IDC 
+    INNER JOIN DOCSCAPTACAO DCP ON DCP.CTRL_DCP = IDC.CTRL_DCP 
+    INNER JOIN CABCAPTACAO CCP ON CCP.CODI_CCP = DCP.CODI_CCP 
+    INNER JOIN NOTA NTA ON DCP.EMPE_DCP = NTA.CODI_EMP AND DCP.NDOC_DCP = NTA.NOTA_NOT AND DCP.SERI_DCP = NTA.SERI_NOT 
+    INNER JOIN INOTA INO ON NTA.NPRE_NOT = INO.NPRE_NOT AND INO.CODI_PSV = IDC.CODI_PSV 
+    INNER JOIN TIPO_CTRL TP ON TP.CODI_TOP = NTA.CODI_TOP
+    INNER JOIN TRANSAC TRA ON NTA.CODI_TRA = TRA.CODI_TRA 
+    LEFT JOIN MUNICIPIO MUT ON TRA.CODI_MUN = MUT.CODI_MUN 
+    LEFT JOIN PROPRIED PRO ON NTA.PROP_PRO = PRO.PROP_PRO 
+    LEFT JOIN MUNICIPIO MUP ON PRO.CODI_MUN = MUP.CODI_MUN 
+WHERE
+    CCP.TDOC_CAP = 'N' AND 
+    ((NTA.SITU_NOT &lt;&gt; '9') OR (NTA.SITU_NOT IS NULL))
+
+UNION ALL
+
+SELECT /* CAPTAÇÃO VINCULADA A ORDEM DE TRANSFERENCIA */
+    ('CAPTACAO#ORDEM_TRANSF#') || TO_CHAR(DCP.CTRL_DCP) AS NK_MOVIMENTO_ESTOQUE,
+    TO_CHAR(CCP.CODI_EMP) AS NK_EMPRESA,
+    TO_CHAR(SLT.CODI_PSV) AS NK_PRODUTO,
+    MUN.ESTA_MUN,
+    CAST(CCP.DATA_CCP AS DATE) AS NK_TEMPO_DIA,
+    (TP.EF * TP.CAPT_TCT) * COALESCE(IDC.QTDE_IDC, 0) AS QTD_EST_FISICO,
+    (TP.CAPT_TCT) * COALESCE(IDC.QTDE_IDC, 0) AS QTD_EST_DISP
+FROM 
+    IDOCSCAPTACAO IDC 
+    INNER JOIN DOCSCAPTACAO DCP ON DCP.CTRL_DCP = IDC.CTRL_DCP 
+    INNER JOIN CABCAPTACAO CCP ON CCP.CODI_CCP = DCP.CODI_CCP 
+    INNER JOIN CABSOLTRANSF CST ON DCP.EMPE_DCP = CST.EORI_EMP AND DCP.NDOC_DCP = CST.CTRL_CST 
+    INNER JOIN SOLTRANSF SLT ON CST.CTRL_CST = SLT.CTRL_CST AND IDC.CODI_PSV = SLT.CODI_PSV 
+    INNER JOIN CFO ON CST.CCFO_CFO = CFO.CCFO_CFO 
+    INNER JOIN TIPO_CTRL TP ON TP.CODI_TOP = CFO.CODI_TOP
+    INNER JOIN CADEMP EMP ON CST.EORI_EMP = EMP.CODI_EMP 
+    INNER JOIN TRANSAC TRA ON EMP.COD1_TRA = TRA.CODI_TRA 
+    LEFT JOIN MUNICIPIO MUN ON TRA.CODI_MUN = MUN.CODI_MUN 
+WHERE CCP.TDOC_CAP = 'O'</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>143</xloc>
+      <yloc>755</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>[DB] - ERP - Estoque - Comprovante de Entrega</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>[DB] - Oracle - AgriBusiness ERP</connection>
+    <sql>WITH
+    TIPO_CTRL AS
+    (
+        SELECT DISTINCT
+            T.CODI_TOP,
+            T.CODI_CTR,
+            T.ATED_TCT,
+            DECODE(T.PDCO_TCT, 'S', -1, 'A', 1, 0) AS PDCO_TCT,
+            DECODE(T.NFTE_TCT, 'S', -1, 'A', 1, 0) AS NFTE_TCT,
+            DECODE(T.NFEM_TCT, 'S', -1, 'A', 1, 0) AS NFEM_TCT,
+            DECODE(T.CFIS_TCT, 'S', -1, 'A', 1, 0) AS CFIS_TCT,
+            DECODE(T.PDVE_TCT, 'S', -1, 'A', 1, 0) AS PDVE_TCT,
+            DECODE(T.CENT_TCT, 'S', -1, 'A', 1, 0) AS CENT_TCT,
+            DECODE(T.REQO_TCT, 'S', -1, 'A', 1, 'N', 0) AS REQO_TCT,
+            DECODE(T.SOLT_TCT, 'S', -1, 'A', 1, 'N', 0) AS SOLT_TCT,
+            DECODE(T.CAPT_TCT, 'S', -1, 'A', 1, 0) AS CAPT_TCT,
+            (
+                CASE
+                    WHEN CS.DESC_CTR = 'ESTOQUE FISICO' THEN 1
+                    ELSE 0
+                END
+            ) AS EF,
+            (
+                CASE
+                    WHEN E.FUNC_EST = 'S' THEN -1
+                    WHEN E.FUNC_EST = 'A' THEN 1
+                    ELSE 0
+                END
+            ) AS FE
+        FROM 
+            TOPCTRL T
+            INNER JOIN CTRLSALDO CS ON CS.CODI_CTR = T.CODI_CTR
+            INNER JOIN ESTOQUE E ON E.CODI_CTR = CS.CODI_CTR
+                AND E.TIPO_EST = '1'
+    )
+SELECT
+    UPPER('COMP_ENT#') || TO_CHAR(C.NUME_COM) AS NK_MOVIMENTO_ESTOQUE,
+    TO_CHAR(
+        CASE
+            WHEN TP.PDVE_TCT = 0 AND COALESCE(TP.ATED_TCT, 'N') = 'N'
+            THEN IC.CODI_EMP
+            WHEN TP.PDVE_TCT = 1 AND COALESCE(TP.ATED_TCT, 'N') = 'N'
+            THEN IC.EMPR_PED
+            ELSE CA.CODI_EMP
+        END
+    ) AS NK_EMPRESA,
+    TO_CHAR(IC.CODI_PSV) AS NK_PRODUTO,
+    (
+        CASE
+            WHEN C.PROP_PRO IS NULL THEN M.ESTA_MUN
+            ELSE M2.ESTA_MUN
+        END
+    ) AS ESTA_MUN,
+    CAST(IC.DATA_COM AS DATE) AS NK_TEMPO_DIA,
+    (TP.EF * TP.CENT_TCT) * COALESCE(IC.QTDE_ICO, 0) AS QTD_EST_FISICO,
+    (TP.CENT_TCT * TP.FE) * COALESCE(IC.QTDE_ICO, 0) AS QTD_EST_DISP
+FROM
+    ICOMPROVA IC
+    INNER JOIN COMPROVA C ON (C.CODI_EMP = IC.CODI_EMP AND C.NUME_COM = IC.NUME_COM)
+    LEFT JOIN TIPO_CTRL TP ON TP.CODI_TOP = C.CODI_TOP
+    LEFT JOIN CADEMP CA ON (CA.COD1_TRA = C.CODI_TRA AND COALESCE(TP.ATED_TCT, 'N') = 'S')
+    INNER JOIN TRANSAC T ON (T.CODI_TRA = C.CODI_TRA)
+    LEFT JOIN MUNICIPIO M ON (M.CODI_MUN = T.CODI_MUN)
+    LEFT JOIN PROPRIED PRO ON (C.PROP_PRO = PRO.PROP_PRO)
+    LEFT JOIN MUNICIPIO M2 ON (M2.CODI_MUN = PRO.CODI_MUN)
+WHERE
+      ((IC.CODI_EMP IS NOT NULL AND TP.PDVE_TCT = 0 AND COALESCE(TP.ATED_TCT, 'N') = 'N') OR
+       (IC.EMPR_PED IS NOT NULL AND TP.PDVE_TCT = 1 AND COALESCE(TP.ATED_TCT, 'N') = 'N') OR
+       (CA.CODI_EMP IS NOT NULL )) AND
+      ((C.SITU_COM &lt;&gt; '9') OR (C.SITU_COM IS NULL))
+</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>143</xloc>
+      <yloc>557</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>[DB] - ERP - Estoque - Desfazimento - NF Empresa</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>[DB] - Oracle - AgriBusiness ERP</connection>
+    <sql>WITH
+    TIPO_CTRL AS
+    (
+        SELECT DISTINCT
+            T.CODI_TOP,
+            T.CODI_CTR,
+            T.ATED_TCT,
+            DECODE(T.PDCO_TCT, 'S', -1, 'A', 1, 0) AS PDCO_TCT,
+            DECODE(T.NFTE_TCT, 'S', -1, 'A', 1, 0) AS NFTE_TCT,
+            DECODE(T.NFEM_TCT, 'S', -1, 'A', 1, 0) AS NFEM_TCT,
+            DECODE(T.CFIS_TCT, 'S', -1, 'A', 1, 0) AS CFIS_TCT,
+            DECODE(T.PDVE_TCT, 'S', -1, 'A', 1, 0) AS PDVE_TCT,
+            DECODE(T.CENT_TCT, 'S', -1, 'A', 1, 0) AS CENT_TCT,
+            DECODE(T.REQO_TCT, 'S', -1, 'A', 1, 'N', 0) AS REQO_TCT,
+            DECODE(T.SOLT_TCT, 'S', -1, 'A', 1, 'N', 0) AS SOLT_TCT,
+            DECODE(T.CAPT_TCT, 'S', -1, 'A', 1, 0) AS CAPT_TCT,
+            (
+                CASE
+                    WHEN CS.DESC_CTR = 'ESTOQUE FISICO' THEN 1
+                    ELSE 0
+                END
+            ) AS EF,
+            (
+                CASE
+                    WHEN E.FUNC_EST = 'S' THEN -1
+                    WHEN E.FUNC_EST = 'A' THEN 1
+                    ELSE 0
+                END
+            ) AS FE
+        FROM 
+            TOPCTRL T
+            INNER JOIN CTRLSALDO CS ON CS.CODI_CTR = T.CODI_CTR
+            INNER JOIN ESTOQUE E ON E.CODI_CTR = CS.CODI_CTR
+                AND E.TIPO_EST = '1'
+    )
+SELECT /* Desfazimento para Notas Empresa */
+    UPPER('DESFAZ#NF_EMP#') || TO_CHAR(DDZ.CODI_CDS) || '#' || TO_CHAR(DDZ.CTRL_DDZ) AS NK_MOVIMENTO_ESTOQUE,
+    TO_CHAR(
+        CASE
+            WHEN TP.PDVE_TCT IN (0, 1) AND COALESCE(TP.ATED_TCT, 'N') = 'N'
+            THEN IDD.CODI_EMP
+            ELSE CA.CODI_EMP
+        END
+    ) AS NK_EMPRESA,
+    TO_CHAR(IDD.CODI_PSV) AS NK_PRODUTO,
+    M.ESTA_MUN,
+    CAST(CDS.DATA_CDS AS DATE) AS NK_TEMPO_DIA,
+    (TP.EF * TP.CENT_TCT) * COALESCE(IDD.QTDE_IDD, 0) AS QTD_EST_FISICO,
+    (TP.CENT_TCT * TP.FE) * COALESCE(IDD.QTDE_IDD, 0) AS QTD_EST_DISP
+FROM
+    IDOCDESFAZ IDD
+    JOIN DOCDESFAZ DDZ ON (IDD.CTRL_DDZ = DDZ.CTRL_DDZ)
+                  AND (IDD.CODI_EMP = DDZ.CODI_EMP)
+                  AND (IDD.CODI_CDS = DDZ.CODI_CDS)
+    JOIN CABDESFAZ CDS ON (CDS.CODI_CDS = DDZ.CODI_CDS)
+                  AND (CDS.CODI_EMP = DDZ.CODI_EMP)
+    JOIN TIPO_CTRL TP ON TP.CODI_TOP = CDS.CODI_TOP
+    JOIN NOTA N ON (N.CODI_EMP = DDZ.CODI_EMP)
+           AND (N.NOTA_NOT = DDZ.NDOC_DDZ)
+           AND (N.SERI_NOT = DDZ.SERI_DDZ)
+           AND (N.CODI_TRA = DDZ.CODI_TRA)
+    JOIN INOTA INO ON (INO.NPRE_NOT = N.NPRE_NOT)
+              AND (INO.ITEM_INO = IDD.ITEM_IDD)
+    JOIN TRANSAC T ON (T.CODI_TRA = DDZ.CODI_TRA)
+    LEFT JOIN CADEMP CA ON (CA.COD1_TRA = CDS.CODI_TRA)
+                   AND (COALESCE(TP.ATED_TCT, 'N') = 'S')
+    LEFT JOIN MUNICIPIO M ON (M.CODI_MUN = T.CODI_MUN)
+WHERE
+    (DDZ.TIPO_DDZ = 'NE') AND
+    (
+        (IDD.CODI_EMP IS NOT NULL AND TP.PDVE_TCT IN (0, 1) AND COALESCE(TP.ATED_TCT, 'N') = 'N') OR
+        CA.CODI_EMP IS NOT NULL
+    )</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>143</xloc>
+      <yloc>491</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>[DB] - ERP - Estoque - Desfazimento - NF de Terceiros</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>[DB] - Oracle - AgriBusiness ERP</connection>
+    <sql>WITH
+    TIPO_CTRL AS
+    (
+        SELECT DISTINCT
+            T.CODI_TOP,
+            T.CODI_CTR,
+            T.ATED_TCT,
+            DECODE(T.PDCO_TCT, 'S', -1, 'A', 1, 0) AS PDCO_TCT,
+            DECODE(T.NFTE_TCT, 'S', -1, 'A', 1, 0) AS NFTE_TCT,
+            DECODE(T.NFEM_TCT, 'S', -1, 'A', 1, 0) AS NFEM_TCT,
+            DECODE(T.CFIS_TCT, 'S', -1, 'A', 1, 0) AS CFIS_TCT,
+            DECODE(T.PDVE_TCT, 'S', -1, 'A', 1, 0) AS PDVE_TCT,
+            DECODE(T.CENT_TCT, 'S', -1, 'A', 1, 0) AS CENT_TCT,
+            DECODE(T.REQO_TCT, 'S', -1, 'A', 1, 0) AS REQO_TCT,
+            DECODE(T.SOLT_TCT, 'S', -1, 'A', 1, 0) AS SOLT_TCT,
+            DECODE(T.CAPT_TCT, 'S', -1, 'A', 1, 0) AS CAPT_TCT,
+            (
+                CASE
+                    WHEN CS.DESC_CTR = 'ESTOQUE FISICO' THEN 1
+                    ELSE 0
+                END
+            ) AS EF,
+            (
+                CASE
+                    WHEN E.FUNC_EST = 'S' THEN -1
+                    WHEN E.FUNC_EST = 'A' THEN 1
+                    ELSE 0
+                END
+            ) AS FE
+        FROM 
+            TOPCTRL T
+            INNER JOIN CTRLSALDO CS ON CS.CODI_CTR = T.CODI_CTR
+            INNER JOIN ESTOQUE E ON E.CODI_CTR = CS.CODI_CTR
+                AND E.TIPO_EST = '1'
+    )
+SELECT /* Desfazimento para Notas de Terceiros */
+    UPPER('DESFAZ#NF_TER#') || TO_CHAR(DDZ.CODI_CDS) || '#' || TO_CHAR(DDZ.CTRL_DDZ) AS NK_MOVIMENTO_ESTOQUE,
+    TO_CHAR(
+        CASE
+            WHEN TP.PDVE_TCT IN (0, 1) AND COALESCE(TP.ATED_TCT, 'N') = 'N'
+            THEN IDD.CODI_EMP
+            ELSE CA.CODI_EMP
+        END
+    ) AS NK_EMPRESA,
+    TO_CHAR(IDD.CODI_PSV) AS NK_PRODUTO,
+    M.ESTA_MUN,
+    CAST(CDS.DATA_CDS AS DATE) AS NK_TEMPO_DIA,
+    (TP.EF * TP.CENT_TCT) * COALESCE(IDD.QTDE_IDD, 0) AS QTD_EST_FISICO,
+    (TP.CENT_TCT * TP.FE) * COALESCE(IDD.QTDE_IDD, 0) AS QTD_EST_DISP
+FROM
+    IDOCDESFAZ IDD
+    JOIN DOCDESFAZ DDZ ON (IDD.CTRL_DDZ = DDZ.CTRL_DDZ)
+        AND (IDD.CODI_EMP = DDZ.CODI_EMP)
+        AND (IDD.CODI_CDS = DDZ.CODI_CDS)
+    JOIN CABDESFAZ CDS ON (CDS.CODI_CDS = DDZ.CODI_CDS)
+        AND (CDS.CODI_EMP = DDZ.CODI_EMP)
+    JOIN TIPO_CTRL TP ON TP.CODI_TOP = CDS.CODI_TOP
+    JOIN NFENTRA NFE ON (NFE.CODI_EMP = DDZ.CODI_EMP)
+        AND (NFE.CODI_TRA = DDZ.CODI_TRA)
+        AND (NFE.NUME_NFE = DDZ.NDOC_DDZ)
+        AND (NFE.SERI_NFE = DDZ.SERI_DDZ)
+    JOIN INFENTRA INFE ON (INFE.CODI_EMP = NFE.CODI_EMP)
+        AND (INFE.CODI_TRA = NFE.CODI_TRA)
+        AND (INFE.NUME_NFE = NFE.NUME_NFE)
+        AND (INFE.SERI_NFE = NFE.SERI_NFE)
+        AND (INFE.CODI_PSV = IDD.CODI_PSV)
+        AND (INFE.ITEM_INF = IDD.ITEM_IDD)
+    JOIN TRANSAC T ON (T.CODI_TRA = DDZ.CODI_TRA)
+    LEFT JOIN CADEMP CA ON (CA.COD1_TRA = CDS.CODI_TRA)
+        AND (COALESCE(TP.ATED_TCT, 'N') = 'S')
+    LEFT JOIN MUNICIPIO M ON (M.CODI_MUN = T.CODI_MUN)
+WHERE
+    (DDZ.TIPO_DDZ = 'NT') AND
+    (
+        (IDD.CODI_EMP IS NOT NULL AND TP.PDVE_TCT IN (0, 1) AND COALESCE(TP.ATED_TCT, 'N') = 'N')
+        OR CA.CODI_EMP IS NOT NULL
+    )</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>143</xloc>
+      <yloc>425</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>[DB] - ERP - Estoque - NF Empresa - Com Pedido</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>[DB] - Oracle - AgriBusiness ERP</connection>
+    <sql>WITH
+    TIPO_CTRL AS
+    (
+        SELECT DISTINCT
+            T.CODI_TOP,
+            T.CODI_CTR,
+            T.ATED_TCT,
+            T.PDCO_TCT AS PDCO_TCT,
+            DECODE(T.NFTE_TCT, 'S', -1, 'A', 1, 0) AS NFTE_TCT,
+            DECODE(T.NFEM_TCT, 'S', -1, 'A', 1, 0) AS NFEM_TCT,
+            DECODE(T.CFIS_TCT, 'S', -1, 'A', 1, 0) AS CFIS_TCT,
+            DECODE(T.PDVE_TCT, 'S', -1, 'A', 1, 0) AS PDVE_TCT,
+            DECODE(T.CENT_TCT, 'S', -1, 'A', 1, 0) AS CENT_TCT,
+            DECODE(T.REQO_TCT, 'S', -1, 'A', 1, 0) AS REQO_TCT,
+            DECODE(T.SOLT_TCT, 'S', -1, 'A', 1, 0) AS SOLT_TCT,
+            DECODE(T.CAPT_TCT, 'S', -1, 'A', 1, 0) AS CAPT_TCT,
+            (
+                CASE
+                    WHEN CS.DESC_CTR = 'ESTOQUE FISICO' THEN 1
+                    ELSE 0
+                END
+            ) AS EF,
+            (
+                CASE
+                    WHEN E.FUNC_EST = 'S' THEN -1
+                    WHEN E.FUNC_EST = 'A' THEN 1
+                    ELSE 0
+                END
+            ) AS FE
+        FROM 
+            TOPCTRL T
+            INNER JOIN CTRLSALDO CS ON CS.CODI_CTR = T.CODI_CTR
+            INNER JOIN ESTOQUE E ON E.CODI_CTR = CS.CODI_CTR
+                AND E.TIPO_EST = '1'
+    )
+SELECT /* NOTA FISCAL EMITIDA PELA EMPRESA - COM PEDIDO */
+    UPPER('NF_EMP#COMPEDIDO#') || TO_CHAR(NT.NPRE_NOT) AS NK_MOVIMENTO_ESTOQUE,
+    TO_CHAR(
+        CAST(
+            CASE
+                WHEN COALESCE(TP.ATED_TCT, 'N') = 'N' AND (D.CTRL_DCP IS NULL OR TP.CODI_CTR &lt;&gt; 1)
+                THEN IPED.LRET_IPE
+                ELSE CA.CODI_EMP
+            END AS INTEGER
+        )
+    ) AS NK_EMPRESA,
+    TO_CHAR(INO.CODI_PSV) AS NK_PRODUTO,
+    (
+        CASE
+            WHEN NT.PROP_PRO IS NULL
+            THEN M.ESTA_MUN
+            ELSE M2.ESTA_MUN
+        END
+    ) AS ESTA_MUN,
+    CAST(INO.DEMI_NOT AS DATE) AS NK_TEMPO_DIA,
+    (TP.EF * TP.NFEM_TCT) * COALESCE(INO.QTDE_INO, 0) AS QTD_EST_FISICO,
+    (TP.NFEM_TCT * TP.FE) * COALESCE(INO.QTDE_INO, 0) AS QTD_EST_DISP
+FROM
+    INOTA INO
+    INNER JOIN PRODSERV PS ON PS.CODI_PSV = INO.CODI_PSV
+    INNER JOIN NOTA NT       ON (INO.NPRE_NOT = NT.NPRE_NOT)
+    INNER JOIN TRANSAC T     ON (T.CODI_TRA = NT.CODI_TRA)
+    INNER JOIN IPEDIDO IPED  ON (IPED.CODI_EMP = INO.EMPR_PED AND IPED.PEDI_PED = INO.PEDI_PED AND IPED.SERI_PED = INO.SERI_PED AND IPED.CODI_PSV = INO.CODI_PSV)
+    LEFT JOIN TIPO_CTRL TP ON TP.CODI_TOP = INO.CODI_TOP
+    LEFT JOIN CADEMP CA      ON (CA.COD1_TRA = NT.CODI_TRA AND COALESCE(TP.ATED_TCT, 'N') = 'S')
+    LEFT JOIN MUNICIPIO M    ON (M.CODI_MUN = T.CODI_MUN)
+    LEFT JOIN PROPRIED PRO   ON (NT.PROP_PRO = PRO.PROP_PRO)
+    LEFT JOIN MUNICIPIO M2   ON (M2.CODI_MUN = PRO.CODI_MUN)
+    LEFT JOIN DOCSCAPTACAO D ON (NT.NPRE_NOT = D.NPRE_NOT)
+WHERE
+    PS.PRSE_PSV &lt;&gt; 'S' AND
+    ((IPED.LRET_IPE IS NOT NULL AND COALESCE(TP.ATED_TCT, 'N') = 'N' AND (D.CTRL_DCP IS NULL OR TP.CODI_CTR &lt;&gt; 1)) OR
+    (CA.CODI_EMP IS NOT NULL )) AND
+    (NT.SITU_NOT = '5')</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>143</xloc>
+      <yloc>161</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>[DB] - ERP - Estoque - NF Empresa - Sem Pedido</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>[DB] - Oracle - AgriBusiness ERP</connection>
+    <sql>WITH
+    TIPO_CTRL AS
+    (
+        SELECT DISTINCT
+            T.CODI_TOP,
+            T.CODI_CTR,
+            T.ATED_TCT,
+            T.PDCO_TCT AS PDCO_TCT,
+            DECODE(T.NFTE_TCT, 'S', -1, 'A', 1, 0) AS NFTE_TCT,
+            DECODE(T.NFEM_TCT, 'S', -1, 'A', 1, 0) AS NFEM_TCT,
+            DECODE(T.CFIS_TCT, 'S', -1, 'A', 1, 0) AS CFIS_TCT,
+            DECODE(T.PDVE_TCT, 'S', -1, 'A', 1, 0) AS PDVE_TCT,
+            DECODE(T.CENT_TCT, 'S', -1, 'A', 1, 0) AS CENT_TCT,
+            DECODE(T.REQO_TCT, 'S', -1, 'A', 1, 0) AS REQO_TCT,
+            DECODE(T.SOLT_TCT, 'S', -1, 'A', 1, 0) AS SOLT_TCT,
+            DECODE(T.CAPT_TCT, 'S', -1, 'A', 1, 0) AS CAPT_TCT,
+            (
+                CASE
+                    WHEN CS.DESC_CTR = 'ESTOQUE FISICO' THEN 1
+                    ELSE 0
+                END
+            ) AS EF,
+            (
+                CASE
+                    WHEN E.FUNC_EST = 'S' THEN -1
+                    WHEN E.FUNC_EST = 'A' THEN 1
+                    ELSE 0
+                END
+            ) AS FE
+        FROM 
+            TOPCTRL T
+            INNER JOIN CTRLSALDO CS ON CS.CODI_CTR = T.CODI_CTR
+            INNER JOIN ESTOQUE E ON E.CODI_CTR = CS.CODI_CTR
+                AND E.TIPO_EST = '1'
+    )
+SELECT /* Nota Fiscal emitida pela empresa - Sem pedido */
+    UPPER('NF_EMP#SEMPEDIDO#') || TO_CHAR(NT.NPRE_NOT) AS NK_MOVIMENTO_ESTOQUE,
+    TO_CHAR(
+        CAST(
+            CASE
+                WHEN (IPED.LRET_IPE IS NULL OR (D.CTRL_DCP IS NOT NULL AND TP.CODI_CTR = 1)) AND TP.PDVE_TCT = 0 AND COALESCE(TP.ATED_TCT, 'N') = 'N'
+                THEN NT.CODI_EMP
+                WHEN (IPED.LRET_IPE IS NULL OR (D.CTRL_DCP IS NOT NULL AND TP.CODI_CTR = 1)) AND TP.PDVE_TCT = 1 AND COALESCE(TP.ATED_TCT, 'N') = 'N'
+                THEN INO.EMPR_PED
+                ELSE CA.CODI_EMP
+            END AS INTEGER
+        )
+    ) AS NK_EMPRESA,
+    TO_CHAR(INO.CODI_PSV) AS NK_PRODUTO,
+    (
+        CASE
+            WHEN NT.PROP_PRO IS NULL
+            THEN M.ESTA_MUN
+            ELSE M2.ESTA_MUN
+        END
+    ) AS ESTA_MUN,
+    CAST(INO.DEMI_NOT AS DATE) AS NK_TEMPO_DIA,
+    (TP.EF * TP.NFEM_TCT) * COALESCE(INO.QTDE_INO, 0) AS QTD_EST_FISICO,
+    (TP.NFEM_TCT * TP.FE) * COALESCE(INO.QTDE_INO, 0) AS QTD_EST_DISP
+FROM
+    INOTA INO
+    INNER JOIN NOTA NT       ON (INO.NPRE_NOT = NT.NPRE_NOT)
+    INNER JOIN TRANSAC T     ON (T.CODI_TRA = NT.CODI_TRA)
+    LEFT JOIN TIPO_CTRL TP ON TP.CODI_TOP = INO.CODI_TOP
+    LEFT JOIN CADEMP CA      ON (CA.COD1_TRA = NT.CODI_TRA AND COALESCE(TP.ATED_TCT, 'N') = 'S')
+    LEFT JOIN MUNICIPIO M    ON (M.CODI_MUN = T.CODI_MUN)
+    LEFT JOIN PROPRIED PRO   ON (NT.PROP_PRO = PRO.PROP_PRO)
+    LEFT JOIN MUNICIPIO M2   ON (M2.CODI_MUN = PRO.CODI_MUN)
+    LEFT JOIN IPEDIDO IPED   ON (IPED.CODI_EMP = INO.EMPR_PED AND IPED.PEDI_PED = INO.PEDI_PED AND IPED.SERI_PED = INO.SERI_PED AND IPED.CODI_PSV = INO.CODI_PSV)
+    LEFT JOIN DOCSCAPTACAO D ON (NT.NPRE_NOT = D.NPRE_NOT)
+WHERE
+    ((NT.CODI_EMP IS NOT NULL AND (IPED.LRET_IPE IS NULL OR (D.CTRL_DCP IS NOT NULL AND TP.CODI_CTR = 1)) AND TP.PDVE_TCT = 0 AND COALESCE(TP.ATED_TCT, 'N') = 'N') OR
+    (INO.EMPR_PED IS NOT NULL AND (IPED.LRET_IPE IS NULL OR (D.CTRL_DCP IS NOT NULL AND TP.CODI_CTR = 1)) AND TP.PDVE_TCT = 1 AND COALESCE(TP.ATED_TCT, 'N') = 'N') OR
+    (CA.CODI_EMP IS NOT NULL )) AND
+    (NT.SITU_NOT = '5')</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>143</xloc>
+      <yloc>227</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>[DB] - ERP - Estoque - NF Terceiro</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>[DB] - Oracle - AgriBusiness ERP</connection>
+    <sql>WITH
+    TIPO_CTRL AS
+    (
+        SELECT DISTINCT
+            T.CODI_TOP,
+            T.CODI_CTR,
+            T.ATED_TCT,
+            T.PDCO_TCT AS PDCO_TCT,
+            DECODE(T.NFTE_TCT, 'S', -1, 'A', 1, 0) AS NFTE_TCT,
+            DECODE(T.NFEM_TCT, 'S', -1, 'A', 1, 0) AS NFEM_TCT,
+            DECODE(T.CFIS_TCT, 'S', -1, 'A', 1, 0) AS CFIS_TCT,
+            DECODE(T.PDVE_TCT, 'S', -1, 'A', 1, 0) AS PDVE_TCT,
+            DECODE(T.CENT_TCT, 'S', -1, 'A', 1, 0) AS CENT_TCT,
+            DECODE(T.REQO_TCT, 'S', -1, 'A', 1, 0) AS REQO_TCT,
+            DECODE(T.SOLT_TCT, 'S', -1, 'A', 1, 0) AS SOLT_TCT,
+            DECODE(T.CAPT_TCT, 'S', -1, 'A', 1, 0) AS CAPT_TCT,
+            (
+                CASE
+                    WHEN CS.DESC_CTR = 'ESTOQUE FISICO' THEN 1
+                    ELSE 0
+                END
+            ) AS EF,
+            (
+                CASE
+                    WHEN E.FUNC_EST = 'S' THEN -1
+                    WHEN E.FUNC_EST = 'A' THEN 1
+                    ELSE 0
+                END
+            ) AS FE
+        FROM 
+            TOPCTRL T
+            INNER JOIN CTRLSALDO CS ON CS.CODI_CTR = T.CODI_CTR
+            INNER JOIN ESTOQUE E ON E.CODI_CTR = CS.CODI_CTR
+                AND E.TIPO_EST = '1'
+    )
+SELECT
+    UPPER('NF_TER') || '#' || TO_CHAR(NFE.NUME_NFE) AS NK_MOVIMENTO_ESTOQUE,
+    TO_CHAR(
+        CAST(
+            CASE TP.PDCO_TCT
+                WHEN 'N' THEN NFE.CODI_EMP
+                WHEN 'A' THEN INF.EMPR_PEC
+                ELSE CA.CODI_EMP
+            END AS INTEGER
+        )
+    ) AS NK_EMPRESA,
+    TO_CHAR(INF.CODI_PSV) AS NK_PRODUTO,
+    (
+        CASE
+            WHEN NFE.PROP_PRO IS NULL THEN M.ESTA_MUN
+            ELSE M2.ESTA_MUN
+        END
+    ) AS ESTA_MUN,
+    CAST(INF.DREC_NFE AS DATE) AS NK_TEMPO_DIA,
+    (TP.EF * TP.NFTE_TCT) * (COALESCE(INF.QUAN_INF, 0)) AS QTD_EST_FISICO,
+    (TP.NFTE_TCT * TP.FE) * (COALESCE(INF.QUAN_INF, 0)) AS QTD_EST_DISP
+FROM INFENTRA INF
+INNER JOIN NFENTRA NFE ON (INF.CTRL_NFE = NFE.CTRL_NFE) AND
+                          (INF.CODI_EMP = NFE.CODI_EMP) AND
+                          (INF.CODI_TRA = NFE.CODI_TRA) AND
+                          (INF.NUME_NFE = NFE.NUME_NFE) AND
+                          (INF.SERI_NFE = NFE.SERI_NFE)
+LEFT JOIN TIPO_CTRL TP ON TP.CODI_TOP = INF.CODI_TOP
+LEFT JOIN CADEMP CA ON (CA.COD1_TRA = NFE.CODI_TRA AND COALESCE(TP.ATED_TCT, 'N') = 'S')
+INNER JOIN TRANSAC T ON (T.CODI_TRA = NFE.CODI_TRA)
+LEFT JOIN MUNICIPIO M ON (M.CODI_MUN = T.CODI_MUN)
+LEFT JOIN PROPRIED PRO ON (NFE.PROP_PRO = PRO.PROP_PRO)
+LEFT JOIN MUNICIPIO M2 ON (M2.CODI_MUN = PRO.CODI_MUN)
+WHERE
+  ((NFE.CODI_EMP IS NOT NULL AND TP.PDCO_TCT = 'N' AND COALESCE(TP.ATED_TCT, 'N') = 'N') OR
+   (INF.EMPR_PEC IS NOT NULL AND TP.PDCO_TCT = 'A' AND COALESCE(TP.ATED_TCT, 'N') = 'N') OR
+   (CA.CODI_EMP IS NOT NULL))
+</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>143</xloc>
+      <yloc>95</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>[DB] - ERP - Estoque - Ordem de Producao</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>[DB] - Oracle - AgriBusiness ERP</connection>
+    <sql>WITH
+    EST_FIS AS
+    (
+        SELECT DISTINCT
+            CS.CODI_CTR,
+            DECODE(CS.DESC_CTR, 'ESTOQUE FISICO', 1, 0) AS EF,
+            DECODE(E.TIPO_EST, '1', 1, 0) AS ED
+        FROM
+            CTRLSALDO CS
+            LEFT OUTER JOIN ESTOQUE E ON E.CODI_CTR = CS.CODI_CTR
+                AND E.TIPO_EST = '1'
+    )
+SELECT /* Ordem de produção */
+    UPPER('ORD_PROD#') || TO_CHAR(AO.CODI_ACO) AS NK_MOVIMENTO_ESTOQUE,
+    TO_CHAR(O.CODI_EMP) AS NK_EMPRESA,
+    TO_CHAR(IO.CODI_PSV) AS NK_PRODUTO,
+    'ZZ' AS ESTA_MUN,
+    CAST(AO.DINI_ACO AS DATE) AS NK_TEMPO_DIA,
+    (EF.EF * DECODE(OC.ACAO_OCT, 'S', -1, 'A', 1, 0)) * COALESCE(IO.QUTI_PRO, 0) AS QTD_EST_FISICO,
+    (EF.ED * DECODE(OC.ACAO_OCT, 'S', -1, 'A', 1, 0)) * COALESCE(IO.QUTI_PRO, 0) AS QTD_EST_DISP
+FROM
+    IORDEM         IO
+    LEFT JOIN   ACOMPANHAORDEM AO ON (AO.CODI_ACO = IO.CODI_ACO)
+    LEFT JOIN   ORDEMPRODUCAO  O  ON (O.CODI_ORD  = AO.CODI_ORD)
+    LEFT JOIN   PRODSERV       PS ON (PS.CODI_PSV = IO.CODI_PSV)
+    LEFT JOIN   ETAPA          E  ON (E.CODI_ETA  = AO.CODI_ETA)
+    LEFT JOIN ORDEMCTRL OC ON OC.CODI_ETA = E.CODI_ETA
+    LEFT OUTER JOIN EST_FIS EF ON EF.CODI_CTR = OC.CODI_CTR
+WHERE
+    (AO.STAT_ACO IN ('I','F'))
+    AND   E.INSU_ETA IN ('A', 'E', 'P', 'R', 'S')
+    AND   (OC.ACAO_OCT IS NOT NULL)
+    AND   (IO.APON_PRO = 'S')
+
+UNION ALL
+
+SELECT /* ORDEM DE PRODUÇAO - ETAPA DA QUALIDADE */
+    UPPER('ORD_PROD#') || TO_CHAR(AO.CODI_ACO) AS NK_MOVIMENTO_ESTOQUE,
+    TO_CHAR(O.CODI_EMP) AS NK_EMPRESA,
+    TO_CHAR(IO.CODI_PSV) AS NK_PRODUTO,
+    'ZZ' AS ESTA_MUN,
+    CAST(AO.DINI_ACO AS DATE) AS NK_TEMPO_DIA,
+    (EF.EF * DECODE(OC.ACAO_OCQ, 'S', -1, 'A', 1, 0)) * COALESCE(IO.QUTI_PRO, 0) AS QTD_EST_FISICO,
+    (EF.ED * DECODE(OC.ACAO_OCQ, 'S', -1, 'A', 1, 0)) * COALESCE(IO.QUTI_PRO, 0) AS QTD_EST_DISP
+FROM
+    IORDEM         IO
+    LEFT JOIN   ACOMPANHAORDEM AO ON (AO.CODI_ACO = IO.CODI_ACO)
+    LEFT JOIN   ORDEMPRODUCAO  O  ON (O.CODI_ORD  = AO.CODI_ORD)
+    LEFT JOIN   PRODSERV       PS ON (PS.CODI_PSV = IO.CODI_PSV)
+    LEFT JOIN   ETAPA          E  ON (E.CODI_ETA  = AO.CODI_ETA)
+    LEFT JOIN ORDEMCTRLQ OC ON OC.CODI_ETA = E.CODI_ETA
+    LEFT OUTER JOIN EST_FIS EF ON EF.CODI_CTR = OC.CODI_CTR
+WHERE
+    (AO.STAT_ACO IN ('I','F'))
+    AND   E.INSU_ETA  = 'Q'
+    AND   OC.ACAO_OCQ IS NOT NULL
+    AND   IO.APON_PRO = 'S'
+    AND   ((O.QUAP_ORD = 'S' AND OC.APRO_OCQ = 'S') OR
+    (O.QUAP_ORD = 'N' AND OC.APRO_OCQ = 'N'))</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>143</xloc>
+      <yloc>689</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>[DB] - ERP - Estoque - Pedido de Compra</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>[DB] - Oracle - AgriBusiness ERP</connection>
+    <sql>WITH
+    TIPO_CTRL AS
+    (
+        SELECT DISTINCT
+            T.CODI_TOP,
+            T.CODI_CTR,
+            T.ATED_TCT,
+            DECODE(T.PDCO_TCT, 'S', -1, 'A', 1, 0) AS PDCO_TCT,
+            DECODE(T.NFTE_TCT, 'S', -1, 'A', 1, 0) AS NFTE_TCT,
+            DECODE(T.NFEM_TCT, 'S', -1, 'A', 1, 0) AS NFEM_TCT,
+            DECODE(T.CFIS_TCT, 'S', -1, 'A', 1, 0) AS CFIS_TCT,
+            DECODE(T.PDVE_TCT, 'S', -1, 'A', 1, 0) AS PDVE_TCT,
+            DECODE(T.CENT_TCT, 'S', -1, 'A', 1, 0) AS CENT_TCT,
+            DECODE(T.REQO_TCT, 'S', -1, 'A', 1, 0) AS REQO_TCT,
+            DECODE(T.SOLT_TCT, 'S', -1, 'A', 1, 0) AS SOLT_TCT,
+            DECODE(T.CAPT_TCT, 'S', -1, 'A', 1, 0) AS CAPT_TCT,
+            (
+                CASE
+                    WHEN CS.DESC_CTR = 'ESTOQUE FISICO' THEN 1
+                    ELSE 0
+                END
+            ) AS EF,
+            (
+                CASE
+                    WHEN E.FUNC_EST = 'S' THEN -1
+                    WHEN E.FUNC_EST = 'A' THEN 1
+                    ELSE 0
+                END
+            ) AS FE
+        FROM 
+            TOPCTRL T
+            INNER JOIN CTRLSALDO CS ON CS.CODI_CTR = T.CODI_CTR
+            INNER JOIN ESTOQUE E ON E.CODI_CTR = CS.CODI_CTR
+                AND E.TIPO_EST = '1'
+    )
+SELECT /* Pedido de Compra */
+    UPPER('PED_COMP#') || TO_CHAR(PE.NUME_PEC) AS NK_MOVIMENTO_ESTOQUE,
+    TO_CHAR(CAST(PE.CODI_EMP AS INTEGER)) AS NK_EMPRESA,
+    TO_CHAR(IPE.CODI_PSV) AS NK_PRODUTO,
+    (
+        CASE
+            WHEN PE.PROP_PRO IS NULL THEN M.ESTA_MUN
+            ELSE M2.ESTA_MUN
+        END
+    ) AS ESTA_MUN,
+    IPE.DATA_PEC AS NK_TEMPO_DIA,
+    (TP.EF * TP.PDCO_TCT) * (COALESCE(IPE.QTDP_IPC, 0) - COALESCE(IPE.QPER_IPC,0)) AS QTD_EST_FISICO,
+    (TP.PDCO_TCT * TP.FE) * (COALESCE(IPE.QTDP_IPC, 0) - COALESCE(IPE.QPER_IPC,0)) AS QTD_EST_DISP
+FROM
+    IPEDCOM IPE
+    INNER JOIN PEDCOM PE ON (PE.CODI_EMP = IPE.CODI_EMP AND PE.NUME_PEC = IPE.NUME_PEC AND PE.TPPC_PEC &lt;&gt; 'C')
+    LEFT OUTER JOIN TIPO_CTRL TP ON TP.CODI_TOP = PE.CODI_TOP
+    INNER JOIN TRANSAC T ON (T.CODI_TRA = PE.CODI_TRA)
+    LEFT JOIN MUNICIPIO M ON (M.CODI_MUN = T.CODI_MUN)
+    LEFT JOIN PROPRIED PRO ON (PE.PROP_PRO = PRO.PROP_PRO)
+    LEFT JOIN MUNICIPIO M2 ON (M2.CODI_MUN = PRO.CODI_MUN)
+WHERE
+    (PE.STAT_PEC &lt;&gt; 'C') OR (PE.STAT_PEC IS NULL)</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>143</xloc>
+      <yloc>359</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>[DB] - ERP - Estoque - Pedido de Venda</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>[DB] - Oracle - AgriBusiness ERP</connection>
+    <sql>WITH
+    TIPO_CTRL AS
+    (
+        SELECT DISTINCT
+            T.CODI_TOP,
+            T.CODI_CTR,
+            T.ATED_TCT,
+            T.PDCO_TCT AS PDCO_TCT,
+            DECODE(T.NFTE_TCT, 'S', -1, 'A', 1, 0) AS NFTE_TCT,
+            DECODE(T.NFEM_TCT, 'S', -1, 'A', 1, 0) AS NFEM_TCT,
+            DECODE(T.CFIS_TCT, 'S', -1, 'A', 1, 0) AS CFIS_TCT,
+            DECODE(T.PDVE_TCT, 'S', -1, 'A', 1, 0) AS PDVE_TCT,
+            DECODE(T.CENT_TCT, 'S', -1, 'A', 1, 0) AS CENT_TCT,
+            DECODE(T.REQO_TCT, 'S', -1, 'A', 1, 0) AS REQO_TCT,
+            DECODE(T.SOLT_TCT, 'S', -1, 'A', 1, 0) AS SOLT_TCT,
+            DECODE(T.CAPT_TCT, 'S', -1, 'A', 1, 0) AS CAPT_TCT,
+            (
+                CASE
+                    WHEN CS.DESC_CTR = 'ESTOQUE FISICO' THEN 1
+                    ELSE 0
+                END
+            ) AS EF,
+            (
+                CASE
+                    WHEN E.FUNC_EST = 'S' THEN -1
+                    WHEN E.FUNC_EST = 'A' THEN 1
+                    ELSE 0
+                END
+            ) AS FE
+        FROM 
+            TOPCTRL T
+            INNER JOIN CTRLSALDO CS ON CS.CODI_CTR = T.CODI_CTR
+            INNER JOIN ESTOQUE E ON E.CODI_CTR = CS.CODI_CTR
+                AND E.TIPO_EST = '1'
+    )
+SELECT /* MOV PEDIDO */
+    UPPER('PED_VEN#') || TO_CHAR(IPE.PEDI_PED) AS NK_MOVIMENTO_ESTOQUE,
+    TO_CHAR(CAST(PE.CODI_EMP AS INTEGER)) AS NK_EMPRESA,
+    TO_CHAR(IPE.CODI_PSV) AS NK_PRODUTO,
+    (
+        CASE
+            WHEN PE.PROP_PRO IS NULL THEN M.ESTA_MUN
+            ELSE M2.ESTA_MUN
+        END
+    ) AS ESTA_MUN,
+    CAST(COALESCE(IPE.DEMI_PED, PE.DEMI_PED) AS DATE) AS NK_TEMPO_DIA,
+    (TP.EF * TP.PDVE_TCT) * (COALESCE(IPE.QTDE_IPE,0) - COALESCE(IPE.QPER_IPE,0)) AS QTD_EST_FISICO,
+    (TP.PDVE_TCT * TP.FE) * (COALESCE(IPE.QTDE_IPE,0) - COALESCE(IPE.QPER_IPE,0)) AS QTD_EST_DISP
+FROM
+    IPEDIDO IPE
+    INNER JOIN PEDIDO PE ON (PE.CODI_EMP = IPE.CODI_EMP AND
+        PE.PEDI_PED = IPE.PEDI_PED AND
+        PE.SERI_PED = IPE.SERI_PED)
+    INNER JOIN PRODSERV PS ON PS.CODI_PSV = IPE.CODI_PSV
+    INNER JOIN TRANSAC T ON (T.CODI_TRA = PE.CODI_TRA)
+    LEFT JOIN TIPO_CTRL TP ON TP.CODI_TOP = COALESCE(IPE.CODI_TOP,PE.CODI_TOP)
+    LEFT JOIN MUNICIPIO M ON (M.CODI_MUN = T.CODI_MUN)
+    LEFT JOIN PROPRIED PRO ON (PE.PROP_PRO = PRO.PROP_PRO)
+    LEFT JOIN MUNICIPIO M2 ON (M2.CODI_MUN = PRO.CODI_MUN)
+WHERE
+    PS.PRSE_PSV &lt;&gt; UPPER('S') AND
+    (PE.TFAT_PED IN ('1','3')) AND
+    ((PE.SITU_PED &lt;&gt; '9') OR (PE.SITU_PED IS NULL))</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>143</xloc>
+      <yloc>293</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>[DB] - ERP - Estoque - Solicitacao de Transferencia</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>[DB] - Oracle - AgriBusiness ERP</connection>
+    <sql>WITH
+    TIPO_CTRL AS
+    (
+        SELECT DISTINCT
+            T.CODI_TOP,
+            T.CODI_CTR,
+            T.ATED_TCT,
+            DECODE(T.PDCO_TCT, 'S', -1, 'A', 1, 0) AS PDCO_TCT,
+            DECODE(T.NFTE_TCT, 'S', -1, 'A', 1, 0) AS NFTE_TCT,
+            DECODE(T.NFEM_TCT, 'S', -1, 'A', 1, 0) AS NFEM_TCT,
+            DECODE(T.CFIS_TCT, 'S', -1, 'A', 1, 0) AS CFIS_TCT,
+            DECODE(T.PDVE_TCT, 'S', -1, 'A', 1, 0) AS PDVE_TCT,
+            DECODE(T.CENT_TCT, 'S', -1, 'A', 1, 0) AS CENT_TCT,
+            DECODE(T.REQO_TCT, 'S', -1, 'A', 1, 'N', 0) AS REQO_TCT,
+            DECODE(T.SOLT_TCT, 'S', -1, 'A', 1, 'N', 0) AS SOLT_TCT,
+            DECODE(T.CAPT_TCT, 'S', -1, 'A', 1, 0) AS CAPT_TCT,
+            (
+                CASE
+                    WHEN CS.DESC_CTR = 'ESTOQUE FISICO' THEN 1
+                    ELSE 0
+                END
+            ) AS EF,
+            (
+                CASE
+                    WHEN E.FUNC_EST = 'S' THEN -1
+                    WHEN E.FUNC_EST = 'A' THEN 1
+                    ELSE 0
+                END
+            ) AS FE
+        FROM 
+            TOPCTRL T
+            INNER JOIN CTRLSALDO CS ON CS.CODI_CTR = T.CODI_CTR
+            INNER JOIN ESTOQUE E ON E.CODI_CTR = CS.CODI_CTR
+                AND E.TIPO_EST = '1'
+    )
+SELECT /* Transferencia - Origem */
+    UPPER('SOL_TRANSF#ORIG#') || TO_CHAR(ST.CTRL_SLT) AS NK_MOVIMENTO_ESTOQUE,
+    TO_CHAR(P.CODI_EMP) AS NK_EMPRESA,
+    TO_CHAR(ST.CODI_PSV) AS NK_PRODUTO,
+	'ZZ' AS ESTA_MUN,
+    CAST(ST.DATA_SLT AS DATE) AS NK_TEMPO_DIA,
+    (TP.EF * TP.SOLT_TCT) * COALESCE(ST.QTDE_SLT, 0) AS QTD_EST_FISICO,
+    (TP.SOLT_TCT * TP.FE) * COALESCE(ST.QTDE_SLT, 0) AS QTD_EST_DISP
+FROM
+    SOLTRANSF ST
+    INNER JOIN PARAMGER P ON ST.EORI_EMP = P.CODI_EMP
+    INNER JOIN TIPO_CTRL TP ON TP.CODI_TOP = P.TOTO_PAR
+
+UNION ALL
+
+SELECT /* Transferencia - Destino */
+    UPPER('SOL_TRANSF#DEST#') || TO_CHAR(ST.CTRL_SLT) AS NK_MOVIMENTO_ESTOQUE,
+    TO_CHAR(P.CODI_EMP) AS NK_EMPRESA,
+    TO_CHAR(ST.CODI_PSV) AS NK_PRODUTO,
+	'ZZ' AS ESTA_MUN,
+    CAST(ST.DATA_SLT AS DATE) AS NK_TEMPO_DIA,
+    (TP.EF * TP.SOLT_TCT) * COALESCE(ST.QTDE_SLT, 0) AS QTD_EST_FISICO,
+    (TP.SOLT_TCT * TP.FE) * COALESCE(ST.QTDE_SLT, 0) AS QTD_EST_DISP
+FROM
+    SOLTRANSF ST
+    INNER JOIN PARAMGER P ON ST.EDES_EMP = P.CODI_EMP
+    INNER JOIN TIPO_CTRL TP ON TP.CODI_TOP = P.TOTD_PAR</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>143</xloc>
+      <yloc>623</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>[DW] - SQL - Truncate Table</name>
+    <type>ExecSQL</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>[DW] - PostgreSQL - Vistra BI</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>truncate table stage.stg_mov_estoque;</sql>
+    <set_params>N</set_params>
+    <insert_field />
+    <update_field />
+    <delete_field />
+    <read_field />
+    <arguments>
+    </arguments>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>312</xloc>
+      <yloc>19</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>[DW] - W - Stage Saldo Estoque</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>[DW] - PostgreSQL - Vistra BI</connection>
+    <schema>stage</schema>
+    <table>stg_mov_estoque</table>
+    <commit>100</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>nk_movimento_estoque</column_name>
+        <stream_name>NK_MOVIMENTO_ESTOQUE</stream_name>
+      </field>
+      <field>
+        <column_name>nk_empresa</column_name>
+        <stream_name>NK_EMPRESA</stream_name>
+      </field>
+      <field>
+        <column_name>nk_produto</column_name>
+        <stream_name>NK_PRODUTO</stream_name>
+      </field>
+      <field>
+        <column_name>nk_tempo_dia</column_name>
+        <stream_name>NK_TEMPO_DIA</stream_name>
+      </field>
+      <field>
+        <column_name>qtd_est_fisico</column_name>
+        <stream_name>QTD_EST_FISICO</stream_name>
+      </field>
+      <field>
+        <column_name>qtd_est_disp</column_name>
+        <stream_name>QTD_EST_DISP</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>742</xloc>
+      <yloc>344</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+</transformation>

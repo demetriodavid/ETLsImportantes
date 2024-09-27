@@ -1,0 +1,1151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>Trans Carga - Stage - Titulos a Pagar</name>
+    <description />
+    <extended_description />
+    <trans_version />
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection />
+        <schema />
+        <table />
+        <size_limit_lines />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject />
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection />
+        <schema />
+        <table />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection />
+      <table />
+      <field />
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>1000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file />
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2015/09/11 11:48:51.872</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2015/09/11 11:48:51.872</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>[DB] - Oracle - AgriBusiness ERP</name>
+    <server>${ORIGEM_ORACLE_HOST}</server>
+    <type>ORACLE</type>
+    <access>Native</access>
+    <database>${ORIGEM_ORACLE_BANCO}</database>
+    <port>${ORIGEM_ORACLE_PORTA}</port>
+    <username>${ORIGEM_ORACLE_USER_NAME}</username>
+    <password>${ORIGEM_ORACLE_PASSWORD}</password>
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>${ORIGEM_ORACLE_PORTA}</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>[DB] - PostgreSQL - Vistra Templ BI</name>
+    <server>${ORIGEM_VISTRA_HOST}</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>${ORIGEM_VISTRA_BANCO}</database>
+    <port>${ORIGEM_VISTRA_PORTA}</port>
+    <username>${ORIGEM_VISTRA_USER_NAME}</username>
+    <password>${ORIGEM_VISTRA_PASSWORD}</password>
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>${ORIGEM_VISTRA_PORTA}</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>[DW] - PostgreSQL - Vistra BI</name>
+    <server>${DESTINO_HOST}</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>${DESTINO_BANCO}</database>
+    <port>${DESTINO_PORTA}</port>
+    <username>${DESTINO_USER_NAME_BD}</username>
+    <password>${DESTINO_PASSWORD_BD}</password>
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>${DESTINO_PORTA}</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>[DB] - Extracao ERP - Extração Titulos a Pagar</from>
+      <to>Date Conv.</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Date Conv.</from>
+      <to>Block this step until steps finish</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Block this step until steps finish</from>
+      <to>[DW] - W - Stage Titulos a Pagar</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>Block this step until steps finish</name>
+    <type>BlockUntilStepsFinish</type>
+    <description />
+    <distribute>N</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <steps>
+      <step>
+        <name>[DW] - SQL - Truncate Table</name>
+        <CopyNr>0</CopyNr>
+      </step>
+    </steps>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>500</xloc>
+      <yloc>333</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Date Conv.</name>
+    <type>SelectValues</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>NK_TEMPO_DIA_BAIXA</name>
+        <rename>NK_TEMPO_DIA_BAIXA</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>dd/MM/yyyy</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>NK_TEMPO_DIA_MOV</name>
+        <rename>NK_TEMPO_DIA_MOV</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>dd/MM/yyyy</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>NK_TEMPO_DIA_VENC</name>
+        <rename>NK_TEMPO_DIA_VENC</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>dd/MM/yyyy</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>334</xloc>
+      <yloc>333</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>[DB] - Extracao ERP - Extração Titulos a Pagar</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>[DB] - Oracle - AgriBusiness ERP</connection>
+    <sql>WITH CCU AS (
+             SELECT CL.CTRL_CLC,
+                    CAST(CC.CODI_PLC AS VARCHAR2(15))|| '#' || CAST(CC.CODI_CCU AS VARCHAR2(15)) CODI_CCU,
+                    (CC.VLOR_LCT/CL.VCON_CLC) PERCENT
+               FROM CABLANCTB CL
+                    INNER JOIN LANCONTAB LC ON LC.SEQU_CLC = CL.SEQU_CLC AND LC.TIPO_LCT = 'D'
+                    INNER JOIN CCUSTOLAN CC ON CC.SEQU_LCT = LC.SEQU_LCT
+              WHERE CL.ORIG_CLC = 'DP'
+
+              UNION ALL
+
+             SELECT NP.CTRL_CPG CTRL_CLC,
+                    CAST(CC.CODI_PLC AS VARCHAR2(15))|| '#' || CAST(CC.CODI_CCU AS VARCHAR2(15)) CODI_CCU,
+                    (CC.VLOR_LCT/CL.VCON_CLC) PERCENT
+               FROM CABLANCTB CL
+                   INNER JOIN LANCONTAB LC ON LC.SEQU_CLC = CL.SEQU_CLC AND LC.TIPO_LCT = 'D'
+                   INNER JOIN CCUSTOLAN CC ON CC.SEQU_LCT = LC.SEQU_LCT
+                   INNER JOIN NFENTRA NF   ON NF.CODI_EMP = CL.EDOC_CLC AND NF.CODI_TRA = CL.CODI_TRA AND NF.NUME_NFE = CL.CTRL_CLC AND NF.SERI_NFE = CL.SDOC_CLC
+                   INNER JOIN NOTACPG NP   ON NP.CODI_EMP = NF.CODI_EMP AND NP.CODI_TRA = NF.CODI_TRA AND NP.NDOC_NCP = NF.NUME_NFE AND NP.SDOC_NCP = NF.SERI_NFE AND NP.CTRL_NCP = NF.CTRL_NFE AND NP.TDOC_NCP = 'NT'
+             WHERE CL.ORIG_CLC = 'NT'
+ 
+             UNION ALL
+ 
+            SELECT NP.CTRL_CPG CTRL_CLC,
+                   CAST(CC.CODI_PLC AS VARCHAR2(15))|| '#' || CAST(CC.CODI_CCU AS VARCHAR2(15)) CODI_CCU,
+                  (CC.VLOR_LCT/CL.VCON_CLC) PERCENT
+              FROM CABLANCTB CL
+                  INNER JOIN LANCONTAB LC ON LC.SEQU_CLC = CL.SEQU_CLC AND LC.TIPO_LCT = 'D'
+                  INNER JOIN CCUSTOLAN CC ON CC.SEQU_LCT = LC.SEQU_LCT
+                  INNER JOIN NOTA NE      ON NE.CODI_EMP = CL.EDOC_CLC AND NE.CODI_TRA = CL.CODI_TRA AND NE.NOTA_NOT = CL.CTRL_CLC AND NE.SERI_NOT = CL.SDOC_CLC
+                  INNER JOIN NOTACPG NP   ON NP.CODI_EMP = NE.CODI_EMP AND NP.CODI_TRA = NE.CODI_TRA AND NP.NDOC_NCP = NE.NOTA_NOT AND NP.SDOC_NCP = NE.SERI_NOT AND NP.TDOC_NCP = 'NE'
+             WHERE CL.ORIG_CLC = 'NE'
+ 
+             UNION ALL
+
+            SELECT NP.CTRL_CPG CTRL_CLC,
+                   CAST(CC.CODI_PLC AS VARCHAR2(15))|| '#' || CAST(CC.CODI_CCU AS VARCHAR2(15)) CODI_CCU,
+                   (CC.VLOR_LCT/CL.VCON_CLC) PERCENT
+              FROM CABLANCTB CL
+                  INNER JOIN LANCONTAB LC ON LC.SEQU_CLC = CL.SEQU_CLC AND LC.TIPO_LCT = 'D'
+                  INNER JOIN CCUSTOLAN CC ON CC.SEQU_LCT = LC.SEQU_LCT
+                  INNER JOIN CTRC CT      ON CT.CODI_EMP = CL.EDOC_CLC AND CT.CODI_TRA = CL.CODI_TRA AND CT.CTRC_CTR = CL.CTRL_CLC AND CT.SERI_CTR = CL.SDOC_CLC
+                  INNER JOIN NOTACPG NP   ON NP.CODI_EMP = CT.CODI_EMP AND NP.CODI_TRA = CT.CODI_TRA AND NP.NDOC_NCP = CT.CTRC_CTR AND NP.SDOC_NCP = CT.SERI_CTR AND NP.TDOC_NCP = 'CT'
+             WHERE CL.ORIG_CLC = 'CT'
+ 
+             UNION ALL
+ 
+            SELECT NP.CTRL_CPG CTRL_CLC,
+                   CAST(CC.CODI_PLC AS VARCHAR2(15))|| '#' || CAST(CC.CODI_CCU AS VARCHAR2(15)) CODI_CCU,
+                   (CC.VLOR_LCT/CL.VCON_CLC) PERCENT
+              FROM CABLANCTB CL
+                  INNER JOIN LANCONTAB LC ON LC.SEQU_CLC = CL.SEQU_CLC AND LC.TIPO_LCT = 'D'
+                  INNER JOIN CCUSTOLAN CC ON CC.SEQU_LCT = LC.SEQU_LCT
+                  INNER JOIN NFENTRARETEN RT ON RT.CODI_EMP = CL.EDOC_CLC AND RT.CODI_TRA = CL.CODI_TRA AND RT.CODI_NFR = CL.CTRL_CLC AND RT.SERI_NFR = CL.SDOC_CLC
+                  INNER JOIN NOTACPG NP ON NP.CODI_EMP = RT.CODI_EMP AND NP.CODI_TRA = RT.CODI_TRA AND NP.NDOC_NCP = RT.CODI_NFR AND NP.SDOC_NCP = 'RT' AND NP.TDOC_NCP = 'RT'
+             WHERE CL.ORIG_CLC = 'RT'
+ 
+             UNION ALL
+ 
+            SELECT NP.CTRL_CPG CTRL_CLC,
+                   CAST(CC.CODI_PLC AS VARCHAR2(15))|| '#' || CAST(CC.CODI_CCU AS VARCHAR2(15)) CODI_CCU,
+                   (CC.VLOR_LCT/CL.VCON_CLC) PERCENT
+              FROM CABLANCTB CL
+                  INNER JOIN LANCONTAB LC ON LC.SEQU_CLC = CL.SEQU_CLC AND LC.TIPO_LCT = 'D'
+                  INNER JOIN CCUSTOLAN CC ON CC.SEQU_LCT = LC.SEQU_LCT
+                  INNER JOIN CABDESFAZ DZ ON DZ.CODI_EMP = CL.EDOC_CLC AND DZ.CODI_TRA = CL.CODI_TRA AND DZ.CODI_CDS = CL.CTRL_CLC
+                  INNER JOIN NOTACPG NP   ON NP.CODI_EMP = DZ.CODI_EMP AND NP.CODI_TRA = DZ.CODI_TRA AND NP.NDOC_NCP = DZ.CODI_CDS AND NP.SDOC_NCP = 'DZ' AND NP.TDOC_NCP = 'DZ'
+             WHERE CL.ORIG_CLC = 'DZ'
+
+             UNION ALL
+
+            SELECT CP.CTRL_CPG CTRL_CLC,
+                   CAST(CC.CODI_PLC AS VARCHAR2(15))|| '#' || CAST(CC.CODI_CCU AS VARCHAR2(15)) CODI_CCU,
+                   (CC.VLOR_LCT/CL.VCON_CLC) PERCENT
+              FROM CABLANCTB CL
+                  INNER JOIN LANCONTAB LC ON LC.SEQU_CLC = CL.SEQU_CLC AND LC.TIPO_LCT = 'D'
+                  INNER JOIN CCUSTOLAN CC ON CC.SEQU_LCT = LC.SEQU_LCT
+                  INNER JOIN LANCAMEN LM ON LM.CTRL_LAN = CL.CTRL_CLC
+                  INNER JOIN CABPAGAR CP ON CP.CTRL_LAN = LM.CTRL_LAN AND CP.TDRL_CPG = 'CX'
+             WHERE CL.ORIG_CLC = 'FC'
+)
+
+SELECT TO_CHAR(CP.CODI_EMP)                                                                                                  AS NK_EMPRESA,
+       TO_CHAR(CP.CODI_TRA)                                                                                                  AS NK_FORNECEDOR,
+       TO_CHAR(CP.CODI_TDO)                                                                                                  AS NK_TIPO_DOCUMENTO,
+       TO_CHAR(P.CODI_TCO)                                                                                                   AS NK_TIPO_COBRANCA,
+	   TO_CHAR(COALESCE(B.CODI_TPG, -1))																					 AS NK_TIPO_PAGAMENTO,
+       TO_CHAR(CP.DMOV_CPG, UPPER('DD/MM/YYYY'))                                                                             AS NK_TEMPO_DIA_MOV,
+       TO_CHAR(P.DVEN_PAG, UPPER('DD/MM/YYYY'))                                                                              AS NK_TEMPO_DIA_VENC,
+       COALESCE(B.DPAG_CPB, TO_DATE('31/12/9999', 'DD/MM/YYYY'))                                                             AS NK_TEMPO_DIA_BAIXA,
+       '-1'                                                                                                                  AS NK_CENTRO_CUSTO,
+       TO_CHAR(COALESCE(C.CODI_CON, -1))                                                                                     AS NK_CONTA_FLUXO_CAIXA,
+       CP.DOCU_CPG                                                                                                           AS DD_DOC_PAGAR,
+       TO_CHAR(CP.CODI_TDO)                                                                                                  AS TIPO_DOC,
+       COALESCE(PY.CTRL_PAG, 0)                                                                                              AS RENEGOCIACAO,
+       P.NPAR_PAG                                                                                                            AS DD_NUM_PARCELA,
+	   P.CTRL_PAG																											 AS DD_ID_PARCELA,
+       'T'                                                                                                                   AS TIPO,
+       CASE WHEN TD.TIPO_TDO = 'C'  THEN CP.TOTA_CPG * -1
+			ELSE CP.TOTA_CPG
+       END                                                                                                                   AS VLR_TOTAL_PAGAR,--(ALTERAÇÃO FEITA 30/01/2023 - JEAN, MARIA)
+       CASE 
+            WHEN TD.TIPO_TDO = 'C'  THEN (P.VLOR_PAG - (SELECT VALOR FROM TABLE(VALOR_ABERTO_PAGAR(P.CTRL_PAG))))  * -1
+            ELSE (P.VLOR_PAG - (SELECT VALOR FROM TABLE(VALOR_ABERTO_PAGAR(P.CTRL_PAG)))) 
+            
+       END                                                                                                                   AS VLR_PAGO, --(ALTERAÇÃO FEITA 30/01/2023 - JEAN, MARIA)
+       ((P.DPON_PAG * P.VLOR_PAG) / 100)                                                                                     AS VLR_DESC_PONT,
+       ((P.DANT_PAG * P.VLOR_PAG) / 100)                                                                                     AS VLR_DESC_ANTECP,
+       B.DESC_CPB                                                                                                            AS DESCONTO,
+       /*COALESCE(((P.MULT_PAG * P.VLOR_PAG) / 100),0) */ B.MULT_CPB                                                         AS VLR_MULTA,
+       /*((P.JAPV_PAG * P.VLOR_PAG) / 100)*/ B.JURO_CPB                                                                      AS VLR_JUROS,
+       B.ACRE_CPB                                                                                                            AS ACRESCIMO,
+       B.VLOR_CPB + B.ACRE_CPB - B.DESC_CPB + B.MULT_CPB + B.JURO_CPB                                                                           AS BAIXA,
+       CASE 
+            WHEN TD.TIPO_TDO = 'C'   THEN P.VLOR_PAG * -1
+            ELSE P.VLOR_PAG
+       END                                                                                                     AS VLR_PARCELA,--(ALTERAÇÃO FEITA 30/01/2023 - JEAN, MARIA)
+       COALESCE(round(P.VLOR_PAG,2) ,0)                                                                        AS VLR_CALCULADO,
+       CASE 
+            WHEN TD.TIPO_TDO = 'C' THEN (SELECT VALOR FROM TABLE(VALOR_ABERTO_PAGAR(P.CTRL_PAG))) * -1
+            ELSE (SELECT VALOR FROM TABLE(VALOR_ABERTO_PAGAR(P.CTRL_PAG))) 
+            
+       END                                                                                                                      AS VLR_SALDO,       --(ALTERAÇÃO FEITA 30/01/2023 - JEAN, MARIA)
+
+       0 AS VLR_PERDIDO,        --(ALTERAÇÃO FEITA 14/02/2023 - JEAN, MARIA)
+       'SIM' AS LIBERADO
+  FROM CABPAGAR CP
+       INNER JOIN PAGAR P ON P.CTRL_CPG = CP.CTRL_CPG
+       INNER JOIN TIPDOC TD   ON TD.CODI_TDO = CP.CODI_TDO
+       --LEFT JOIN RENEGOCIARCPG PG ON (PG.CODI_TRA = CP.CODI_TRA)
+       LEFT JOIN RCPPAGAR PY ON (PY.CTRL_CPG = CP.CTRL_CPG AND P.CTRL_PAG = PY.CTRL_PAG) 
+       --LEFT JOIN CCU ON CCU.CTRL_CLC = CP.CTRL_CPG
+       INNER JOIN CONDICAO C USING(COND_CON)
+       LEFT  JOIN CPGBAIXA B ON B.CTRL_PAG = P.CTRL_PAG and B.SITU_CPB = 'N'
+   WHERE 
+/*CP.CODI_TDO IN ('10000307', '10000008' ,'10000011','10000324','11','10000310','10000325','40','41' ,'50','51','10000319','10000320','31' ,'32','33','35','36' ,'37' 
+   ,'30' ,'34' ,'18' ,'19','10','4','8','9','10000009','5','70','1', '10000311', '316', '314','13','20','29','28','27','22', '61','10000323','60','10000323','25','24','26','21','23','312',
+   '10000305','10000328', '304','300','10000010','10000327', '7', '10000326', '303', '302', '10000318', '10000308', '80', '10000306', '10000309', '312') 
+*/
+	CP.CODI_TDO NOT IN (6,106,3,103)
+   AND (PY.TIPO_RCP = 'N' OR PY.TIPO_RCP IS NULL)
+--   AND CP.DMOV_CPG >= ?
+   -- AND CP.CTRL_CPG = 50150801
+    -- AND CP.DOCU_CPG = '265975'
+    --AND CP.CODI_TRA = '10004238'
+    --AND EXTRACT(YEAR FROM B.DPAG_CPB ) = 2023
+    --AND EXTRACT(MONTH FROM B.DPAG_CPB ) = 08
+
+
+/*UNION 
+
+
+SELECT TO_CHAR(PD.CODI_EMP)                                                                                                  AS NK_EMPRESA,
+       TO_CHAR(PD.CODI_TRA)                                                                                                  AS NK_FORNECEDOR,
+       TO_CHAR(PD.CODI_TOP)                                                                                                  AS NK_TIPO_DOCUMENTO,
+       TO_CHAR(PD.COND_CON)                                                                                                  AS NK_TIPO_COBRANCA,
+       TO_CHAR(PD.DATA_PEC, UPPER('DD/MM/YYYY'))                                                                             AS NK_TEMPO_DIA_MOV,
+       TO_CHAR(PA.VENC_PPC, UPPER('DD/MM/YYYY'))                                                                             AS NK_TEMPO_DIA_VENC,                  
+       TO_DATE('31/12/9999', 'DD/MM/YYYY')                                                                                   AS NK_TEMPO_DIA_BAIXA,
+       '-1'                                                                                                                  AS NK_CENTRO_CUSTO,
+       '-1'                                                                                                                  AS NK_CONTA_FLUXO_CAIXA,
+       TO_CHAR(PD.NUME_PEC)                                                                                                  AS DD_DOC_PAGAR,
+       '-1'                                                                                                                  AS TIPO_DOC,
+       0                                                                                                                     AS RENEGOCIACAO,
+       RANK()  OVER(PARTITION BY PD.NUME_PEC ORDER BY PA.VENC_PPC)                                                           AS DD_NUM_PARCELA,
+       'P'                                                                                                                   AS TIPO,
+      (SELECT SUM(COALESCE(IP.VLOR_IPC * IP.QTDP_IPC,0)) 
+          FROM IPEDCOM IP 
+         WHERE PD.CODI_EMP = IP.CODI_EMP 
+           AND PD.NUME_PEC = IP.NUME_PEC)  / (COUNT(*) OVER(PARTITION BY PD.NUME_PEC))                                       AS VLR_TOTAL_PAGAR,
+         (SELECT SUM(COALESCE(IP.QTDR_IPC * IP.VLOR_IPC ,0)) 
+          FROM IPEDCOM IP 
+         WHERE PD.CODI_EMP = IP.CODI_EMP 
+           AND PD.NUME_PEC = IP.NUME_PEC)  / (COUNT(*) OVER(PARTITION BY PD.NUME_PEC))                                       AS VLR_PAGO,
+       0                                                                                                                     AS VLR_DESC_PONT,
+       0                                                                                                                     AS VLR_DESC_ANTECP,
+       0                                                                                                                     AS DESCONTO,
+       0                                                                                                                     AS VLR_MULTA,
+       0                                                                                                                     AS VLR_JUROS, 
+       0                                                                                                                     AS ACRESCIMO,
+       0                                                                                                                     AS BAIXA,
+       PA.VLOR_PPC                                                                                                           AS VLR_PARCELA,
+       0                                                                                                                     AS VLR_CALCULADO,
+       (SELECT SUM(COALESCE(IP.VLOR_IPC * IP.QTDP_IPC,0) - COALESCE(IP.QTDR_IPC * IP.VLOR_IPC ,0) - COALESCE(IP.QPER_IPC * IP.VLOR_IPC ,0)) 
+          FROM IPEDCOM IP 
+         WHERE PD.CODI_EMP = IP.CODI_EMP 
+           AND PD.NUME_PEC = IP.NUME_PEC)  / (COUNT(*) OVER(PARTITION BY PD.NUME_PEC))                                       AS VLR_SALDO,
+      (SELECT SUM(COALESCE(IP.QPER_IPC * IP.VLOR_IPC ,0)) FROM IPEDCOM IP 
+         WHERE PD.CODI_EMP = IP.CODI_EMP 
+           AND PD.NUME_PEC = IP.NUME_PEC)   / (COUNT(*) OVER(PARTITION BY PD.NUME_PEC))                                      AS VLR_PERDIDO,
+       CASE
+            WHEN PD.CODI_EMP||PD.NUME_PEC IN (SELECT LI.CODI_EMP||LI.NUME_PEC FROM LIBPEDCOM LI) THEN 'SIM'  
+            ELSE 'NÃO' 
+       END                                                                                                                   AS LIBERADO
+    FROM PEDCOM PD
+   INNER JOIN PARCPEDCOM PA ON PD.CODI_EMP = PA.CODI_EMP 
+                           AND PD.NUME_PEC = PA.NUME_PEC */
+    /*INNER JOIN LIBPEDCOM LI  ON PD.CODI_EMP = LI.CODI_EMP 
+                           AND PD.NUME_PEC = LI.NUME_PEC                      
+ -- WHERE PD.STAT_PEC = 'A' */
+</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>Y</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>130</xloc>
+      <yloc>330</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>[DW] - SQL - Truncate Table</name>
+    <type>ExecSQL</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>[DW] - PostgreSQL - Vistra BI</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>truncate table stage.stg_mov_fin_titulo_pagar;
+
+</sql>
+    <set_params>N</set_params>
+    <insert_field />
+    <update_field />
+    <delete_field />
+    <read_field />
+    <arguments>
+    </arguments>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>457</xloc>
+      <yloc>53</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>[DW] - W - Stage Titulos a Pagar</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>[DW] - PostgreSQL - Vistra BI</connection>
+    <schema>stage</schema>
+    <table>stg_mov_fin_titulo_pagar</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>NK_EMPRESA</column_name>
+        <stream_name>NK_EMPRESA</stream_name>
+      </field>
+      <field>
+        <column_name>NK_FORNECEDOR</column_name>
+        <stream_name>NK_FORNECEDOR</stream_name>
+      </field>
+      <field>
+        <column_name>NK_TIPO_DOCUMENTO</column_name>
+        <stream_name>NK_TIPO_DOCUMENTO</stream_name>
+      </field>
+      <field>
+        <column_name>NK_TIPO_COBRANCA</column_name>
+        <stream_name>NK_TIPO_COBRANCA</stream_name>
+      </field>
+      <field>
+        <column_name>NK_TIPO_PAGAMENTO</column_name>
+        <stream_name>NK_TIPO_PAGAMENTO</stream_name>
+      </field>
+      <field>
+        <column_name>NK_TEMPO_DIA_MOV</column_name>
+        <stream_name>NK_TEMPO_DIA_MOV</stream_name>
+      </field>
+      <field>
+        <column_name>NK_TEMPO_DIA_VENC</column_name>
+        <stream_name>NK_TEMPO_DIA_VENC</stream_name>
+      </field>
+      <field>
+        <column_name>NK_TEMPO_DIA_BAIXA</column_name>
+        <stream_name>NK_TEMPO_DIA_BAIXA</stream_name>
+      </field>
+      <field>
+        <column_name>NK_CENTRO_CUSTO</column_name>
+        <stream_name>NK_CENTRO_CUSTO</stream_name>
+      </field>
+      <field>
+        <column_name>NK_CONTA_FLUXO_CAIXA</column_name>
+        <stream_name>NK_CONTA_FLUXO_CAIXA</stream_name>
+      </field>
+      <field>
+        <column_name>DD_DOC_PAGAR</column_name>
+        <stream_name>DD_DOC_PAGAR</stream_name>
+      </field>
+      <field>
+        <column_name>TIPO_DOC</column_name>
+        <stream_name>TIPO_DOC</stream_name>
+      </field>
+      <field>
+        <column_name>DD_NUM_PARCELA</column_name>
+        <stream_name>DD_NUM_PARCELA</stream_name>
+      </field>
+      <field>
+        <column_name>VLR_TOTAL_PAGAR</column_name>
+        <stream_name>VLR_TOTAL_PAGAR</stream_name>
+      </field>
+      <field>
+        <column_name>VLR_PAGO</column_name>
+        <stream_name>VLR_PAGO</stream_name>
+      </field>
+      <field>
+        <column_name>VLR_DESC_PONT</column_name>
+        <stream_name>VLR_DESC_PONT</stream_name>
+      </field>
+      <field>
+        <column_name>VLR_DESC_ANTECP</column_name>
+        <stream_name>VLR_DESC_ANTECP</stream_name>
+      </field>
+      <field>
+        <column_name>VLR_MULTA</column_name>
+        <stream_name>VLR_MULTA</stream_name>
+      </field>
+      <field>
+        <column_name>VLR_JUROS</column_name>
+        <stream_name>VLR_JUROS</stream_name>
+      </field>
+      <field>
+        <column_name>VLR_PARCELA</column_name>
+        <stream_name>VLR_PARCELA</stream_name>
+      </field>
+      <field>
+        <column_name>VLR_CALCULADO</column_name>
+        <stream_name>VLR_CALCULADO</stream_name>
+      </field>
+      <field>
+        <column_name>VLR_SALDO</column_name>
+        <stream_name>VLR_SALDO</stream_name>
+      </field>
+      <field>
+        <column_name>VLR_PERDIDO</column_name>
+        <stream_name>VLR_PERDIDO</stream_name>
+      </field>
+      <field>
+        <column_name>LIBERADO</column_name>
+        <stream_name>LIBERADO</stream_name>
+      </field>
+      <field>
+        <column_name>RENEGOCIACAO</column_name>
+        <stream_name>RENEGOCIACAO</stream_name>
+      </field>
+      <field>
+        <column_name>ACRESCIMO</column_name>
+        <stream_name>ACRESCIMO</stream_name>
+      </field>
+      <field>
+        <column_name>DESCONTO</column_name>
+        <stream_name>DESCONTO</stream_name>
+      </field>
+      <field>
+        <column_name>BAIXA</column_name>
+        <stream_name>BAIXA</stream_name>
+      </field>
+      <field>
+        <column_name>DD_ID_PARCELA</column_name>
+        <stream_name>DD_ID_PARCELA</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>738</xloc>
+      <yloc>336</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+</transformation>

@@ -1,0 +1,497 @@
+﻿-- alter database vistra_dw_purinutre_homl set search_path to public,stages,partitioned,"$user"
+
+create schema if not exists stage;
+
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN operacaorecebimento;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN operacaofixacao;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN codigotipoestatiscovenda;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN codigotipoestatiscocompra;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN consideravalorbruto;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN contasinsumos;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN inverte_parametro_carteira_financeira;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN diretorio_backup;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN nome_cliente;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN exportar_ddl;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN servidor_ftp;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN usuario_ftp;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN senha_ftp;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN pasta_ftp;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN porta_ftp;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN codigotipooperacaorecebimento;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN codigotipooperacaofixacao;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN codigotipoestatiscocustosvenda;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN encerramentoderesultado;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN tipo_de_movimentacao_contabil;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN codigooperacaoajusteestoque;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN codigooperacaobalancoestoque;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN tipolimitecredito;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN primeiracarga;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN codigodescontoumidade;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN codigodescontoimpureza;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN codigodescontoardido;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN codigodescontosubproduto;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN codigodescontobrotado;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN codigodescontoverde;
+ALTER TABLE public.dim_junk_configuracao DROP COLUMN contascontabeisnaoutilizaveis;
+
+create table if not exists public.dim_junk_parametro
+(
+    parametro varchar(50) not null,
+    valor varchar(100) not null,
+    descricao varchar(255),
+    observacao text,
+
+    constraint dim_junk_parametro_pkey primary key (parametro)
+)with(oids=false);
+
+alter table if exists dim_empresa
+    alter column empresa drop not null,
+    alter column cod_empresa drop not null,
+    alter column cod_grupoempresarial drop not null,
+    alter column grupoempresarial drop not null,
+    add column if not exists sigla_tipo_empresa varchar(1),
+    add column if not exists tipo_empresa varchar,
+    add constraint dim_empresa_sigla_tipo_cst check (upper(sigla_tipo_empresa) in (upper('s'), upper('f'), upper('m'), upper('u')));
+
+ALTER TABLE public.dim_produto DROP COLUMN if exists cod_familia;
+ALTER TABLE public.dim_produto DROP COLUMN if exists familia;
+ALTER TABLE public.dim_produto DROP COLUMN if exists insumo;
+ALTER TABLE public.dim_produto DROP COLUMN if exists semente;
+ALTER TABLE public.dim_produto DROP COLUMN if exists unid_medida;
+ALTER TABLE public.dim_produto DROP COLUMN if exists cod_linha;
+ALTER TABLE public.dim_produto DROP COLUMN if exists linha;
+ALTER TABLE public.dim_produto DROP COLUMN if exists parceiro_local_linha;
+ALTER TABLE public.dim_produto DROP COLUMN if exists familia_superior;
+ALTER TABLE public.dim_produto DROP COLUMN if exists cod_familia_superior;
+ALTER TABLE public.dim_produto DROP COLUMN if exists produto_industrializado;
+ALTER TABLE public.dim_produto DROP COLUMN if exists produto_ativo;
+
+alter table if exists dim_produto
+    add column if not exists nk_grupo varchar(50) not null,
+    add column if not exists nk_subgrupo varchar(50) not null,
+    add column if not exists nk_linha varchar(50) not null,
+    add column if not exists ativo smallint not null default 1,
+    add constraint dim_produto_ativo_cst check(ativo in (0, 1));
+    
+create table if not exists public.dim_grupo (
+	sk_grupo serial not null,
+	nk_grupo varchar(50) not null,
+	cod_grupo integer not null,
+	grupo varchar(255) not null,
+    ativo smallint not null,
+    constraint dim_grupo_pkey primary key (sk_grupo),
+    constraint dim_grupo_nk_cst unique (nk_grupo),
+    constraint dim_grupo_ativo_cst check (ativo in (0, 1))
+) with (oids=false);
+
+create table if not exists public.dim_subgrupo (
+	sk_subgrupo serial not null,
+	nk_subgrupo varchar(50) not null,
+    nk_grupo varchar(50) not null,
+	cod_subgrupo integer not null,
+	subgrupo varchar(255) not null,
+    ativo smallint not null,
+    constraint dim_subgrupo_pkey primary key (sk_subgrupo),
+    constraint dim_subgrupo_nk_cst unique (nk_subgrupo),
+    constraint dim_subgrupo_ativo_cst check (ativo in (0, 1))
+) with (oids=false);
+
+create table if not exists public.dim_linha (
+	sk_linha serial not null,
+	nk_linha varchar(50) not null,
+	cod_linha integer not null,
+	linha varchar(255) not null,
+    ativo smallint not null,
+    constraint dim_linha_pkey primary key (sk_linha),
+    constraint dim_linha_nk_cst unique (nk_linha),
+    constraint dim_linha_ativo_cst check (ativo in (0, 1))
+) with (oids=false);
+
+ALTER TABLE public.dim_regiao DROP COLUMN cod_grupo_empresarial;
+ALTER TABLE public.dim_regiao DROP COLUMN grupo_empresarial;
+
+drop table if exists public.stg_cliente;
+drop table if exists stage.stg_cliente;
+
+create unlogged table if not exists stage.stg_cliente
+(
+    sk_cliente integer,
+    nk_cliente varchar(50),
+    nk_empresa varchar(50),
+    nk_regiao varchar(50),
+    nk_categoria varchar(50),
+	nk_vendedor_01 varchar(50),
+    nk_vendedor_02 varchar(50),
+    nk_vendedor_03 varchar(50),
+    pessoa_fisica_juridica varchar(10),
+    razao_social varchar(255),
+    nome varchar(255),
+    municipio varchar(255),
+    uf varchar(2),
+    pais varchar(25),
+    endereco varchar(255),
+    bairro varchar(255),
+    cep varchar(8),
+    codigo_ibge varchar(10),
+    sexo varchar(1),
+    telefone_principal varchar(25),
+    telefone_secundario varchar(25),
+    tel_cobranca_princ varchar(25),
+    tel_cobranca_sec varchar(25),
+    cel_contato_comercial varchar(25),
+    cel_contato_financeiro varchar(25),
+    ativo smallint,
+    observacao text,
+    data_vencimento date,
+    data_nascimento date,
+    data_ult_alteracao date,
+    categ_codigo integer,
+    categ_nome varchar(255),
+    categ_ativo smallint
+) with(oids=false);
+
+ALTER TABLE public.dim_cliente DROP COLUMN cod_pais;
+ALTER TABLE public.dim_cliente DROP COLUMN pais;
+ALTER TABLE public.dim_cliente DROP COLUMN cod_regiao;
+ALTER TABLE public.dim_cliente DROP COLUMN regiao;
+ALTER TABLE public.dim_cliente DROP COLUMN cod_uf;
+ALTER TABLE public.dim_cliente DROP COLUMN uf;
+ALTER TABLE public.dim_cliente DROP COLUMN uf_extenso;
+ALTER TABLE public.dim_cliente DROP COLUMN cod_cidade;
+ALTER TABLE public.dim_cliente DROP COLUMN cidade;
+ALTER TABLE public.dim_cliente DROP COLUMN associado;
+ALTER TABLE public.dim_cliente DROP COLUMN local_acerto;
+ALTER TABLE public.dim_cliente DROP COLUMN endereco;
+ALTER TABLE public.dim_cliente DROP COLUMN data_nascimento;
+ALTER TABLE public.dim_cliente DROP COLUMN bairro;
+ALTER TABLE public.dim_cliente DROP COLUMN telefone;
+ALTER TABLE public.dim_cliente DROP COLUMN celular;
+ALTER TABLE public.dim_cliente DROP COLUMN numero_dap;
+ALTER TABLE public.dim_cliente DROP COLUMN venc_limite;
+ALTER TABLE public.dim_cliente DROP COLUMN saldo_limite;
+ALTER TABLE public.dim_cliente DROP COLUMN parceiro_superior;
+ALTER TABLE public.dim_cliente DROP COLUMN grupo_empresarial;
+ALTER TABLE public.dim_cliente DROP COLUMN cod_grupo_empresarial;
+ALTER TABLE public.dim_cliente DROP COLUMN codigo_ibge;
+ALTER TABLE public.dim_cliente DROP COLUMN limite_credito;
+ALTER TABLE public.dim_cliente DROP COLUMN nome_consultor;
+ALTER TABLE public.dim_cliente DROP COLUMN filial_consultor;
+ALTER TABLE public.dim_cliente DROP COLUMN perfil_de_acesso_consultor;
+ALTER TABLE public.dim_cliente DROP COLUMN garantia_limite_credito;
+ALTER TABLE public.dim_cliente DROP COLUMN saldo_capital;
+ALTER TABLE public.dim_cliente DROP COLUMN email;
+ALTER TABLE public.dim_cliente DROP COLUMN capital_social;
+ALTER TABLE public.dim_cliente DROP COLUMN data_admissao;
+ALTER TABLE public.dim_cliente DROP COLUMN sexo;
+ALTER TABLE public.dim_cliente ADD ativo smallint NOT NULL;
+
+alter table if exists public.dim_cliente
+    add constraint dim_cliente_ativo_cst check(ativo in (0, 1)),
+	alter column cod_cliente set type integer using cast(cod_cliente as integer);
+	
+drop table if exists public.dim_cliente_compl;
+
+create table if not exists public.dim_cliente_compl
+(
+    sk_cliente integer not null,
+    nk_cliente varchar(50) not null,
+    nk_empresa varchar(50),
+    nk_regiao varchar(50),
+    dd_tipo_pessoa varchar(10),
+    dd_ativo smallint,
+    razao_social varchar(255),
+    cliente varchar(255),
+    municipio varchar(255),
+    uf varchar(255),
+    endereco varchar(255),
+    bairro varchar(255),
+    cep varchar(10),
+    codigo_ibge varchar(10),
+    sexo varchar(1),
+    telefone_principal varchar(25),
+    telefone_secundario varchar(25),
+    observacao text,
+    data_vencimento date,
+    data_ult_alteracao date,
+    categoria varchar(255),
+    categ_ativo smallint,
+
+    constraint dim_cliente_compl_pkey primary key (sk_cliente),
+    constraint dim_cliente_compl_fkey foreign key (sk_cliente) references dim_cliente(sk_cliente),
+    constraint dim_cliente_compl_nk_cst unique (nk_cliente),
+    constraint dim_cliente_compl_ativo_cst check(dd_ativo in (0, 1))
+) with (oids=false);
+
+ALTER TABLE public.dim_fornecedor DROP COLUMN cod_pais;
+ALTER TABLE public.dim_fornecedor DROP COLUMN pais;
+ALTER TABLE public.dim_fornecedor DROP COLUMN cod_regiao;
+ALTER TABLE public.dim_fornecedor DROP COLUMN regiao;
+ALTER TABLE public.dim_fornecedor DROP COLUMN cod_uf;
+ALTER TABLE public.dim_fornecedor DROP COLUMN uf;
+ALTER TABLE public.dim_fornecedor DROP COLUMN uf_extenso;
+ALTER TABLE public.dim_fornecedor DROP COLUMN cod_cidade;
+ALTER TABLE public.dim_fornecedor DROP COLUMN cidade;
+ALTER TABLE public.dim_fornecedor DROP COLUMN local_acerto;
+ALTER TABLE public.dim_fornecedor DROP COLUMN limite_credito;
+ALTER TABLE public.dim_fornecedor DROP COLUMN endereco;
+ALTER TABLE public.dim_fornecedor DROP COLUMN data_nascimento;
+ALTER TABLE public.dim_fornecedor DROP COLUMN bairro;
+ALTER TABLE public.dim_fornecedor DROP COLUMN telefone;
+ALTER TABLE public.dim_fornecedor DROP COLUMN celular;
+ALTER TABLE public.dim_fornecedor DROP COLUMN numero_dap;
+ALTER TABLE public.dim_fornecedor DROP COLUMN saldo_capital;
+ALTER TABLE public.dim_fornecedor ADD dd_ativo smallint NOT NULL;
+
+alter table if exists public.dim_fornecedor
+    alter column cod_fornecedor set data type integer using (cast(cod_fornecedor as integer)),
+    add constraint dim_forn_ativo_cst check(dd_ativo in (0,1));
+	
+drop table if exists public.dim_tabela_preco restrict;
+
+create table if not exists public.dim_tabela_preco
+(
+    sk_tabela_preco serial not null,
+    nk_tabela_preco varchar(50) not null,
+    cod_tabela_preco integer not null,
+    tabela_preco varchar(255) not null,
+    abrev_tabela_preco varchar(50) not null,
+    dd_tipo_tabela varchar(1) not null,
+    dd_ativo smallint not null,
+    tipo_tabela varchar(25) not null,
+
+    constraint dim_tabela_preco_pkey primary key (sk_tabela_preco),
+    constraint dim_tabela_preco_nk_cst unique (nk_tabela_preco),
+    constraint dim_tabela_preco_ativo_cst check (dd_ativo in (0,1)),
+    constraint dim_tabela_preco_tipo_cst check (lower(dd_tipo_tabela) in (
+        lower('v'), lower('a'), lower('n')
+    ))
+)with (oids=false);
+
+alter table if exists dim_produto
+    add column if not exists unidade varchar(5),
+	drop column if exists nk_faricante,
+    add column if not exists nk_fabricante varchar(25);
+
+drop table if exists public.dim_fabricante;
+
+create table if not exists public.dim_fabricante
+(
+    sk_fabricante serial not null,
+    nk_fabricante varchar(25) not null,
+    cod_fabricante integer not null,
+    dd_ativo smallint not null,
+    fabricante varchar(255) not null,
+    razao_social varchar(255),
+
+    constraint dim_fabricante_pkey primary key (sk_fabricante),
+    constraint dim_fabricante_nk_cst unique (nk_fabricante),
+    constraint dim_fabricante_ativo_cst check(dd_ativo in (0,1))
+)with(oids=false);
+
+drop table if exists stages.stg_mov_estoque;
+drop table if exists stages.stg_ajuste_estoque;
+drop table if exists stage.stg_mov_estoque;
+drop table if exists stage.stg_ajuste_estoque;
+
+drop table if exists public.fato_ajuste_estoque;
+drop table if exists public.fato_movimento_estoque_dia;
+drop table if exists public.fato_movimento_ajustado_estoque_dia;
+
+create unlogged table if not exists stage.stg_ajuste_estoque
+(
+    nk_empresa varchar(25) not null,
+    nk_produto varchar(25) not null,
+    nk_tempo_dia date not null,
+    dd_ajuste_fisico smallint,
+    dd_ajuste_disp smallint,
+    qtd_est_fisico double precision default 0 not null,
+	qtd_est_disp double precision default 0 not null
+)with(oids=false);
+
+create unlogged table if not exists stage.stg_mov_estoque
+(
+    nk_movimento_estoque varchar(50) not null,
+    nk_empresa varchar(25) not null,
+    nk_produto varchar(25) not null,
+    nk_tempo_dia date not null,
+    qtd_est_fisico double precision default 0 not null,
+    qtd_est_disp double precision default 0 not null
+)with(oids=false);
+
+create table if not exists public.fato_ajuste_estoque
+(
+    sk_empresa integer not null,
+    sk_produto integer not null,
+    sk_tempo_dia integer not null,
+    dd_ajuste_fisico smallint not null,
+    dd_ajuste_disp smallint not null,
+    qtd_est_fisico double precision default 0 not null,
+    qtd_est_disp double precision default 0 not null,
+
+    constraint fato_ajuste_estoque_pkey primary key (sk_tempo_dia, sk_empresa, sk_produto),
+    constraint fato_ajuste_estoque_empresa_fkey foreign key (sk_empresa) references dim_empresa (sk_empresa),
+    constraint fato_ajuste_estoque_produto_fkey foreign key (sk_produto) references dim_produto (sk_produto),
+    constraint fato_ajuste_estoque_tempo_dia_fkey foreign key (sk_tempo_dia) references dim_tempo_dia (sk_tempo_dia),
+    constraint fato_ajuste_estoque_flags_cst check (dd_ajuste_fisico in (0,1) and dd_ajuste_disp in (0,1))
+)with(oids=false);
+
+create table if not exists public.fato_movimento_estoque_dia
+(
+    nk_movimento_estoque varchar(30) not null,
+    sk_empresa integer not null,
+    sk_produto integer not null,
+    sk_tempo_dia integer not null,
+    qtd_est_fisico double precision default 0 not null,
+    qtd_est_disp double precision default 0 not null,
+
+    constraint fato_movimento_estoque_pkey primary key (sk_tempo_dia, sk_empresa, sk_produto, nk_movimento_estoque),
+    constraint fato_movimento_estoque_empresa_fkey foreign key (sk_empresa) references dim_empresa (sk_empresa),
+    constraint fato_movimento_estoque_produto_fkey foreign key (sk_produto) references dim_produto (sk_produto),
+    constraint fato_movimento_estoque_tempo_dia_fkey foreign key (sk_tempo_dia) references dim_tempo_dia (sk_tempo_dia)
+)with(oids=false);
+
+create table if not exists public.fato_movimento_ajustado_estoque_dia
+(
+    nk_movimento_estoque varchar(30) not null,
+    sk_empresa integer not null,
+    sk_produto integer not null,
+    sk_tempo_dia integer not null,
+    qtd_est_fisico double precision default 0 not null,
+    qtd_est_disp double precision default 0 not null,
+
+    constraint fato_movimento_ajustado_estoque_pkey primary key (sk_tempo_dia, sk_empresa, sk_produto, nk_movimento_estoque),
+    constraint fato_movimento_ajustado_estoque_empresa_fkey foreign key (sk_empresa) references dim_empresa (sk_empresa),
+    constraint fato_movimento_ajustado_estoque_produto_fkey foreign key (sk_produto) references dim_produto (sk_produto),
+    constraint fato_movimento_ajustado_estoque_tempo_dia_fkey foreign key (sk_tempo_dia) references dim_tempo_dia (sk_tempo_dia)
+)with(oids=false);
+
+drop table if exists public.fato_movimento_venda_dia;
+drop table if exists public.dim_operacao_fiscal cascade;
+drop table if exists stage.stg_movimento_venda_dia;
+drop table if exists stage.stg_movimento_vendas_dia;
+
+create table if not exists public.dim_operacao_fiscal
+(
+    sk_operacao_fiscal serial not null,
+    nk_operacao_fiscal varchar(25) not null,
+    cod_cfop varchar(25) not null,
+    cod_tipo_operacao integer not null,
+    dd_tipo_operacao varchar(255),
+    dd_ativo smallint not null,
+    dd_ativo_tipo_operacao smallint not null,
+    cfop varchar(255) not null,
+
+    constraint dim_operacao_fiscal_pkey primary key (sk_operacao_fiscal),
+    constraint dim_operacao_fiscal_nk_cst unique (nk_operacao_fiscal),
+    constraint dim_operacao_fiscal_ativo_cst check (dd_ativo in (0,1) and dd_ativo_tipo_operacao in (0,1))
+)with(oids=false);
+
+create table if not exists public.fato_movimento_venda_dia
+(
+    sk_tempo_dia integer not null,
+    sk_empresa integer not null,
+    sk_produto integer not null,
+    sk_cliente integer not null,
+    sk_tabela_preco integer not null,
+    sk_operacao_fiscal integer not null,
+    dd_nota_fiscal varchar(25),
+    dd_nf_serie varchar(10),
+    dd_situacao varchar(25),
+    quantidade double precision default 0 not null,
+    valor double precision default 0 not null,
+    valor_total_nota double precision default 0 not null,
+
+    constraint fato_movimento_venda_dia_pkey primary key (sk_tempo_dia, sk_empresa, sk_produto, sk_tabela_preco, dd_nota_fiscal),
+    constraint fato_movimento_venda_dia_tempo_dia_fkey foreign key (sk_tempo_dia) references dim_tempo_dia (sk_tempo_dia),
+    constraint fato_movimento_venda_dia_empresa_fkey foreign key (sk_empresa) references dim_empresa (sk_empresa),
+    constraint fato_movimento_venda_dia_produto_fkey foreign key (sk_produto) references dim_produto (sk_produto),
+    constraint fato_movimento_venda_dia_cliente_fkey foreign key (sk_cliente) references dim_cliente (sk_cliente),
+    constraint fato_movimento_venda_dia_tab_preco_fkey foreign key (sk_tabela_preco) references dim_tabela_preco (sk_tabela_preco),
+    constraint fato_movimento_venda_dia_oper_fiscal_fkey foreign key (sk_operacao_fiscal) references dim_operacao_fiscal (sk_operacao_fiscal)
+)with(oids=false);
+
+create unlogged table if not exists stage.stg_movimento_venda_dia
+(
+    nk_tempo_dia date,
+    nk_empresa varchar(25),
+    nk_produto varchar(25),
+    nk_cliente varchar(25),
+    nk_tabela_preco varchar(25),
+    nk_operacao_fiscal varchar(25),
+    dd_nota_fiscal varchar(25),
+    dd_nf_serie varchar(10),
+    dd_situacao varchar(25),
+    quantidade double precision default 0,
+    valor double precision default 0,
+    valor_total_nota double precision default 0
+)with(oids=false);
+
+drop table if exists public.dim_lote_produto cascade;
+
+create table if not exists public.dim_lote_produto
+(
+    sk_lote_produto serial not null,
+    nk_lote_produto varchar(50) not null,
+    lote_produto varchar(50) not null,
+    cod_produto varchar(10) not null,
+    produto varchar(255),
+    dd_ativo smallint not null default 0,
+    dd_tipo_produto varchar(25),
+    dd_nivel_lote varchar(25),
+    data_aquisicao date,
+    data_vencimento date not null,
+
+    constraint dim_lote_produto_pkey primary key (sk_lote_produto),
+    constraint dim_lote_produto_nk_cst unique (nk_lote_produto)
+)with(oids=false);
+
+drop table if exists stage.stg_movimento_compra;
+
+create unlogged table if not exists stage.stg_movimento_compra
+(
+    nk_empresa varchar(25),
+    nk_fornecedor varchar(25),
+    nk_produto varchar(25),
+    nk_operacao_fiscal varchar(25),
+    nk_tempo_dia_emissao date,
+    nk_tempo_dia_rec date,
+    dd_nota_fiscal integer,
+    dd_nf_serie varchar(5),
+    dd_pedido_compra integer,
+    qtd_item double precision default 0,
+    qtd_dev_item double precision default 0,
+    valor_unitario double precision default 0,
+    valor_frete_nota double precision default 0,
+    valor_nota double precision default 0
+)with(oids=false);
+
+drop table if exists public.fato_movimento_compra;
+
+create table if not exists public.fato_movimento_compra
+(
+    sk_empresa integer not null,
+    sk_fornecedor integer not null,
+    sk_produto integer not null,
+    sk_operacao_fiscal integer not null,
+    sk_tempo_dia_emissao integer not null,
+    sk_tempo_dia_rec integer,
+    dd_nota_fiscal integer not null,
+    dd_nf_serie varchar(5),
+    dd_pedido_compra integer,
+    qtd_item double precision default 0 not null,
+    qtd_dev_item double precision default 0 not null,
+    valor_unitario double precision default 0 not null,
+    valor_frete_nota double precision default 0 not null,
+    valor_nota double precision default 0 not null,
+
+    constraint fato_movimento_compra_empresa_fkey foreign key (sk_empresa) references dim_empresa (sk_empresa),
+    constraint fato_movimento_compra_fornecedor_fkey foreign key (sk_fornecedor) references dim_fornecedor (sk_fornecedor),
+    constraint fato_movimento_compra_produto_fkey foreign key (sk_produto) references dim_produto (sk_produto),
+    constraint fato_movimento_compra_op_fiscal_fkey foreign key (sk_operacao_fiscal) references dim_operacao_fiscal (sk_operacao_fiscal),
+    constraint fato_movimento_compra_data_emimssao_fkey foreign key (sk_tempo_dia_emissao) references dim_tempo_dia (sk_tempo_dia),
+    constraint fato_movimento_compra_data_receb_fkey foreign key (sk_tempo_dia_rec) references dim_tempo_dia (sk_tempo_dia)
+)with(oids=false);
+
+create index fato_mov_compra_pedido_idx
+    on public.fato_movimento_compra
+    using btree(dd_pedido_compra);

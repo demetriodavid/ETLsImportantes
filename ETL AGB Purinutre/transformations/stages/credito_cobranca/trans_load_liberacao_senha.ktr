@@ -1,0 +1,1129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>trans_load_liberacao_senha</name>
+    <description />
+    <extended_description />
+    <trans_version />
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection />
+        <schema />
+        <table />
+        <size_limit_lines />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject />
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection />
+        <schema />
+        <table />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection />
+      <table />
+      <field />
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file />
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2023/10/02 14:30:53.856</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2023/10/02 14:30:53.856</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>[DB] - Oracle - AgriBusiness ERP</name>
+    <server>${ORIGEM_ORACLE_HOST}</server>
+    <type>ORACLE</type>
+    <access>Native</access>
+    <database>${ORIGEM_ORACLE_BANCO}</database>
+    <port>${ORIGEM_ORACLE_PORTA}</port>
+    <username>${ORIGEM_ORACLE_USER_NAME}</username>
+    <password>${ORIGEM_ORACLE_PASSWORD}</password>
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>${ORIGEM_ORACLE_PORTA}</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>[DB] - PostgreSQL - Vistra Templ BI</name>
+    <server>${ORIGEM_VISTRA_HOST}</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>${ORIGEM_VISTRA_BANCO}</database>
+    <port>${ORIGEM_VISTRA_PORTA}</port>
+    <username>${ORIGEM_VISTRA_USER_NAME}</username>
+    <password>${ORIGEM_VISTRA_PASSWORD}</password>
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>${ORIGEM_VISTRA_PORTA}</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>[DW] - PostgreSQL - Vistra BI</name>
+    <server>${DESTINO_HOST}</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>${DESTINO_BANCO}</database>
+    <port>${DESTINO_PORTA}</port>
+    <username>${DESTINO_USER_NAME_BD}</username>
+    <password>${DESTINO_PASSWORD_BD}</password>
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>${DESTINO_PORTA}</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>Input Senhas</from>
+      <to>Table output cheque</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>Input Senhas</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>[DB] - Oracle - AgriBusiness ERP</connection>
+    <sql>SELECT
+PS.CODI_EMP NK_EMPRESA,
+PS.CODI_TRA NK_CLIENTE,
+P.NOME_PES "USUARIO_SOLICITANTE",
+P2.NOME_PES "USUARIO_LIBERACAO",
+LS.TIPO_LIB "TIPO_SENHA",
+LS.DATA_LIB DATA_LIBERACAO,
+CASE
+WHEN LS.TIPO_LIB = 001 THEN 'Limite de crédito vencido (Vinculos em detalhe)'
+WHEN LS.TIPO_LIB = 002 THEN 'Limite de desconto excedido'
+WHEN LS.TIPO_LIB = 003 THEN 'Condição de pagamento não permitida com a tabela'
+WHEN LS.TIPO_LIB = 004 THEN 'Limite de acréscimo excedido'
+WHEN LS.TIPO_LIB = 005 THEN 'Limite de crédito excedido'
+WHEN LS.TIPO_LIB = 006 THEN 'Clientes com mesmo CPF/IE'
+WHEN LS.TIPO_LIB = 007 THEN 'Alteração de documento a receber'
+WHEN LS.TIPO_LIB = 008 THEN 'Movimentação em lote com saldo insuficiente'
+WHEN LS.TIPO_LIB = 009 THEN 'Faturamento p/Cliente c/Cheque Devolvido'
+WHEN LS.TIPO_LIB = 010 THEN 'Alteração de CFOP '
+WHEN LS.TIPO_LIB = 011 THEN 'Alteração de Indexador '
+WHEN LS.TIPO_LIB = 012 THEN 'Venda com Contas Vencidas'
+WHEN LS.TIPO_LIB = 013 THEN 'Movimentação em controle de saldo com saldo insuficiente'
+WHEN LS.TIPO_LIB = 014 THEN 'Vcto Maior Condição de Pagamento'
+WHEN LS.TIPO_LIB = 015 THEN 'Alteração de Percencentuais Financeiros'
+WHEN LS.TIPO_LIB = 016 THEN 'Liberação Validade IE'
+WHEN LS.TIPO_LIB = 017 THEN 'Alteração Docs. Anteriores ao Balanço/Contabilidade'
+WHEN LS.TIPO_LIB = 018 THEN 'Baixa Documentos com Percentuais Alterados'
+WHEN LS.TIPO_LIB = 019 THEN 'Faturamento para Cliente Não Pertencente à Empresa'
+WHEN LS.TIPO_LIB = 020 THEN 'Alteração Data de Referência '
+WHEN LS.TIPO_LIB = 021 THEN 'Vencimento maior que o Vencimento Máximo da Tabela de Preços'
+WHEN LS.TIPO_LIB = 022 THEN 'Estorno Baixa Contas a Receber'
+WHEN LS.TIPO_LIB = 023 THEN 'Vcto do documento maior que vcto do pedido de venda'
+WHEN LS.TIPO_LIB = 024 THEN 'Venda sem estoque disponível'
+WHEN LS.TIPO_LIB = 025 THEN 'Ponto fora do horário'
+WHEN LS.TIPO_LIB = 026 THEN 'Faturamento sem estoque pertencente a empresa'
+WHEN LS.TIPO_LIB = 027 THEN 'Baixa de Contas a Receber com desconto total'
+WHEN LS.TIPO_LIB = 028 THEN 'Baixa de Contas a Pagar com desconto total'
+WHEN LS.TIPO_LIB = 029 THEN 'Faturamento com Tipo de Operação Restrito'
+WHEN LS.TIPO_LIB = 030 THEN 'Estorno Baixa Contas a Pagar'
+WHEN LS.TIPO_LIB = 031 THEN 'Bloqueio de Faturamento a Prazo por Valor'
+WHEN LS.TIPO_LIB = 032 THEN 'Bloqueio de Faturamento de Lote Vencido'
+WHEN LS.TIPO_LIB = 033 THEN 'Manutenção das Cotações dos Indexadores'
+WHEN LS.TIPO_LIB = 034 THEN 'Bloqueio de Requisição com Saldo Indisponível'
+WHEN LS.TIPO_LIB = 035 THEN 'Exclusão de Documento Fiscal'
+WHEN LS.TIPO_LIB = 036 THEN 'Transferência de Produto Contrato de Compra de preço Fixado'
+WHEN LS.TIPO_LIB = 037 THEN 'Saída de Grãos sem saldo'
+WHEN LS.TIPO_LIB = 038 THEN 'Título enviado ao banco'
+WHEN LS.TIPO_LIB = 039 THEN 'Liberação Comercial de Pedido de Venda sem Assinatura'
+WHEN LS.TIPO_LIB = 040 THEN 'Vendedor informado diferente do configurado no parceiro'
+WHEN LS.TIPO_LIB = 041 THEN 'Compensação de débitos menor que o possível'
+WHEN LS.TIPO_LIB = 042 THEN 'Contas vencidas não selecionadas para compensação'
+WHEN LS.TIPO_LIB = 043 THEN 'Conhecimento de transporte sem NFs relacionadas'
+WHEN LS.TIPO_LIB = 044 THEN 'NF relacionada a outro conhecimento de transporte'
+WHEN LS.TIPO_LIB = 045 THEN 'Vendas com prazo superior ao permitido para o cliente'
+WHEN LS.TIPO_LIB = 046 THEN 'Duplicatas a receber não assinadas com tempo expirado'
+WHEN LS.TIPO_LIB = 047 THEN 'Inserir Itens sem apontamento Aberto'
+WHEN LS.TIPO_LIB = 048 THEN 'Estouro no Planejamento Quantidade/Valores'
+WHEN LS.TIPO_LIB = 049 THEN 'Produto não planejado para a Campanha'
+WHEN LS.TIPO_LIB = 050 THEN 'Preço da saca diferente do preço permitido'
+WHEN LS.TIPO_LIB = 051 THEN 'Bloqueio de Emissão de NF de Entrada para Pessoa Jurídica'
+WHEN LS.TIPO_LIB = 052 THEN 'Coeficiente estratégico maior que o permitido'
+WHEN LS.TIPO_LIB = 053 THEN 'Acesso à opção Fechamento/Fixação do Contrato'
+WHEN LS.TIPO_LIB = 054 THEN 'Liberação de Comercialização Bloqueada'
+WHEN LS.TIPO_LIB = 055 THEN 'Faturamento com carta de cobrança sem saldo'
+WHEN LS.TIPO_LIB = 056 THEN 'Faturamento para cliente com restrição no SERASA'
+WHEN LS.TIPO_LIB = 057 THEN 'Faturamento com Validade da Consulta SERASA expirada'
+WHEN LS.TIPO_LIB = 058 THEN 'Liberação de Cotação Vencida'
+WHEN LS.TIPO_LIB = 059 THEN 'Liberação de Pesagem sem Nr. NF Produtor'
+WHEN LS.TIPO_LIB = 060 THEN 'Liberação de Transferência de Produto'
+WHEN LS.TIPO_LIB = 061 THEN 'Coeficiente estratégico do Contrato maior que o permitido'
+WHEN LS.TIPO_LIB = 062 THEN 'Troca de produto no faturamento'
+WHEN LS.TIPO_LIB = 063 THEN 'Alteração no Contrato de Compra'
+WHEN LS.TIPO_LIB = 064 THEN 'Pesagem avulsa'
+WHEN LS.TIPO_LIB = 065 THEN 'Liberação de OS Interna'
+WHEN LS.TIPO_LIB = 066 THEN 'Liberação de romaneio com bloqueio de edição de pesagem'
+WHEN LS.TIPO_LIB = 067 THEN 'Liberação para alterar Pedido/Faturamento Gerenciado Logística'
+WHEN LS.TIPO_LIB = 068 THEN 'Data de compra menor do que a data atual'
+WHEN LS.TIPO_LIB = 069 THEN 'Data de venda menor do que a data atual'
+WHEN LS.TIPO_LIB = 070 THEN 'Faturamento do contrato de venda/compra com qtde excedida'
+WHEN LS.TIPO_LIB = 071 THEN 'Liberação de Fixação para cliente com conta vencida'
+WHEN LS.TIPO_LIB = 072 THEN 'Vencto maior que o Vencto Máximo da Tabela de Preços da Negociação'
+WHEN LS.TIPO_LIB = 073 THEN 'Condição de pagamento não permitida com a tabela da Negociação'
+WHEN LS.TIPO_LIB = 074 THEN 'CND vencida no cadastro do Parceiro'
+WHEN LS.TIPO_LIB = 075 THEN 'CND vencida no cadastro da Propriedade'
+WHEN LS.TIPO_LIB = 076 THEN 'CND vencida no cadastro da Empresa'
+WHEN LS.TIPO_LIB = 077 THEN 'CND não informada no cadastro do Parceiro'
+WHEN LS.TIPO_LIB = 078 THEN 'CND não informada no cadastro da Propriedade'
+WHEN LS.TIPO_LIB = 079 THEN 'CND não informada no cadastro da Empresa'
+WHEN LS.TIPO_LIB = 080 THEN 'Código de autenticação não informado junto a CND do Parceiro'
+WHEN LS.TIPO_LIB = 081 THEN 'Código de autenticação não informado junto a CND da Propriedade'
+WHEN LS.TIPO_LIB = 082 THEN 'Código de autenticação não informado junto a CND da Empresa'
+WHEN LS.TIPO_LIB = 083 THEN 'Alteração/Exclusão do Pré-Financeiro'
+WHEN LS.TIPO_LIB = 084 THEN 'Alteração das informações do romaneio'
+WHEN LS.TIPO_LIB = 085 THEN 'Produtos com dados divergentens da requisição'
+WHEN LS.TIPO_LIB = 086 THEN 'Valor do Frete a Pagar superior ao previsto no Contrato de Frete'
+WHEN LS.TIPO_LIB = 087 THEN 'Alteração de Coeficiente Estratégico no Programa de Paridade'
+WHEN LS.TIPO_LIB = 088 THEN 'Lote sem Comprovante de Pagamento da Taxa Sanitária'
+WHEN LS.TIPO_LIB = 089 THEN 'Alteração das informações do contrato'
+WHEN LS.TIPO_LIB = 090 THEN 'Valor do frete acima do orçado no contrato.'
+WHEN LS.TIPO_LIB = 091 THEN 'Venc negociação diferente do Config p/ Emp ou cultura do parceiro'
+WHEN LS.TIPO_LIB = 092 THEN 'Negociação fora do padrão de carregamento.'
+WHEN LS.TIPO_LIB = 093 THEN 'Cancelamento/Exclusão de nota fiscal relacionada a fixação de produtos'
+WHEN LS.TIPO_LIB = 094 THEN 'Alteração das informações Dados de Exportação - Boletos'
+WHEN LS.TIPO_LIB = 095 THEN 'Faturamento com lote diferente do informado no coletor'
+WHEN LS.TIPO_LIB = 096 THEN 'Data de recebimento/documento menor que data atual'
+WHEN LS.TIPO_LIB = 097 THEN 'Cancelamento da negociação.'
+WHEN LS.TIPO_LIB = 098 THEN 'Limite de Desconto por Pedido de Venda'
+WHEN LS.TIPO_LIB = 099 THEN 'Parceiro com Título em Protesto'
+WHEN LS.TIPO_LIB = 100 THEN 'CPR com Cultura/Ciclo diferente do Pedido de Venda'
+WHEN LS.TIPO_LIB = 101 THEN 'Exclusão de Conhecimento de Transporte Eletrônico CTE'
+WHEN LS.TIPO_LIB = 102 THEN 'Faturamento para território diferente do cadastro do produto'
+WHEN LS.TIPO_LIB = 103 THEN 'Financeiro da nota fiscal diferente do contrato utilizado como origem'
+WHEN LS.TIPO_LIB = 104 THEN 'Valor da fixação diferente do valor da Nota de Terceiro selecionada'
+WHEN LS.TIPO_LIB = 105 THEN 'Limite de crédito por ciclo excedido'
+WHEN LS.TIPO_LIB = 106 THEN 'Cancelamento de Negociação de Trocas'
+WHEN LS.TIPO_LIB = 107 THEN 'Cancelamento de Ordem de Produção'
+WHEN LS.TIPO_LIB = 108 THEN 'Vcto maior que o Vcto Máximo do Grupo de Prod. da Tab. de Preço'
+WHEN LS.TIPO_LIB = 109 THEN 'Venda de Produto(s) sem saldo da Cota de Venda'
+WHEN LS.TIPO_LIB = 110 THEN 'Limite de crédito com fornecedor excedido'
+WHEN LS.TIPO_LIB = 111 THEN 'Recebimento com cheque com vencimento maior do que o permitido'
+WHEN LS.TIPO_LIB = 112 THEN 'Lançamento de pedido com simples faturamento em aberto'
+WHEN LS.TIPO_LIB = 113 THEN 'Limite de desconto da oferta excedido'
+WHEN LS.TIPO_LIB = 114 THEN 'Vencimento do desconto da oferta expirado'
+WHEN LS.TIPO_LIB = 115 THEN 'Negociação lançada sem Cotação do dia cadastrada'
+WHEN LS.TIPO_LIB = 116 THEN 'Exclusão de documentos fiscais de entrada'
+WHEN LS.TIPO_LIB = 117 THEN 'Cancelamento do Pedido de Venda'
+WHEN LS.TIPO_LIB = 118 THEN 'Dev. de venda com itens relacionados a contrato de compra'
+WHEN LS.TIPO_LIB = 119 THEN 'Solicita senha no faturamento para Parceiros pessoa Jurídica'
+WHEN LS.TIPO_LIB = 120 THEN 'Cancelamento de CT-e'
+WHEN LS.TIPO_LIB = 121 THEN 'Inclusão manual de romaneio'
+WHEN LS.TIPO_LIB = 122 THEN 'Solicitar senha ao alterar Pedido inserido em captação'
+WHEN LS.TIPO_LIB = 123 THEN 'Alteração de peso do veículo'
+WHEN LS.TIPO_LIB = 124 THEN 'Valor do item maior que o máximo permitido'
+WHEN LS.TIPO_LIB = 125 THEN 'Reabertura de contrato de movimentação de grãos'
+WHEN LS.TIPO_LIB = 126 THEN 'Alteração de produto de saldo inicial'
+WHEN LS.TIPO_LIB = 127 THEN 'Exclusão de produto de saldo inicial'
+WHEN LS.TIPO_LIB = 128 THEN 'Exclusão de saldo inicial'
+WHEN LS.TIPO_LIB = 129 THEN 'Pedido de Venda emitido com valor inferior ao configurado'
+WHEN LS.TIPO_LIB = 130 THEN 'Cheque está com situação Devolvido em processo jurídico'
+WHEN LS.TIPO_LIB = 131 THEN 'Limite de Crédito por Ciclo Vencido'
+WHEN LS.TIPO_LIB = 132 THEN 'Limite de Crédito Individual Excedido'
+WHEN LS.TIPO_LIB = 133 THEN 'Limite de Crédito Individual por Ciclo Excedido'
+WHEN LS.TIPO_LIB = 134 THEN 'Margem de Lucro Bruta Mínima Excedida'
+WHEN LS.TIPO_LIB = 135 THEN 'Inclusão/Exclusão de vínculos no cadastro do Parceiro'
+WHEN LS.TIPO_LIB = 136 THEN 'Venda com lote não permitido'
+WHEN LS.TIPO_LIB = 137 THEN 'Faturamento com Princípio Ativo e/ou Produto Receita restrito'
+WHEN LS.TIPO_LIB = 138 THEN 'Baixa de contas a pagar sem usar nota de crédito do fornecedor'
+WHEN LS.TIPO_LIB = 139 THEN 'Manutenção da Cotação na Negociação'
+WHEN LS.TIPO_LIB = 140 THEN 'Cancelamento de item (Checkout)'
+WHEN LS.TIPO_LIB = 141 THEN 'Cancelamento de venda (Checkout)'
+WHEN LS.TIPO_LIB = 142 THEN 'Fechamento de caixa com diferença de valores (Checkout)'
+WHEN LS.TIPO_LIB = 143 THEN 'Baixa de encontro de contas com cliente diferente do Fornecedor'
+WHEN LS.TIPO_LIB = 144 THEN 'Volume a ser expedido maior que tolerância'
+WHEN LS.TIPO_LIB = 145 THEN 'Vencimento menor que o permitido para o tipo de documento'
+WHEN LS.TIPO_LIB = 146 THEN 'Uso de notas fiscais com prazo excedido'
+WHEN LS.TIPO_LIB = 147 THEN 'Isentar itens de conferência'
+WHEN LS.TIPO_LIB = 148 THEN 'Confirmar Entrada da nota fiscal sem conferir'
+WHEN LS.TIPO_LIB = 149 THEN 'Alteração(ões) de lote(s) de item já enviado ao SISDEV'
+WHEN LS.TIPO_LIB = 150 THEN 'Tipo de Documento com Restrição'
+WHEN LS.TIPO_LIB = 151 THEN 'Venda sem Estoque Físico Disponível para o Faturamento'
+WHEN LS.TIPO_LIB = 152 THEN 'Reposição de estoque diferente da forma especificada'
+WHEN LS.TIPO_LIB = 153 THEN 'Edição do Lote para Nota Fiscal Emitida'
+WHEN LS.TIPO_LIB = 154 THEN 'Pedido de compra com restrição para cancelamento ou exclusão'
+WHEN LS.TIPO_LIB = 155 THEN 'Adiantamento vinculado a pedido de compra com restrição na exclusão'
+WHEN LS.TIPO_LIB = 156 THEN 'Fixação com pendências' 
+WHEN LS.TIPO_LIB = 157 THEN 'Ordem de Serviço com restrição para cancelamento'
+WHEN LS.TIPO_LIB = 158 THEN 'Alteração da data de vencimento do documento a receber'
+WHEN LS.TIPO_LIB = 159 THEN 'Alteração de Valor de Frete Calculado'
+WHEN LS.TIPO_LIB = 160 THEN 'Documento a Receber ao realizar baixa de cheque recebido com restrição para ser gerado'
+WHEN LS.TIPO_LIB = 161 THEN 'Alteração do campo FUNRURAL / SENAR no cadastro do Parceiro'
+WHEN LS.TIPO_LIB = 162 THEN 'Propriedade do Destinatário não informado o Código INDEA'
+WHEN LS.TIPO_LIB = 163 THEN 'Pedido sem assinatura eletrônica'
+WHEN LS.TIPO_LIB = 164 THEN 'Informar Lote na Devolução ou Retorno diferente do Lote Nota Origem'
+END "DESCRICAO_TIPO_SENHA",
+(CAST(LS.JUST_LIB AS VARCHAR(100))) "DESCRICAO_JUSTIFICATIVA",
+PS.DOCU_SEN "DOCUMENTO_ALTERADO",
+CASE  
+WHEN (LS.SREC_LIB = 'S') THEN 'SENHA RECUSADA'  
+WHEN (LS.RHLS_LIB IS NULL) THEN 'PENDENTE'  
+ELSE 'LIBERADA' END STATUS_SENHA
+from PEDSENHA PS
+INNER JOIN LIBERASENHA LS ON (LS.CODI_LIB = PS.CODI_SEN AND LS.TIPO_LIB &lt;&gt; '00')
+left outer join CADUSU US on (PS.CODI_USU = US.CODI_USU) 
+left outer join PESSOAL P on (US.CODI_PES = P.CODI_PES) 
+left outer join TRANSAC T on (T.CODI_TRA = PS.CODI_TRA) 
+left outer join PRODSERV PR on (PR.CODI_PSV = PS.CODI_PSV) 
+left outer join CONDICAO CD on (CD.COND_CON = PS.COND_CON) 
+left outer join CABTAB CT on (CT.TABE_CTA = PS.TABE_CTA) 
+left outer join CFO CF on (CF.CCFO_CFO = PS.CCFO_CFO) 
+left outer join INDEXADOR ID on (ID.CODI_IND = PS.CODI_IND) 
+left outer join CABREC  CR on (CR.CTRL_CBR = PS.CTRL_CBR) 
+left outer join TIPDOC TD on (CR.CODI_TDO = TD.CODI_TDO) 
+left outer join CTRLSALDO CS on (CS.CODI_CTR = PS.CODI_CTR) 
+left outer join TIPOOPER TP ON (TP.CODI_TOP = PS.CODI_TOP) 
+left outer join DEPOSITO DEP on (PS.CODI_DPT = DEP.CODI_DPT) 
+left outer join PESSOAL V on (PS.CODI_PES = V.CODI_PES) 
+left outer join PROPRIED PO on (PS.PROP_PRO=PO.PROP_PRO) 
+left outer join CADEMP EM on (EM.CODI_EMP=PS.COD1_EMP) 
+left outer join TRANSAC T2 on (PO.CODI_TRA=T2.CODI_TRA) 
+left outer join CICLO CIC on (CIC.CODI_CIC = PS.CODI_CIC) 
+left outer join CULTURA CUL on (CUL.CODI_CUL = PS.CODI_CUL) 
+left outer join GRUPO GPR on (GPR.CODI_GPR = PS.CODI_GPR) 
+left outer join TRANSAC T3 on (PS.CODI_VIN = T3.CODI_TRA) 
+left outer join CONTA CO ON (CO.CODI_CON = PS.CODI_CON)
+left join CADUSU US2 ON (US2.CODI_USU = LS.CODI_USU)
+left join PESSOAL P2 ON (P2.CODI_PES = US2.CODI_PES)
+WHERE LS.TIPO_LIB IN (18)
+
+UNION ALL
+ 
+SELECT
+PS.CODI_EMP NK_EMPRESA,
+PS.CODI_TRA NK_CLIENTE,
+P.NOME_PES "USUARIO_SOLICITANTE",
+P2.NOME_PES "USUARIO_LIBERACAO",
+LS.TIPO_LIB "TIPO_SENHA",
+LS.DATA_LIB DATA_LIBERACAO,
+CASE
+WHEN LS.TIPO_LIB = 001 THEN 'Limite de crédito vencido (Vinculos em detalhe)'
+WHEN LS.TIPO_LIB = 002 THEN 'Limite de desconto excedido'
+WHEN LS.TIPO_LIB = 003 THEN 'Condição de pagamento não permitida com a tabela'
+WHEN LS.TIPO_LIB = 004 THEN 'Limite de acréscimo excedido'
+WHEN LS.TIPO_LIB = 005 THEN 'Limite de crédito excedido'
+WHEN LS.TIPO_LIB = 006 THEN 'Clientes com mesmo CPF/IE'
+WHEN LS.TIPO_LIB = 007 THEN 'Alteração de documento a receber'
+WHEN LS.TIPO_LIB = 008 THEN 'Movimentação em lote com saldo insuficiente'
+WHEN LS.TIPO_LIB = 009 THEN 'Faturamento p/Cliente c/Cheque Devolvido'
+WHEN LS.TIPO_LIB = 010 THEN 'Alteração de CFOP '
+WHEN LS.TIPO_LIB = 011 THEN 'Alteração de Indexador '
+WHEN LS.TIPO_LIB = 012 THEN 'Venda com Contas Vencidas'
+WHEN LS.TIPO_LIB = 013 THEN 'Movimentação em controle de saldo com saldo insuficiente'
+WHEN LS.TIPO_LIB = 014 THEN 'Vcto Maior Condição de Pagamento'
+WHEN LS.TIPO_LIB = 015 THEN 'Alteração de Percencentuais Financeiros'
+WHEN LS.TIPO_LIB = 016 THEN 'Liberação Validade IE'
+WHEN LS.TIPO_LIB = 017 THEN 'Alteração Docs. Anteriores ao Balanço/Contabilidade'
+WHEN LS.TIPO_LIB = 018 THEN 'Baixa Documentos com Percentuais Alterados'
+WHEN LS.TIPO_LIB = 019 THEN 'Faturamento para Cliente Não Pertencente à Empresa'
+WHEN LS.TIPO_LIB = 020 THEN 'Alteração Data de Referência '
+WHEN LS.TIPO_LIB = 021 THEN 'Vencimento maior que o Vencimento Máximo da Tabela de Preços'
+WHEN LS.TIPO_LIB = 022 THEN 'Estorno Baixa Contas a Receber'
+WHEN LS.TIPO_LIB = 023 THEN 'Vcto do documento maior que vcto do pedido de venda'
+WHEN LS.TIPO_LIB = 024 THEN 'Venda sem estoque disponível'
+WHEN LS.TIPO_LIB = 025 THEN 'Ponto fora do horário'
+WHEN LS.TIPO_LIB = 026 THEN 'Faturamento sem estoque pertencente a empresa'
+WHEN LS.TIPO_LIB = 027 THEN 'Baixa de Contas a Receber com desconto total'
+WHEN LS.TIPO_LIB = 028 THEN 'Baixa de Contas a Pagar com desconto total'
+WHEN LS.TIPO_LIB = 029 THEN 'Faturamento com Tipo de Operação Restrito'
+WHEN LS.TIPO_LIB = 030 THEN 'Estorno Baixa Contas a Pagar'
+WHEN LS.TIPO_LIB = 031 THEN 'Bloqueio de Faturamento a Prazo por Valor'
+WHEN LS.TIPO_LIB = 032 THEN 'Bloqueio de Faturamento de Lote Vencido'
+WHEN LS.TIPO_LIB = 033 THEN 'Manutenção das Cotações dos Indexadores'
+WHEN LS.TIPO_LIB = 034 THEN 'Bloqueio de Requisição com Saldo Indisponível'
+WHEN LS.TIPO_LIB = 035 THEN 'Exclusão de Documento Fiscal'
+WHEN LS.TIPO_LIB = 036 THEN 'Transferência de Produto Contrato de Compra de preço Fixado'
+WHEN LS.TIPO_LIB = 037 THEN 'Saída de Grãos sem saldo'
+WHEN LS.TIPO_LIB = 038 THEN 'Título enviado ao banco'
+WHEN LS.TIPO_LIB = 039 THEN 'Liberação Comercial de Pedido de Venda sem Assinatura'
+WHEN LS.TIPO_LIB = 040 THEN 'Vendedor informado diferente do configurado no parceiro'
+WHEN LS.TIPO_LIB = 041 THEN 'Compensação de débitos menor que o possível'
+WHEN LS.TIPO_LIB = 042 THEN 'Contas vencidas não selecionadas para compensação'
+WHEN LS.TIPO_LIB = 043 THEN 'Conhecimento de transporte sem NFs relacionadas'
+WHEN LS.TIPO_LIB = 044 THEN 'NF relacionada a outro conhecimento de transporte'
+WHEN LS.TIPO_LIB = 045 THEN 'Vendas com prazo superior ao permitido para o cliente'
+WHEN LS.TIPO_LIB = 046 THEN 'Duplicatas a receber não assinadas com tempo expirado'
+WHEN LS.TIPO_LIB = 047 THEN 'Inserir Itens sem apontamento Aberto'
+WHEN LS.TIPO_LIB = 048 THEN 'Estouro no Planejamento Quantidade/Valores'
+WHEN LS.TIPO_LIB = 049 THEN 'Produto não planejado para a Campanha'
+WHEN LS.TIPO_LIB = 050 THEN 'Preço da saca diferente do preço permitido'
+WHEN LS.TIPO_LIB = 051 THEN 'Bloqueio de Emissão de NF de Entrada para Pessoa Jurídica'
+WHEN LS.TIPO_LIB = 052 THEN 'Coeficiente estratégico maior que o permitido'
+WHEN LS.TIPO_LIB = 053 THEN 'Acesso à opção Fechamento/Fixação do Contrato'
+WHEN LS.TIPO_LIB = 054 THEN 'Liberação de Comercialização Bloqueada'
+WHEN LS.TIPO_LIB = 055 THEN 'Faturamento com carta de cobrança sem saldo'
+WHEN LS.TIPO_LIB = 056 THEN 'Faturamento para cliente com restrição no SERASA'
+WHEN LS.TIPO_LIB = 057 THEN 'Faturamento com Validade da Consulta SERASA expirada'
+WHEN LS.TIPO_LIB = 058 THEN 'Liberação de Cotação Vencida'
+WHEN LS.TIPO_LIB = 059 THEN 'Liberação de Pesagem sem Nr. NF Produtor'
+WHEN LS.TIPO_LIB = 060 THEN 'Liberação de Transferência de Produto'
+WHEN LS.TIPO_LIB = 061 THEN 'Coeficiente estratégico do Contrato maior que o permitido'
+WHEN LS.TIPO_LIB = 062 THEN 'Troca de produto no faturamento'
+WHEN LS.TIPO_LIB = 063 THEN 'Alteração no Contrato de Compra'
+WHEN LS.TIPO_LIB = 064 THEN 'Pesagem avulsa'
+WHEN LS.TIPO_LIB = 065 THEN 'Liberação de OS Interna'
+WHEN LS.TIPO_LIB = 066 THEN 'Liberação de romaneio com bloqueio de edição de pesagem'
+WHEN LS.TIPO_LIB = 067 THEN 'Liberação para alterar Pedido/Faturamento Gerenciado Logística'
+WHEN LS.TIPO_LIB = 068 THEN 'Data de compra menor do que a data atual'
+WHEN LS.TIPO_LIB = 069 THEN 'Data de venda menor do que a data atual'
+WHEN LS.TIPO_LIB = 070 THEN 'Faturamento do contrato de venda/compra com qtde excedida'
+WHEN LS.TIPO_LIB = 071 THEN 'Liberação de Fixação para cliente com conta vencida'
+WHEN LS.TIPO_LIB = 072 THEN 'Vencto maior que o Vencto Máximo da Tabela de Preços da Negociação'
+WHEN LS.TIPO_LIB = 073 THEN 'Condição de pagamento não permitida com a tabela da Negociação'
+WHEN LS.TIPO_LIB = 074 THEN 'CND vencida no cadastro do Parceiro'
+WHEN LS.TIPO_LIB = 075 THEN 'CND vencida no cadastro da Propriedade'
+WHEN LS.TIPO_LIB = 076 THEN 'CND vencida no cadastro da Empresa'
+WHEN LS.TIPO_LIB = 077 THEN 'CND não informada no cadastro do Parceiro'
+WHEN LS.TIPO_LIB = 078 THEN 'CND não informada no cadastro da Propriedade'
+WHEN LS.TIPO_LIB = 079 THEN 'CND não informada no cadastro da Empresa'
+WHEN LS.TIPO_LIB = 080 THEN 'Código de autenticação não informado junto a CND do Parceiro'
+WHEN LS.TIPO_LIB = 081 THEN 'Código de autenticação não informado junto a CND da Propriedade'
+WHEN LS.TIPO_LIB = 082 THEN 'Código de autenticação não informado junto a CND da Empresa'
+WHEN LS.TIPO_LIB = 083 THEN 'Alteração/Exclusão do Pré-Financeiro'
+WHEN LS.TIPO_LIB = 084 THEN 'Alteração das informações do romaneio'
+WHEN LS.TIPO_LIB = 085 THEN 'Produtos com dados divergentens da requisição'
+WHEN LS.TIPO_LIB = 086 THEN 'Valor do Frete a Pagar superior ao previsto no Contrato de Frete'
+WHEN LS.TIPO_LIB = 087 THEN 'Alteração de Coeficiente Estratégico no Programa de Paridade'
+WHEN LS.TIPO_LIB = 088 THEN 'Lote sem Comprovante de Pagamento da Taxa Sanitária'
+WHEN LS.TIPO_LIB = 089 THEN 'Alteração das informações do contrato'
+WHEN LS.TIPO_LIB = 090 THEN 'Valor do frete acima do orçado no contrato.'
+WHEN LS.TIPO_LIB = 091 THEN 'Venc negociação diferente do Config p/ Emp ou cultura do parceiro'
+WHEN LS.TIPO_LIB = 092 THEN 'Negociação fora do padrão de carregamento.'
+WHEN LS.TIPO_LIB = 093 THEN 'Cancelamento/Exclusão de nota fiscal relacionada a fixação de produtos'
+WHEN LS.TIPO_LIB = 094 THEN 'Alteração das informações Dados de Exportação - Boletos'
+WHEN LS.TIPO_LIB = 095 THEN 'Faturamento com lote diferente do informado no coletor'
+WHEN LS.TIPO_LIB = 096 THEN 'Data de recebimento/documento menor que data atual'
+WHEN LS.TIPO_LIB = 097 THEN 'Cancelamento da negociação.'
+WHEN LS.TIPO_LIB = 098 THEN 'Limite de Desconto por Pedido de Venda'
+WHEN LS.TIPO_LIB = 099 THEN 'Parceiro com Título em Protesto'
+WHEN LS.TIPO_LIB = 100 THEN 'CPR com Cultura/Ciclo diferente do Pedido de Venda'
+WHEN LS.TIPO_LIB = 101 THEN 'Exclusão de Conhecimento de Transporte Eletrônico CTE'
+WHEN LS.TIPO_LIB = 102 THEN 'Faturamento para território diferente do cadastro do produto'
+WHEN LS.TIPO_LIB = 103 THEN 'Financeiro da nota fiscal diferente do contrato utilizado como origem'
+WHEN LS.TIPO_LIB = 104 THEN 'Valor da fixação diferente do valor da Nota de Terceiro selecionada'
+WHEN LS.TIPO_LIB = 105 THEN 'Limite de crédito por ciclo excedido'
+WHEN LS.TIPO_LIB = 106 THEN 'Cancelamento de Negociação de Trocas'
+WHEN LS.TIPO_LIB = 107 THEN 'Cancelamento de Ordem de Produção'
+WHEN LS.TIPO_LIB = 108 THEN 'Vcto maior que o Vcto Máximo do Grupo de Prod. da Tab. de Preço'
+WHEN LS.TIPO_LIB = 109 THEN 'Venda de Produto(s) sem saldo da Cota de Venda'
+WHEN LS.TIPO_LIB = 110 THEN 'Limite de crédito com fornecedor excedido'
+WHEN LS.TIPO_LIB = 111 THEN 'Recebimento com cheque com vencimento maior do que o permitido'
+WHEN LS.TIPO_LIB = 112 THEN 'Lançamento de pedido com simples faturamento em aberto'
+WHEN LS.TIPO_LIB = 113 THEN 'Limite de desconto da oferta excedido'
+WHEN LS.TIPO_LIB = 114 THEN 'Vencimento do desconto da oferta expirado'
+WHEN LS.TIPO_LIB = 115 THEN 'Negociação lançada sem Cotação do dia cadastrada'
+WHEN LS.TIPO_LIB = 116 THEN 'Exclusão de documentos fiscais de entrada'
+WHEN LS.TIPO_LIB = 117 THEN 'Cancelamento do Pedido de Venda'
+WHEN LS.TIPO_LIB = 118 THEN 'Dev. de venda com itens relacionados a contrato de compra'
+WHEN LS.TIPO_LIB = 119 THEN 'Solicita senha no faturamento para Parceiros pessoa Jurídica'
+WHEN LS.TIPO_LIB = 120 THEN 'Cancelamento de CT-e'
+WHEN LS.TIPO_LIB = 121 THEN 'Inclusão manual de romaneio'
+WHEN LS.TIPO_LIB = 122 THEN 'Solicitar senha ao alterar Pedido inserido em captação'
+WHEN LS.TIPO_LIB = 123 THEN 'Alteração de peso do veículo'
+WHEN LS.TIPO_LIB = 124 THEN 'Valor do item maior que o máximo permitido'
+WHEN LS.TIPO_LIB = 125 THEN 'Reabertura de contrato de movimentação de grãos'
+WHEN LS.TIPO_LIB = 126 THEN 'Alteração de produto de saldo inicial'
+WHEN LS.TIPO_LIB = 127 THEN 'Exclusão de produto de saldo inicial'
+WHEN LS.TIPO_LIB = 128 THEN 'Exclusão de saldo inicial'
+WHEN LS.TIPO_LIB = 129 THEN 'Pedido de Venda emitido com valor inferior ao configurado'
+WHEN LS.TIPO_LIB = 130 THEN 'Cheque está com situação Devolvido em processo jurídico'
+WHEN LS.TIPO_LIB = 131 THEN 'Limite de Crédito por Ciclo Vencido'
+WHEN LS.TIPO_LIB = 132 THEN 'Limite de Crédito Individual Excedido'
+WHEN LS.TIPO_LIB = 133 THEN 'Limite de Crédito Individual por Ciclo Excedido'
+WHEN LS.TIPO_LIB = 134 THEN 'Margem de Lucro Bruta Mínima Excedida'
+WHEN LS.TIPO_LIB = 135 THEN 'Inclusão/Exclusão de vínculos no cadastro do Parceiro'
+WHEN LS.TIPO_LIB = 136 THEN 'Venda com lote não permitido'
+WHEN LS.TIPO_LIB = 137 THEN 'Faturamento com Princípio Ativo e/ou Produto Receita restrito'
+WHEN LS.TIPO_LIB = 138 THEN 'Baixa de contas a pagar sem usar nota de crédito do fornecedor'
+WHEN LS.TIPO_LIB = 139 THEN 'Manutenção da Cotação na Negociação'
+WHEN LS.TIPO_LIB = 140 THEN 'Cancelamento de item (Checkout)'
+WHEN LS.TIPO_LIB = 141 THEN 'Cancelamento de venda (Checkout)'
+WHEN LS.TIPO_LIB = 142 THEN 'Fechamento de caixa com diferença de valores (Checkout)'
+WHEN LS.TIPO_LIB = 143 THEN 'Baixa de encontro de contas com cliente diferente do Fornecedor'
+WHEN LS.TIPO_LIB = 144 THEN 'Volume a ser expedido maior que tolerância'
+WHEN LS.TIPO_LIB = 145 THEN 'Vencimento menor que o permitido para o tipo de documento'
+WHEN LS.TIPO_LIB = 146 THEN 'Uso de notas fiscais com prazo excedido'
+WHEN LS.TIPO_LIB = 147 THEN 'Isentar itens de conferência'
+WHEN LS.TIPO_LIB = 148 THEN 'Confirmar Entrada da nota fiscal sem conferir'
+WHEN LS.TIPO_LIB = 149 THEN 'Alteração(ões) de lote(s) de item já enviado ao SISDEV'
+WHEN LS.TIPO_LIB = 150 THEN 'Tipo de Documento com Restrição'
+WHEN LS.TIPO_LIB = 151 THEN 'Venda sem Estoque Físico Disponível para o Faturamento'
+WHEN LS.TIPO_LIB = 152 THEN 'Reposição de estoque diferente da forma especificada'
+WHEN LS.TIPO_LIB = 153 THEN 'Edição do Lote para Nota Fiscal Emitida'
+WHEN LS.TIPO_LIB = 154 THEN 'Pedido de compra com restrição para cancelamento ou exclusão'
+WHEN LS.TIPO_LIB = 155 THEN 'Adiantamento vinculado a pedido de compra com restrição na exclusão'
+WHEN LS.TIPO_LIB = 156 THEN 'Fixação com pendências' 
+WHEN LS.TIPO_LIB = 157 THEN 'Ordem de Serviço com restrição para cancelamento'
+WHEN LS.TIPO_LIB = 158 THEN 'Alteração da data de vencimento do documento a receber'
+WHEN LS.TIPO_LIB = 159 THEN 'Alteração de Valor de Frete Calculado'
+WHEN LS.TIPO_LIB = 160 THEN 'Documento a Receber ao realizar baixa de cheque recebido com restrição para ser gerado'
+WHEN LS.TIPO_LIB = 161 THEN 'Alteração do campo FUNRURAL / SENAR no cadastro do Parceiro'
+WHEN LS.TIPO_LIB = 162 THEN 'Propriedade do Destinatário não informado o Código INDEA'
+WHEN LS.TIPO_LIB = 163 THEN 'Pedido sem assinatura eletrônica'
+WHEN LS.TIPO_LIB = 164 THEN 'Informar Lote na Devolução ou Retorno diferente do Lote Nota Origem'
+END "DESCRICAO_TIPO_SENHA",
+(CAST(LS.JUST_LIB AS VARCHAR(100))) "DESCRICAO_JUSTIFICATIVA",
+PS.DOCU_SEN "DOCUMENTO_ALTERADO",
+'SENHA RECUSADA' STATUS_SENHA
+from PEDSENHA PS 
+INNER JOIN SENHARECUSA LS ON (LS.CODI_LIB = PS.CODI_SEN)
+left outer join CADUSU US on (PS.CODI_USU = US.CODI_USU) 
+left outer join PESSOAL P on (US.CODI_PES = P.CODI_PES) 
+left outer join TRANSAC T on (T.CODI_TRA = PS.CODI_TRA) 
+left outer join PRODSERV PR on (PR.CODI_PSV = PS.CODI_PSV) 
+left outer join CONDICAO CD on (CD.COND_CON = PS.COND_CON) 
+left outer join CABTAB CT on (CT.TABE_CTA = PS.TABE_CTA) 
+left outer join CFO CF on (CF.CCFO_CFO = PS.CCFO_CFO) 
+left outer join INDEXADOR ID on (ID.CODI_IND = PS.CODI_IND) 
+left outer join CABREC  CR on (CR.CTRL_CBR = PS.CTRL_CBR) 
+left outer join TIPDOC TD on (CR.CODI_TDO = TD.CODI_TDO) 
+left outer join CTRLSALDO CS on (CS.CODI_CTR = PS.CODI_CTR) 
+left outer join TIPOOPER TP ON (TP.CODI_TOP = PS.CODI_TOP) 
+left outer join DEPOSITO DEP on (PS.CODI_DPT = DEP.CODI_DPT) 
+left outer join PESSOAL V on (PS.CODI_PES = V.CODI_PES) 
+left outer join PROPRIED PO on (PS.PROP_PRO=PO.PROP_PRO) 
+left outer join CADEMP EM on (EM.CODI_EMP=PS.COD1_EMP) 
+left outer join TRANSAC T2 on (PO.CODI_TRA=T2.CODI_TRA) 
+left outer join CICLO CIC on (CIC.CODI_CIC = PS.CODI_CIC) 
+left outer join CULTURA CUL on (CUL.CODI_CUL = PS.CODI_CUL) 
+left outer join GRUPO GPR on (GPR.CODI_GPR = PS.CODI_GPR) 
+left outer join TRANSAC T3 on (PS.CODI_VIN = T3.CODI_TRA) 
+left outer join CONTA CO ON (CO.CODI_CON = PS.CODI_CON)
+left join CADUSU US2 ON (US2.CODI_USU = LS.CODI_USU)
+left join PESSOAL P2 ON (P2.CODI_PES = US2.CODI_PES)
+WHERE LS.TIPO_LIB IN (18)</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>190</xloc>
+      <yloc>150</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Table output cheque</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>[DW] - PostgreSQL - Vistra BI</connection>
+    <schema>stage</schema>
+    <table>stg_liberacao_senha</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>NK_EMPRESA</column_name>
+        <stream_name>NK_EMPRESA</stream_name>
+      </field>
+      <field>
+        <column_name>NK_CLIENTE</column_name>
+        <stream_name>NK_CLIENTE</stream_name>
+      </field>
+      <field>
+        <column_name>USUARIO_SOLICITANTE</column_name>
+        <stream_name>USUARIO_SOLICITANTE</stream_name>
+      </field>
+      <field>
+        <column_name>USUARIO_LIBERACAO</column_name>
+        <stream_name>USUARIO_LIBERACAO</stream_name>
+      </field>
+      <field>
+        <column_name>TIPO_SENHA</column_name>
+        <stream_name>TIPO_SENHA</stream_name>
+      </field>
+      <field>
+        <column_name>DATA_LIBERACAO</column_name>
+        <stream_name>DATA_LIBERACAO</stream_name>
+      </field>
+      <field>
+        <column_name>DESCRICAO_TIPO_SENHA</column_name>
+        <stream_name>DESCRICAO_TIPO_SENHA</stream_name>
+      </field>
+      <field>
+        <column_name>DESCRICAO_JUSTIFICATIVA</column_name>
+        <stream_name>DESCRICAO_JUSTIFICATIVA</stream_name>
+      </field>
+      <field>
+        <column_name>DOCUMENTO_ALTERADO</column_name>
+        <stream_name>DOCUMENTO_ALTERADO</stream_name>
+      </field>
+      <field>
+        <column_name>STATUS_SENHA</column_name>
+        <stream_name>STATUS_SENHA</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>532</xloc>
+      <yloc>152</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+</transformation>

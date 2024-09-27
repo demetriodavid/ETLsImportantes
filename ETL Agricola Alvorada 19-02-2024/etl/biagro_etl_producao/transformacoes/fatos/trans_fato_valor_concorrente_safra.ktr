@@ -1,0 +1,1291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>trans_fato_valor_concorrente_safra</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <size_limit_lines/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2023/09/14 13:32:10.007</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2023/09/14 13:32:10.007</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>Origem_Analitico</name>
+    <server>${ORIGEM_ANALITICO_HOST}</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>${ORIGEM_ANALITICO_BANCO}</database>
+    <port>${ORIGEM_ANALITICO_PORTA}</port>
+    <username>${ORIGEM_USER_NAME_BD_ANALITICO}</username>
+    <password>${ORIGEM_PASSWORD_BD_ANALITICO}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>${ORIGEM_ANALITICO_PORTA}</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>Origem_CRM</name>
+    <server>${ORIGEM_CRM_HOST}</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>${ORIGEM_CRM_BANCO}</database>
+    <port>${ORIGEM_CRM_PORTA}</port>
+    <username>${ORIGEM_USER_NAME_BD_CRM}</username>
+    <password>${ORIGEM_PASSWORD_BD_CRM}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>${ORIGEM_CRM_PORTA}</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>Vistra_dw</name>
+    <server>${DESTINO_POSTGRES_HOST}</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>${DESTINO_POSTGRES_BANCO}</database>
+    <port>${DESTINO_POSTGRES_PORTA}</port>
+    <username>${DESTINO_USER_NAME_BD}</username>
+    <password>${DESTINO_PASSWORD_BD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>${DESTINO_POSTGRES_PORTA}</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>Block this step until steps finish</from>
+      <to>Carga fato_valor_concorrente_safra</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Input STG_VALOR_CONCORRENTE_SAFRA</from>
+      <to>Block this step until steps finish</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>Block this step until steps finish</name>
+    <type>BlockUntilStepsFinish</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <steps>
+      <step>
+        <name>Truncate fato_valor_concorrente_safra</name>
+        <CopyNr>0</CopyNr>
+      </step>
+    </steps>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>562</xloc>
+      <yloc>207</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Carga fato_valor_concorrente_safra</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Vistra_dw</connection>
+    <schema/>
+    <table>fato_valor_concorrente_safra</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>sk_consultor</column_name>
+        <stream_name>sk_consultor</stream_name>
+      </field>
+      <field>
+        <column_name>sk_cliente</column_name>
+        <stream_name>sk_cliente</stream_name>
+      </field>
+      <field>
+        <column_name>sk_propriedade</column_name>
+        <stream_name>sk_propriedade</stream_name>
+      </field>
+      <field>
+        <column_name>valor_defensivos</column_name>
+        <stream_name>valor_defensivos</stream_name>
+      </field>
+      <field>
+        <column_name>valor_fertilizantes</column_name>
+        <stream_name>valor_fertilizantes</stream_name>
+      </field>
+      <field>
+        <column_name>valor_sementes</column_name>
+        <stream_name>valor_sementes</stream_name>
+      </field>
+      <field>
+        <column_name>valor_especialidades</column_name>
+        <stream_name>valor_especialidades</stream_name>
+      </field>
+      <field>
+        <column_name>sk_tempo_safra</column_name>
+        <stream_name>sk_tempo_safra</stream_name>
+      </field>
+      <field>
+        <column_name>sk_empresa</column_name>
+        <stream_name>sk_empresa</stream_name>
+      </field>
+      <field>
+        <column_name>mercado</column_name>
+        <stream_name>mercado</stream_name>
+      </field>
+      <field>
+        <column_name>sk_concorrente</column_name>
+        <stream_name>sk_concorrente</stream_name>
+      </field>
+      <field>
+        <column_name>pot_defensivos</column_name>
+        <stream_name>pot_defensivos</stream_name>
+      </field>
+      <field>
+        <column_name>pot_fertilizantes</column_name>
+        <stream_name>pot_fertilizantes</stream_name>
+      </field>
+      <field>
+        <column_name>pot_sementes</column_name>
+        <stream_name>pot_sementes</stream_name>
+      </field>
+      <field>
+        <column_name>pot_especialidades</column_name>
+        <stream_name>pot_especialidades</stream_name>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>762</xloc>
+      <yloc>207</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Input STG_VALOR_CONCORRENTE_SAFRA</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Vistra_dw</connection>
+    <sql>
+
+
+/*
+SELECT DTS.SK_TEMPO_SAFRA,
+       DE.SK_EMPRESA,
+       DCO.SK_CONSULTOR,
+       DC.SK_CLIENTE,
+       DPR.SK_PROPRIEDADE,
+       CO.SK_CONCORRENTE,
+       S.MERCADO,
+       CASE S.MERCADO 
+           WHEN 'SEM INFORMAÇÃO' THEN SUM(S.POT_DEFENSIVOS)
+           WHEN 'FECHADO'        THEN SUM(S.VALOR_DEFENSIVOS)
+           WHEN 'ABERTO'         THEN SUM(S.POT_DEFENSIVOS) - COALESCE(SUM(S.VALOR_DEFENSIVOS),0)
+           WHEN 'PARCIAL'        THEN SUM(S.POT_DEFENSIVOS) - COALESCE(SUM(S.VALOR_DEFENSIVOS),0)
+       END                                             AS VALOR_DEFENSIVOS,
+       CASE S.MERCADO 
+           WHEN 'SEM INFORMAÇÃO' THEN SUM(S.POT_FERTILIZANTES)
+           WHEN 'FECHADO'        THEN SUM(S.VALOR_FERTILIZANTES)
+           WHEN 'ABERTO'         THEN SUM(S.POT_FERTILIZANTES) - COALESCE(SUM(S.VALOR_FERTILIZANTES),0)
+           WHEN 'PARCIAL'        THEN SUM(S.POT_FERTILIZANTES) - COALESCE(SUM(S.VALOR_FERTILIZANTES),0)
+       END                                             AS VALOR_FERTILIZANTES,
+       CASE S.MERCADO 
+           WHEN 'SEM INFORMAÇÃO' THEN SUM(S.POT_SEMENTES)
+           WHEN 'FECHADO'        THEN SUM(S.VALOR_SEMENTES)
+           WHEN 'ABERTO'         THEN SUM(S.POT_SEMENTES) - COALESCE(SUM(S.VALOR_SEMENTES),0)
+           WHEN 'PARCIAL'        THEN SUM(S.POT_SEMENTES) - COALESCE(SUM(S.VALOR_SEMENTES),0)
+       END                                             AS VALOR_SEMENTES,
+       CASE S.MERCADO 
+           WHEN 'SEM INFORMAÇÃO' THEN SUM(S.POT_ESPECIALIDADES)
+           WHEN 'FECHADO'        THEN SUM(S.VALOR_ESPECIALIDADES)
+           WHEN 'ABERTO'         THEN SUM(S.POT_ESPECIALIDADES) - COALESCE(SUM(S.VALOR_ESPECIALIDADES),0)
+           WHEN 'PARCIAL'        THEN SUM(S.POT_ESPECIALIDADES) - COALESCE(SUM(S.VALOR_ESPECIALIDADES),0)
+       END                                             AS VALOR_ESPECIALIDADES,
+       COALESCE(SUM(S.POT_DEFENSIVOS),0)               AS POT_DEFENSIVOS,
+       COALESCE(SUM(S.POT_FERTILIZANTES),0)            AS POT_FERTILIZANTES,
+       COALESCE(SUM(S.POT_SEMENTES),0)                 AS POT_SEMENTES,
+       COALESCE(SUM(S.POT_ESPECIALIDADES),0)           AS POT_ESPECIALIDADES
+  FROM STG_VALOR_CONCORRENTE_SAFRA S
+       INNER JOIN DIM_TEMPO_SAFRA DTS USING(NK_TEMPO_SAFRA)
+       INNER JOIN DIM_EMPRESA      DE USING(NK_EMPRESA)
+       INNER JOIN DIM_CONSULTOR   DCO USING(NK_CONSULTOR)
+       INNER JOIN DIM_CLIENTE      DC USING(NK_CLIENTE)
+       INNER JOIN DIM_PROPRIEDADE DPR USING(NK_PROPRIEDADE)
+       INNER JOIN DIM_CONCORRENTE  CO ON CO.NK_CONCORRENTE  = S.CONCORRENTE
+ GROUP BY 1,2,3,4,5,6,7
+*/
+
+SELECT X.SK_TEMPO_SAFRA,
+       X.SK_EMPRESA,
+       X.SK_CONSULTOR,
+       X.SK_CLIENTE,
+       X.SK_PROPRIEDADE,
+       X.SK_CONCORRENTE,
+       X.MERCADO,
+       SUM(X.VALOR_DEFENSIVOS)     AS VALOR_DEFENSIVOS,
+       SUM(X.VALOR_FERTILIZANTES)  AS VALOR_FERTILIZANTES,
+       SUM(X.VALOR_SEMENTES)       AS VALOR_SEMENTES,
+       SUM(X.VALOR_ESPECIALIDADES) AS VALOR_ESPECIALIDADES,
+       SUM(X.POT_DEFENSIVOS)       AS POT_DEFENSIVOS,
+       SUM(X.POT_FERTILIZANTES)    AS POT_FERTILIZANTES,
+       SUM(X.POT_SEMENTES)         AS POT_SEMENTES,
+       SUM(X.POT_ESPECIALIDADES)   AS POT_ESPECIALIDADES
+  FROM (
+        SELECT DTS.SK_TEMPO_SAFRA,
+               DE.SK_EMPRESA,
+               DCO.SK_CONSULTOR,
+               DC.SK_CLIENTE,
+               DPR.SK_PROPRIEDADE,
+               COALESCE(CO.SK_CONCORRENTE, CON.SK_CONCORRENTE)                     AS SK_CONCORRENTE,
+               S.MERCADO,
+               CASE S.MERCADO 
+                   WHEN 'SEM INFORMAÇÃO' THEN SUM(S.POT_DEFENSIVOS)
+                   WHEN 'FECHADO'        THEN SUM(S.VALOR_DEFENSIVOS)
+                   WHEN 'ABERTO'         THEN SUM(S.POT_DEFENSIVOS) - COALESCE(SUM(S.VALOR_DEFENSIVOS),0)
+               END                                             AS VALOR_DEFENSIVOS,
+               CASE S.MERCADO 
+                   WHEN 'SEM INFORMAÇÃO' THEN SUM(S.POT_FERTILIZANTES)
+                   WHEN 'FECHADO'        THEN SUM(S.VALOR_FERTILIZANTES)
+                   WHEN 'ABERTO'         THEN SUM(S.POT_FERTILIZANTES) - COALESCE(SUM(S.VALOR_FERTILIZANTES),0)
+               END                                             AS VALOR_FERTILIZANTES,
+               CASE S.MERCADO 
+                   WHEN 'SEM INFORMAÇÃO' THEN SUM(S.POT_SEMENTES)
+                   WHEN 'FECHADO'        THEN SUM(S.VALOR_SEMENTES)
+                   WHEN 'ABERTO'         THEN SUM(S.POT_SEMENTES) - COALESCE(SUM(S.VALOR_SEMENTES),0)
+               END                                             AS VALOR_SEMENTES,
+               CASE S.MERCADO 
+                   WHEN 'SEM INFORMAÇÃO' THEN SUM(S.POT_ESPECIALIDADES)
+                   WHEN 'FECHADO'        THEN SUM(S.VALOR_ESPECIALIDADES)
+                   WHEN 'ABERTO'         THEN SUM(S.POT_ESPECIALIDADES) - COALESCE(SUM(S.VALOR_ESPECIALIDADES),0)
+               END                                             AS VALOR_ESPECIALIDADES,
+               COALESCE(SUM(S.POT_DEFENSIVOS),0)               AS POT_DEFENSIVOS,
+               COALESCE(SUM(S.POT_FERTILIZANTES),0)            AS POT_FERTILIZANTES,
+               COALESCE(SUM(S.POT_SEMENTES),0)                 AS POT_SEMENTES,
+               COALESCE(SUM(S.POT_ESPECIALIDADES),0)           AS POT_ESPECIALIDADES
+          FROM STG_VALOR_CONCORRENTE_SAFRA S
+               INNER JOIN DIM_TEMPO_SAFRA DTS USING(NK_TEMPO_SAFRA)
+               INNER JOIN DIM_EMPRESA      DE USING(NK_EMPRESA)
+               INNER JOIN DIM_CONSULTOR   DCO USING(NK_CONSULTOR)
+               INNER JOIN DIM_CLIENTE      DC USING(NK_CLIENTE)
+               INNER JOIN DIM_PROPRIEDADE DPR USING(NK_PROPRIEDADE)
+                LEFT JOIN DIM_CONCORRENTE  CO ON CO.NK_CONCORRENTE  = S.CONCORRENTE
+               INNER JOIN DIM_CONCORRENTE CON ON CON.NK_CONCORRENTE = 0
+         WHERE DCO.PERFIL_DE_ACESSO_WEB ILIKE 'RTV'
+         GROUP BY 1,2,3,4,5,6,7
+
+     UNION ALL
+
+        SELECT DTS.SK_TEMPO_SAFRA,
+               DE.SK_EMPRESA,
+               DCO.SK_CONSULTOR,
+               DC.SK_CLIENTE,
+               DPR.SK_PROPRIEDADE,
+               COALESCE(CO.SK_CONCORRENTE, CON.SK_CONCORRENTE)                     AS SK_CONCORRENTE,
+               'ABERTO'                                                            AS MERCADO,
+               SUM(S.POT_DEFENSIVOS) - COALESCE(SUM(S.VALOR_DEFENSIVOS),0)         AS VALOR_DEFENSIVOS,
+               SUM(S.POT_FERTILIZANTES) - COALESCE(SUM(S.VALOR_FERTILIZANTES),0)   AS VALOR_FERTILIZANTES,
+               SUM(S.POT_SEMENTES) - COALESCE(SUM(S.VALOR_SEMENTES),0)             AS VALOR_SEMENTES,
+               SUM(S.POT_ESPECIALIDADES) - COALESCE(SUM(S.VALOR_ESPECIALIDADES),0) AS VALOR_ESPECIALIDADES,
+               COALESCE(SUM(S.POT_DEFENSIVOS),0)                                   AS POT_DEFENSIVOS,
+               COALESCE(SUM(S.POT_FERTILIZANTES),0)                                AS POT_FERTILIZANTES,
+               COALESCE(SUM(S.POT_SEMENTES),0)                                     AS POT_SEMENTES,
+               COALESCE(SUM(S.POT_ESPECIALIDADES),0)                               AS POT_ESPECIALIDADES
+          FROM STG_VALOR_CONCORRENTE_SAFRA S
+               INNER JOIN DIM_TEMPO_SAFRA DTS USING(NK_TEMPO_SAFRA)
+               INNER JOIN DIM_EMPRESA      DE USING(NK_EMPRESA)
+               INNER JOIN DIM_CONSULTOR   DCO USING(NK_CONSULTOR)
+               INNER JOIN DIM_CLIENTE      DC USING(NK_CLIENTE)
+               INNER JOIN DIM_PROPRIEDADE DPR USING(NK_PROPRIEDADE)
+                LEFT JOIN DIM_CONCORRENTE  CO ON CO.NK_CONCORRENTE  = S.CONCORRENTE
+               INNER JOIN DIM_CONCORRENTE CON ON CON.NK_CONCORRENTE = 0
+         WHERE S.MERCADO_PARCIAL        ILIKE 'PARCIAL'
+           AND DCO.PERFIL_DE_ACESSO_WEB ILIKE 'RTV'
+         GROUP BY 1,2,3,4,5,6,7
+     )X
+ GROUP BY 1,2,3,4,5,6,7</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>sk_tempo_safra</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>Input STG_VALOR_CONCORRENTE_SAFRA</origin>
+        <comments>sk_tempo_safra</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_timezone>America/Sao_Paulo</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>sk_empresa</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>Input STG_VALOR_CONCORRENTE_SAFRA</origin>
+        <comments>sk_empresa</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_timezone>America/Sao_Paulo</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>sk_consultor</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>Input STG_VALOR_CONCORRENTE_SAFRA</origin>
+        <comments>sk_consultor</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_timezone>America/Sao_Paulo</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>sk_cliente</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>Input STG_VALOR_CONCORRENTE_SAFRA</origin>
+        <comments>sk_cliente</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_timezone>America/Sao_Paulo</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>sk_propriedade</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>Input STG_VALOR_CONCORRENTE_SAFRA</origin>
+        <comments>sk_propriedade</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_timezone>America/Sao_Paulo</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>sk_concorrente</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>Input STG_VALOR_CONCORRENTE_SAFRA</origin>
+        <comments>sk_concorrente</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_timezone>America/Sao_Paulo</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>mercado</name>
+        <length>2147483647</length>
+        <precision>-1</precision>
+        <origin>Input STG_VALOR_CONCORRENTE_SAFRA</origin>
+        <comments>mercado</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_timezone>America/Sao_Paulo</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Number</type>
+        <storagetype>normal</storagetype>
+        <name>valor_defensivos</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>Input STG_VALOR_CONCORRENTE_SAFRA</origin>
+        <comments>valor_defensivos</comments>
+        <conversion_Mask>####0.0#########;-####0.0#########</conversion_Mask>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_timezone>America/Sao_Paulo</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Number</type>
+        <storagetype>normal</storagetype>
+        <name>valor_fertilizantes</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>Input STG_VALOR_CONCORRENTE_SAFRA</origin>
+        <comments>valor_fertilizantes</comments>
+        <conversion_Mask>####0.0#########;-####0.0#########</conversion_Mask>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_timezone>America/Sao_Paulo</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Number</type>
+        <storagetype>normal</storagetype>
+        <name>valor_sementes</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>Input STG_VALOR_CONCORRENTE_SAFRA</origin>
+        <comments>valor_sementes</comments>
+        <conversion_Mask>####0.0#########;-####0.0#########</conversion_Mask>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_timezone>America/Sao_Paulo</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Number</type>
+        <storagetype>normal</storagetype>
+        <name>valor_especialidades</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>Input STG_VALOR_CONCORRENTE_SAFRA</origin>
+        <comments>valor_especialidades</comments>
+        <conversion_Mask>####0.0#########;-####0.0#########</conversion_Mask>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_timezone>America/Sao_Paulo</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Number</type>
+        <storagetype>normal</storagetype>
+        <name>pot_defensivos</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>Input STG_VALOR_CONCORRENTE_SAFRA</origin>
+        <comments>pot_defensivos</comments>
+        <conversion_Mask>####0.0#########;-####0.0#########</conversion_Mask>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_timezone>America/Sao_Paulo</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Number</type>
+        <storagetype>normal</storagetype>
+        <name>pot_fertilizantes</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>Input STG_VALOR_CONCORRENTE_SAFRA</origin>
+        <comments>pot_fertilizantes</comments>
+        <conversion_Mask>####0.0#########;-####0.0#########</conversion_Mask>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_timezone>America/Sao_Paulo</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Number</type>
+        <storagetype>normal</storagetype>
+        <name>pot_sementes</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>Input STG_VALOR_CONCORRENTE_SAFRA</origin>
+        <comments>pot_sementes</comments>
+        <conversion_Mask>####0.0#########;-####0.0#########</conversion_Mask>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_timezone>America/Sao_Paulo</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Number</type>
+        <storagetype>normal</storagetype>
+        <name>pot_especialidades</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>Input STG_VALOR_CONCORRENTE_SAFRA</origin>
+        <comments>pot_especialidades</comments>
+        <conversion_Mask>####0.0#########;-####0.0#########</conversion_Mask>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_timezone>America/Sao_Paulo</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+    </row-meta>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>248</xloc>
+      <yloc>207</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Truncate fato_valor_concorrente_safra</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Vistra_dw</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>Truncate fato_valor_concorrente_safra</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>561</xloc>
+      <yloc>94</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+  <attributes/>
+</transformation>

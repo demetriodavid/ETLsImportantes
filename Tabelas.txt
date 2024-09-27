@@ -1,0 +1,23 @@
+AGM TABELAS
+TIPO | DESCRIÇÃO
+
+1 | Safra
+2 | Cultura
+3 | Variedade
+4 | Ciclo
+5 | Unidade de medida
+9 | Grupo de produtos
+10 | Moeda
+12 | Cidades
+13 | Estados
+17 | Classe do produto
+18 | Tipos de pessoas
+20 | Tipo contrato
+33 | Tabela de preço
+163 | Grupo unidade
+
+
+UnidNegocio -  empresas emitentes 
+
+
+

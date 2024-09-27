@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>trans_dim_produto</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <directory>&#x2f;</directory>
+    <parameters>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2023&#x2f;08&#x2f;17 09&#x3a;48&#x3a;52.014</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2023&#x2f;08&#x2f;17 09&#x3a;48&#x3a;52.014</modified_date>
+    <key_for_session_key/>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>Origem_Analitico</name>
+    <server>&#x24;&#x7b;ORIGEM_ANALITICO_HOST&#x7d;</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>&#x24;&#x7b;ORIGEM_ANALITICO_BANCO&#x7d;</database>
+    <port>&#x24;&#x7b;ORIGEM_ANALITICO_PORTA&#x7d;</port>
+    <username>&#x24;&#x7b;ORIGEM_USER_NAME_BD_ANALITICO&#x7d;</username>
+    <password>&#x24;&#x7b;ORIGEM_PASSWORD_BD_ANALITICO&#x7d;</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;ORIGEM_ANALITICO_PORTA&#x7d;</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>Origem_CRM</name>
+    <server>&#x24;&#x7b;ORIGEM_CRM_HOST&#x7d;</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>&#x24;&#x7b;ORIGEM_CRM_BANCO&#x7d;</database>
+    <port>&#x24;&#x7b;ORIGEM_CRM_PORTA&#x7d;</port>
+    <username>&#x24;&#x7b;ORIGEM_USER_NAME_BD_CRM&#x7d;</username>
+    <password>&#x24;&#x7b;ORIGEM_PASSWORD_BD_CRM&#x7d;</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;ORIGEM_CRM_PORTA&#x7d;</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>Vistra_dw</name>
+    <server>&#x24;&#x7b;DESTINO_POSTGRES_HOST&#x7d;</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>&#x24;&#x7b;DESTINO_POSTGRES_BANCO&#x7d;</database>
+    <port>&#x24;&#x7b;DESTINO_POSTGRES_PORTA&#x7d;</port>
+    <username>&#x24;&#x7b;DESTINO_USER_NAME_BD&#x7d;</username>
+    <password>&#x24;&#x7b;DESTINO_PASSWORD_BD&#x7d;</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;DESTINO_POSTGRES_PORTA&#x7d;</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+  <hop> <from>Input Analitico dim_produto</from><to>Insert &#x2f; Update dim_produto</to><enabled>Y</enabled> </hop>
+  </order>
+  <step>
+    <name>Input Analitico dim_produto</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Origem_Analitico</connection>
+    <sql>SELECT DP.NK_PRODUTO,&#xd;&#xa;       DP.COD_PRODUTO,&#xd;&#xa;       DP.PRODUTO,&#xd;&#xa;       DP.COD_FAMILIA,&#xd;&#xa;       DP.FAMILIA,&#xd;&#xa;       DP.INSUMO,&#xd;&#xa;       DP.SEMENTE,&#xd;&#xa;       DP.UNID_MEDIDA,&#xd;&#xa;       DP.FAMILIA_SUPERIOR,&#xd;&#xa;       DP.COD_FAMILIA_SUPERIOR,&#xd;&#xa;       DP.PRODUTO_ATIVO,&#xd;&#xa;       DP.PRODUTO_INDUSTRIALIZADO,&#xd;&#xa;       DP.COD_LINHA,&#xd;&#xa;       DP.LINHA,&#xd;&#xa;       DP.PARCEIRO_LOCAL_LINHA,&#xd;&#xa;       DP.QTD_EMBALAGEM,&#xd;&#xa;       DP.FABRICANTE,&#xd;&#xa;       DP.COD_SIMILARIDADE,&#xd;&#xa;       DP.SIMILARIDADE,&#xd;&#xa;       DP.COD_AREA_NEGOCIO,&#xd;&#xa;       DP.CONSIDERA_AREA_NEGOCIO,&#xd;&#xa;       DP.IDPRODUTO,&#xd;&#xa;       DP.CHAVEERP_CRM,&#xd;&#xa;       DP.CODIGO_DEPARTAMENTO,&#xd;&#xa;       DP.NIVEL_DEPARTAMENTO,&#xd;&#xa;       DP.NK_PRODUTO_SUPERIOR,&#xd;&#xa;       DP.ID_CLASSE_NIVEL_01,&#xd;&#xa;       DP.CLASSE_NIVEL_01,&#xd;&#xa;       DP.ID_CLASSE_NIVEL_02,&#xd;&#xa;       DP.CLASSE_NIVEL_02,&#xd;&#xa;       DP.ID_CLASSE_NIVEL_03,&#xd;&#xa;       DP.CLASSE_NIVEL_03,&#xd;&#xa;       DP.ID_CLASSE_NIVEL_04,&#xd;&#xa;       DP.CLASSE_NIVEL_04,&#xd;&#xa;       DP.ID_CLASSE_NIVEL_05,&#xd;&#xa;       DP.CLASSE_NIVEL_05,&#xd;&#xa;       DP.IDFABRICANTE,&#xd;&#xa;       DP.PESO,&#xd;&#xa;       DP.QUANTIDADE_APRESENTACAO,&#xd;&#xa;       DP.CLASSIFICACAO_PRODUTO&#xd;&#xa;  FROM DIM_PRODUTO DP</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>381</xloc>
+      <yloc>255</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Insert &#x2f; Update dim_produto</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Vistra_dw</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>dim_produto</table>
+      <key>
+        <name>nk_produto</name>
+        <field>nk_produto</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>nk_produto</name>
+        <rename>nk_produto</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>cod_produto</name>
+        <rename>cod_produto</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>produto</name>
+        <rename>produto</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>cod_familia</name>
+        <rename>cod_familia</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>familia</name>
+        <rename>familia</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insumo</name>
+        <rename>insumo</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>semente</name>
+        <rename>semente</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>unid_medida</name>
+        <rename>unid_medida</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>familia_superior</name>
+        <rename>familia_superior</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>cod_familia_superior</name>
+        <rename>cod_familia_superior</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>produto_ativo</name>
+        <rename>produto_ativo</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>produto_industrializado</name>
+        <rename>produto_industrializado</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>cod_linha</name>
+        <rename>cod_linha</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>linha</name>
+        <rename>linha</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>parceiro_local_linha</name>
+        <rename>parceiro_local_linha</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>qtd_embalagem</name>
+        <rename>qtd_embalagem</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>fabricante</name>
+        <rename>fabricante</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>cod_similaridade</name>
+        <rename>cod_similaridade</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>similaridade</name>
+        <rename>similaridade</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>cod_area_negocio</name>
+        <rename>cod_area_negocio</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>considera_area_negocio</name>
+        <rename>considera_area_negocio</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>idproduto</name>
+        <rename>idproduto</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>chaveerp_crm</name>
+        <rename>chaveerp_crm</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>codigo_departamento</name>
+        <rename>codigo_departamento</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>nivel_departamento</name>
+        <rename>nivel_departamento</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>nk_produto_superior</name>
+        <rename>nk_produto_superior</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>id_classe_nivel_01</name>
+        <rename>id_classe_nivel_01</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>classe_nivel_01</name>
+        <rename>classe_nivel_01</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>id_classe_nivel_02</name>
+        <rename>id_classe_nivel_02</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>classe_nivel_02</name>
+        <rename>classe_nivel_02</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>id_classe_nivel_03</name>
+        <rename>id_classe_nivel_03</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>classe_nivel_03</name>
+        <rename>classe_nivel_03</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>id_classe_nivel_04</name>
+        <rename>id_classe_nivel_04</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>classe_nivel_04</name>
+        <rename>classe_nivel_04</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>id_classe_nivel_05</name>
+        <rename>id_classe_nivel_05</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>classe_nivel_05</name>
+        <rename>classe_nivel_05</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>idfabricante</name>
+        <rename>idfabricante</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>peso</name>
+        <rename>peso</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>quantidade_apresentacao</name>
+        <rename>quantidade_apresentacao</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>classificacao_produto</name>
+        <rename>classificacao_produto</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>786</xloc>
+      <yloc>257</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+
+</transformation>

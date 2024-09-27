@@ -1,0 +1,197 @@
+https://blog.jooq.org/2016/04/25/10-sql-tricks-that-you-didnt-think-were-possible/
+
+https://stackoverflow.com/questions/47719010/postgresql-ignore-nulls-in-window-functions
+
+coagro 
+23:00 h Bayer
+00:05 h Backup
+01:00 h Carga Vistra
+
+https://www.devmedia.com.br/sql-avancado/28889
+
+skype
+
+usuário: dc.vistraparc.11@outlook.com
+senha: vp_datacoper0008
+
+http://fakeupdate.net/
+
+gptw: 08586056944
+demetrio01041993
+
+Dcdemetrio12@
+De930105@
+
+Coagril2k17
+
+SENHAS COAGRISOL
+
+DATACOPER: Qx6t7u
+ADMINISTRADOR: E3QKgucP6c
+
+
+
+                                               Metas Lead Time Setor Vistra Por Produto
+___________________________________________________________________________________________
+Tipo de Serviço *	Produto *	Qtd. Minima de dias *	Qtd. Máxima de dias                               |
+      BUG	              VISTRA BI	            3	                                             5	                                              |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+Tipo de Serviço *	Produto *	Qtd. Minima de dias *	Qtd. Máxima de dias                               |
+      CCT	              VISTRA BI	            7	                                            9                                                |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+Tipo de Serviço *	Produto *	Qtd. Minima de dias *	Qtd. Máxima de dias                               |
+      SUP	               VISTRA BI	            3	                                             5	                                              |  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Dcdemetrio12*
+
+SETA = C:\Vistra_DW\trunk\servidor\database\dados_dw\unzipfiles
+
+
+SENHA USUARIO LINUX COPASUL: vvar3@2020
+
+
+Bom dia,
+Buenos dias
+Good morning
+Magandang umaga
+Ohayou gosaimasu
+Mae Govannen
+Guten Morgen
+???? ?????.
+
+
+https://cheffuncional.blogosfera.uol.com.br/2018/01/28/aprenda-a-fazer-um-picole-funcional-de-avela-com-banana/
+
+usuario copasul demetrio.santos
+senha demetriodc
+
+criado stg_compras_veterinaria no banco vistra_dw_demo01 da datacoper para carregar arquivos da plantar.
+
+https://www.ibge.gov.br/geociencias-novoportal/organizacao-do-territorio/estrutura-territorial/15761-areas-dos-municipios.html?=&t=downloads (baixar arquivo codigo IBGE cidades Brasileiras)
+
+copasul
+demetrio.santos
+Dcdemetrio
+
+login windows coagro
+
+root
+.creative.coagro
+
+
+
+select psa.datname as "Database",
+psa.pid as "Server PID",
+psa.state as "Session Status",
+psa.query as "SQL",
+psa.waiting as "Lock"
+from pg_stat_activity psa
+where psa.datname = 'vistra_dw'
+and psa.state not like 'idle'
+
+
+
+select pid, pg_terminate_backend(pid) from pg_stat_activity where datname = 'vistra_dw';
+
+/usr/local/pgsql/bin/psql -U postgres
+
+\l listar
+\x mostra um registro
+
+
+Tarefas mais utilizadas
+
+Ginastica laboral                   1376
+Café                                1377
+Tempo de intervalo entre atividades 1378
+Leitura de emails                   1379
+Rotinas de RH                       1380
+Pesquisa e leitura de materiais     1381
+Reunioes internas                   1382
+Compensação de horas                1383
+Treinamentos internos               1384
+Ausencia por atestado medico        1385
+Ferias                              1386
+Limpeza da sala                     1387
+Ausencia por motivos particulares   1581
+Configuração de hardware            1779
+Lançamento de horas                 27985
+Falta de energia elétrica           8618
+
+
+sudo vi /usr/pro/vistradw/kettle_properties/.kettle/kettle.properties
+
+Essa é a linha de comando, para quando tu precisar editar o properties la na Copasul.
+
+Tu sabe os comandos para editar, salvar, etc?
+
+Seguinte, quando tu utiliza o VI tu vai visualizar o arquivo.
+
+Quando tu esta visualizando o arquivo, para alterar qualquer coisa tu precisa apertar o botão insert.
+
+Depois de alterado o que tu precisa no arquivo, tu ira pressionar a tecla "ESC".
+
+Ai tu tem algumas opções:
+
+:q - Tu ira sair do arquivo (só funciona quando tu não alterou nada.
+:!q - Ira ignorar todas as alterações que tu fez e mantera o arquivo como estava.
+:wq - Ira salvar as alterações que tu fez e fechar o arquivo.
+Outra coisa bem importante, todas que vez que tu copiar um arquivo novo para o linux, tu precisa dar permissão de leitura, escrita, etc para ele... para isso tu ira rodar o seguinte comando.
+sudo chmod -R -c 777 /usr/pro/vistradw/
+*Claro que estou me baseando que tu ira alterar somente arquivos pertinentes ao Vistra.
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+como trazer uma base de um servidor linux exemplo coopermota:
+
+ps axwww | grep post
+/usr/local/pgsql11.9/bin/postgres -D /u01/postgres11.9/pgsql11.9/pgsql_dw/data
+
+
+/usr/local/pgsql11.9/bin/pg_dump -U postgres -f vistra.dump vistra_dw
+du -h vistra.dump
+bzip2 vistra.dump
+du -hs vistra.dump.bz2
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+https://powerbiexperience.com/pt/dashboard-vendas-meta-sql-server/
+
+
+senha amaral linux copasul V2K&rJqJ
+
+acesso redmine
+
+demetrio.santos
+Dcdemetrio12*
+
+
+Servidor linux carga coopercitrus, quando app de carga estiver fora, rodar os comandos:
+
+ssh: 10.254.252.249
+usuário: datacoper
+senha: D@t@c0p3r
+cd /home/datacoper
+./start_gocd_agent2.sh
+./start_gocd_server.sh
+
+cat crontab
+
+caminho kettle properties na coopermota linux
+
+cd /usr/pro/vistradw/kettle_properties/.kettle/
+vi kettle.properties
+
+restaurar arquivos apagados do hd
+https://www.partitionwizard.com/free-partition-manager.html
+
+
+https://www.youtube.com/watch?v=mMqaiNbeeUU
+https://www.youtube.com/watch?v=w8Z--fpEpyU
+https://www.youtube.com/watch?v=4DGRqMoyrPk
+
+https://pgdocptbr.sourceforge.io/pg80/functions-math.html
+
+https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-centos-8-pt

@@ -1,0 +1,6 @@
+Logs;
+Pensar sobre como fazer os deletes funcionarem de um jeito que faça sentido no AGM;
+Verificar a possibilidade de usar veriavéis condicionais (familia, especie financeira, agencia);
+Verificar Sucess da job de dimensões;
+Videos explicando o fluxo;
+

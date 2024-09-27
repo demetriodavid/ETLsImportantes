@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>trans_feriados_dim_tempo_dia</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <directory>&#x2f;</directory>
+    <parameters>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2018&#x2f;08&#x2f;13 08&#x3a;39&#x3a;10.248</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2018&#x2f;08&#x2f;13 08&#x3a;39&#x3a;10.248</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>Cooperate_pro9</name>
+    <server/>
+    <type>GENERIC</type>
+    <access>Native</access>
+    <database/>
+    <port>1521</port>
+    <username>&#x24;&#x7b;ORIGEM_USER_NAME_BD&#x7d;</username>
+    <password>&#x24;&#x7b;ORIGEM_PASSWORD_BD&#x7d;</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>CUSTOM_DRIVER_CLASS</code><attribute>&#x24;&#x7b;ORIGEM_DRIVER_JDBC_BD&#x7d;</attribute></attribute>
+      <attribute><code>CUSTOM_URL</code><attribute>&#x24;&#x7b;ORIGEM_URL_JDBC_BD&#x7d;</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>INITIAL_POOL_SIZE</code><attribute>1</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MAXIMUM_POOL_SIZE</code><attribute>2</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1521</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>Y</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>Destino_DW_Analitico</name>
+    <server>&#x24;&#x7b;DESTINO_POSTGRES_ANALITICO_HOST&#x7d;</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>&#x24;&#x7b;DESTINO_POSTGRES_ANALITICO_BANCO&#x7d;</database>
+    <port>&#x24;&#x7b;DESTINO_POSTGRES_PORTA&#x7d;</port>
+    <username>&#x24;&#x7b;DESTINO_USER_NAME_BD&#x7d;</username>
+    <password>&#x24;&#x7b;DESTINO_PASSWORD_BD&#x7d;</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;DESTINO_POSTGRES_PORTA&#x7d;</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>Destino_DW_Desenv</name>
+    <server>&#x24;&#x7b;DESTINO_POSTGRES_HOST&#x7d;</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>&#x24;&#x7b;DESTINO_POSTGRES_BANCO&#x7d;</database>
+    <port>&#x24;&#x7b;DESTINO_POSTGRES_PORTA&#x7d;</port>
+    <username>&#x24;&#x7b;DESTINO_USER_NAME_BD&#x7d;</username>
+    <password>&#x24;&#x7b;DESTINO_PASSWORD_BD&#x7d;</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;DESTINO_POSTGRES_PORTA&#x7d;</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>Firebird SQL</name>
+    <server>&#x24;&#x7b;DESTINO_FIREBIRD_HOST&#x7d;</server>
+    <type>FIREBIRD</type>
+    <access>Native</access>
+    <database>&#x24;&#x7b;DESTINO_FIREBIRD_BANCO&#x7d;</database>
+    <port>&#x24;&#x7b;DESTINO_FIREBIRD_PORTA&#x7d;</port>
+    <username>&#x24;&#x7b;DESTINO_USER_NAME_BD_FIREBIRD&#x7d;</username>
+    <password>&#x24;&#x7b;DESTINO_PASSWORD_BD_FIREBIRD&#x7d;</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;DESTINO_FIREBIRD_PORTA&#x7d;</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>Origem_Agrorevendas</name>
+    <server>&#x24;&#x7b;ORIGEM_AGROREVENDA_HOST&#x7d;</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>&#x24;&#x7b;ORIGEM_AGROREVENDA_BANCO&#x7d;</database>
+    <port>&#x24;&#x7b;ORIGEM_AGROREVENDA_PORTA&#x7d;</port>
+    <username>&#x24;&#x7b;ORIGEM_USER_NAME_BD_AGROREVENDA&#x7d;</username>
+    <password>&#x24;&#x7b;ORIGEM_PASSWORD_BD_AGROREVENDA&#x7d;</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;ORIGEM_AGROREVENDA_PORTA&#x7d;</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>Origem_CORDILHEIRA</name>
+    <server>&#x24;&#x7b;ORIGEM_SII_HOST&#x7d;</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>&#x24;&#x7b;ORIGEM_CORDILHEIRA_BANCO&#x7d;</database>
+    <port>64217</port>
+    <username>&#x24;&#x7b;ORIGEM_USER_NAME_BD_SII&#x7d;</username>
+    <password>&#x24;&#x7b;ORIGEM_PASSWORD_BD_SII&#x7d;</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_MSSQL.instance</code><attribute>I_SQL01</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>64217</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>Origem_CRM</name>
+    <server>&#x24;&#x7b;ORIGEM_CRM_HOST&#x7d;</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>&#x24;&#x7b;ORIGEM_CRM_BANCO&#x7d;</database>
+    <port>&#x24;&#x7b;ORIGEM_CRM_PORTA&#x7d;</port>
+    <username>&#x24;&#x7b;ORIGEM_USER_NAME_BD_CRM&#x7d;</username>
+    <password>&#x24;&#x7b;ORIGEM_PASSWORD_BD_CRM&#x7d;</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;ORIGEM_CRM_PORTA&#x7d;</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>PostgreSQL</name>
+    <server>&#x24;&#x7b;ORIGEM_POSTGRES_HOST_POSTGRES&#x7d;</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>&#x24;&#x7b;ORIGEM_POSTGRES_BANCO_POSTGRES&#x7d;</database>
+    <port>&#x24;&#x7b;ORIGEM_POSTGRES_PORTA_POSTGRES&#x7d;</port>
+    <username>&#x24;&#x7b;ORIGEM_USER_NAME_BD_POSTGRES&#x7d;</username>
+    <password>&#x24;&#x7b;ORIGEM_PASSWORD_BD_POSTGRES&#x7d;</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;ORIGEM_POSTGRES_PORTA_POSTGRES&#x7d;</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>Vistra_dw</name>
+    <server>&#x24;&#x7b;DESTINO_POSTGRES_HOST&#x7d;</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>&#x24;&#x7b;DESTINO_POSTGRES_BANCO&#x7d;</database>
+    <port>&#x24;&#x7b;DESTINO_POSTGRES_PORTA&#x7d;</port>
+    <username>&#x24;&#x7b;DESTINO_USER_NAME_BD&#x7d;</username>
+    <password>&#x24;&#x7b;DESTINO_PASSWORD_BD&#x7d;</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;DESTINO_POSTGRES_PORTA&#x7d;</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+  <hop> <from>Calcula feriados</from><to>Update dim_tempo_dia</to><enabled>Y</enabled> </hop>
+  </order>
+  <step>
+    <name>Calcula feriados</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Destino_DW_Desenv</connection>
+    <sql>WITH PASCOA AS &#x28;&#xd;&#xa;    SELECT D.NK_TEMPO_DIA&#xd;&#xa;      FROM &#x28;&#xd;&#xa;            SELECT DISTINCT&#xd;&#xa;                   DTD.ANO,&#xd;&#xa;                   DIV&#x28;&#x28;&#x28;19 &#x2a; &#x28;DTD.ANO &#x25; 19&#x29; &#x2b; DIV&#x28;DTD.ANO,100&#x29; - DIV&#x28;DIV&#x28;DTD.ANO,100&#x29;,4&#x29; - DIV&#x28;&#x28;DIV&#x28;DTD.ANO,100&#x29; - DIV&#x28;DIV&#x28;DTD.ANO,100&#x29; &#x2b; 8,25&#x29;&#x29;,3&#x29; &#x2b; 15&#x29; &#x25; 30&#x29; &#x2b; &#x28;&#x28;32 &#x2b; 2 &#x2a; &#x28;&#x28;DTD.ANO &#x25; 19&#x29; &#x25; 4&#x29; &#x2b; 2 &#x2a; DIV&#x28;&#x28;DTD.ANO &#x25; 100&#x29;,4&#x29; - &#x28;&#x28;19 &#x2a; &#x28;DTD.ANO &#x25; 19&#x29; &#x2b; DIV&#x28;DTD.ANO,100&#x29; - DIV&#x28;DIV&#x28;DTD.ANO,100&#x29;,4&#x29; - DIV&#x28;&#x28;DIV&#x28;DTD.ANO,100&#x29; - DIV&#x28;DIV&#x28;DTD.ANO,100&#x29; &#x2b; 8,25&#x29;&#x29;,3&#x29; &#x2b; 15&#x29; &#x25; 30&#x29; - &#x28;&#x28;DTD.ANO &#x25; 100&#x29; &#x25; 4&#x29;&#x29; &#x25; 7&#x29; - 7 &#x2a; &#x28;DIV&#x28;&#x28;DTD.ANO &#x25; 19&#x29; &#x2b; 11 &#x2a; &#x28;&#x28;19 &#x2a; &#x28;DTD.ANO &#x25; 19&#x29; &#x2b; DIV&#x28;DTD.ANO,100&#x29; - DIV&#x28;DIV&#x28;DTD.ANO,100&#x29;,4&#x29; - DIV&#x28;&#x28;DIV&#x28;DTD.ANO,100&#x29; - DIV&#x28;DIV&#x28;DTD.ANO,100&#x29; &#x2b; 8,25&#x29;&#x29;,3&#x29; &#x2b; 15&#x29; &#x25; 30&#x29; &#x2b; 22 &#x2a; &#x28;&#x28;32 &#x2b; 2 &#x2a; &#x28;&#x28;DTD.ANO &#x25; 19&#x29; &#x25; 4&#x29; &#x2b; 2 &#x2a; DIV&#x28;&#x28;DTD.ANO &#x25; 100&#x29;,4&#x29; - &#x28;&#x28;19 &#x2a; &#x28;DTD.ANO &#x25; 19&#x29; &#x2b; DIV&#x28;DTD.ANO,100&#x29; - DIV&#x28;DIV&#x28;DTD.ANO,100&#x29;,4&#x29; - DIV&#x28;&#x28;DIV&#x28;DTD.ANO,100&#x29; - DIV&#x28;DIV&#x28;DTD.ANO,100&#x29; &#x2b; 8,25&#x29;&#x29;,3&#x29; &#x2b; 15&#x29; &#x25; 30&#x29; - &#x28;&#x28;DTD.ANO &#x25; 100&#x29; &#x25; 4&#x29;&#x29; &#x25; 7&#x29;, 451&#x29;&#x29; &#x2b; 114, 31&#x29; AS MES,&#xd;&#xa;                   &#x28;&#x28;&#x28;19 &#x2a; &#x28;DTD.ANO &#x25; 19&#x29; &#x2b; DIV&#x28;DTD.ANO,100&#x29; - DIV&#x28;DIV&#x28;DTD.ANO,100&#x29;,4&#x29; - DIV&#x28;&#x28;DIV&#x28;DTD.ANO,100&#x29; - DIV&#x28;DIV&#x28;DTD.ANO,100&#x29; &#x2b; 8,25&#x29;&#x29;,3&#x29; &#x2b; 15&#x29; &#x25; 30&#x29; &#x2b; &#x28;&#x28;32 &#x2b; 2 &#x2a; &#x28;DIV&#x28;DTD.ANO,100&#x29; &#x25; 4&#x29; &#x2b; 2 &#x2a; DIV&#x28;&#x28;DTD.ANO &#x25; 100&#x29;,4&#x29; - &#x28;&#x28;19 &#x2a; &#x28;DTD.ANO &#x25; 19&#x29; &#x2b; DIV&#x28;DTD.ANO,100&#x29; - DIV&#x28;DIV&#x28;DTD.ANO,100&#x29;,4&#x29; - DIV&#x28;&#x28;DIV&#x28;DTD.ANO,100&#x29; - DIV&#x28;DIV&#x28;DTD.ANO,100&#x29; &#x2b; 8,25&#x29;&#x29;,3&#x29; &#x2b; 15&#x29; &#x25; 30&#x29; - &#x28;&#x28;DTD.ANO &#x25; 100&#x29; &#x25; 4&#x29;&#x29; &#x25; 7&#x29; - 7 &#x2a; &#x28;DIV&#x28;&#x28;DTD.ANO &#x25; 19&#x29; &#x2b; 11 &#x2a; &#x28;&#x28;19 &#x2a; &#x28;DTD.ANO &#x25; 19&#x29; &#x2b; DIV&#x28;DTD.ANO,100&#x29; - DIV&#x28;DIV&#x28;DTD.ANO,100&#x29;,4&#x29; - DIV&#x28;&#x28;DIV&#x28;DTD.ANO,100&#x29; - DIV&#x28;DIV&#x28;DTD.ANO,100&#x29; &#x2b; 8,25&#x29;&#x29;,3&#x29; &#x2b; 15&#x29; &#x25; 30&#x29; &#x2b; 22 &#x2a; &#x28;&#x28;32 &#x2b; 2 &#x2a; &#x28;&#x28;DTD.ANO &#x25; 19&#x29; &#x25; 4&#x29; &#x2b; 2 &#x2a; DIV&#x28;&#x28;DTD.ANO &#x25; 100&#x29;,4&#x29; - &#x28;&#x28;19 &#x2a; &#x28;DTD.ANO &#x25; 19&#x29; &#x2b; DIV&#x28;DTD.ANO,100&#x29; - DIV&#x28;DIV&#x28;DTD.ANO,100&#x29;,4&#x29; - DIV&#x28;&#x28;DIV&#x28;DTD.ANO,100&#x29; - DIV&#x28;DIV&#x28;DTD.ANO,100&#x29; &#x2b; 8,25&#x29;&#x29;,3&#x29; &#x2b; 15&#x29; &#x25; 30&#x29; - &#x28;&#x28;DTD.ANO &#x25; 100&#x29; &#x25; 4&#x29;&#x29; &#x25; 7&#x29;, 451&#x29;&#x29; &#x2b; 114&#x29; &#x25; 31 &#x2b; 1 AS DIA&#xd;&#xa;              FROM DIM_TEMPO_DIA DTD&#xd;&#xa;           &#x29; X&#xd;&#xa;    INNER JOIN DIM_TEMPO_DIA D ON D.DIA &#x3d; X.DIA&#xd;&#xa;                              AND D.MES &#x3d; X.MES&#xd;&#xa;                              AND D.ANO &#x3d; X.ANO&#xd;&#xa;&#x29;&#xd;&#xa;&#xd;&#xa;--carnaval&#xd;&#xa;   SELECT DTD.NK_TEMPO_DIA - 47 AS NK_TEMPO_DIA,&#xd;&#xa;          0 AS DIA_UTIL&#xd;&#xa;     FROM PASCOA DTD&#xd;&#xa; GROUP BY 1,2&#xd;&#xa;&#xd;&#xa;UNION ALL&#xd;&#xa;&#xd;&#xa;--sexta feira santa&#xd;&#xa;   SELECT DTD.NK_TEMPO_DIA - 2 AS NK_TEMPO_DIA,&#xd;&#xa;          0 AS DIA_UTIL&#xd;&#xa;     FROM PASCOA DTD&#xd;&#xa; GROUP BY 1,2&#xd;&#xa;&#xd;&#xa;UNION ALL&#xd;&#xa;&#xd;&#xa;--corpus christi&#xd;&#xa;   SELECT DTD.NK_TEMPO_DIA &#x2b; 60 AS NK_TEMPO_DIA,&#xd;&#xa;          0 AS DIA_UTIL&#xd;&#xa;     FROM PASCOA DTD&#xd;&#xa; GROUP BY 1,2&#xd;&#xa;&#xd;&#xa;UNION ALL&#xd;&#xa;&#xd;&#xa;--feriados fixos&#xd;&#xa;   SELECT DTD.NK_TEMPO_DIA,&#xd;&#xa;          0 AS DIA_UTIL&#xd;&#xa;     FROM DIM_TEMPO_DIA DTD&#xd;&#xa;    WHERE &#x28;DTD.DIA &#x3d; 1  AND DTD.MES &#x3d; 1&#x29;&#xd;&#xa;       OR &#x28;DTD.DIA &#x3d; 21 AND DTD.MES &#x3d; 4&#x29;&#xd;&#xa;       OR &#x28;DTD.DIA &#x3d; 1  AND DTD.MES &#x3d; 5&#x29;&#xd;&#xa;       OR &#x28;DTD.DIA &#x3d; 7  AND DTD.MES &#x3d; 9&#x29;&#xd;&#xa;       OR &#x28;DTD.DIA &#x3d; 12 AND DTD.MES &#x3d; 10&#x29;&#xd;&#xa;       OR &#x28;DTD.DIA &#x3d; 2  AND DTD.MES &#x3d; 11&#x29;&#xd;&#xa;       OR &#x28;DTD.DIA &#x3d; 15 AND DTD.MES &#x3d; 11&#x29;&#xd;&#xa;       OR &#x28;DTD.DIA &#x3d; 25  AND DTD.MES &#x3d; 12&#x29;&#xd;&#xa; GROUP BY 1,2</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>200</xloc>
+      <yloc>100</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Update dim_tempo_dia</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Destino_DW_Desenv</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>1000</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>N</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema>public</schema>
+      <table>dim_tempo_dia</table>
+      <key>
+        <name>nk_tempo_dia</name>
+        <field>nk_tempo_dia</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+        </key>
+      <value>
+        <name>dia_util</name>
+        <rename>dia_util</rename>
+        </value>
+      </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>450</xloc>
+      <yloc>100</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+
+</transformation>
